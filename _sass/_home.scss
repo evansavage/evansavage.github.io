@@ -1,0 +1,123 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    background-color: #D8C1BB;
+}
+
+a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+
+.home-title {
+  font-family: angled;
+  margin: 0;
+  position: absolute;
+  top: -7px;
+  right: 30px;
+  color: #636363;
+  @include breakpoint($xs) {
+    font-size: 1.75rem;
+  }
+  @include breakpoint($sm) {
+    font-size: 2.25rem;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+.social-links {
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+  margin: 0;
+  a {
+    text-decoration: none;
+    fill: currentColor;
+    color: #636363;
+    transition: color 0.1s ease-in-out;
+    margin-right: 5px;
+  }
+  a:hover {
+    fill: currentColor;
+    color: #04F700;
+    transition: color 0.1s ease-in-out;
+  }
+}
+
+.glitch:hover {
+  @include textGlitch("example-one", 10, #636363, #D8C1BB, #019B00, #04F700, 450, 115);
+}
+// .glitch::before,
+// .glitch::after {
+//   content: attr(data-text);
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+//
+// .glitch::before {
+//   /* ... anything needed to make it identical */
+//
+//   /* variation */
+//   left: 2px;
+//   text-shadow: -1px 0 red;
+//
+//   /* important: opaque background masks the original */
+//   // background: black;
+// }
+// .glitch::after {
+//   /* ... anything needed to make it identical */
+//
+//   /* variation */
+//   left: -2px;
+//   text-shadow: -1px 0 blue;
+//
+//   /* important: opaque background masks the original */
+//   // background: black;
+// }
+//
+// .glitch::before {
+//   clip: rect(44px, 450px, 56px, 0);
+//   animation: noise-anim-1 2s infinite linear alternate-reverse;
+//   /*
+//     Essentially a box from 0, 44px
+//     to 450px, 56px
+//   */
+//
+//   /* clip-path: inset(); needs how far you want to push in from the edges instead */
+// }
+// .glitch::after {
+//   clip: rect(44px, 450px, 200px, 0);
+//   animation: noise-anim-2 2s infinite linear alternate-reverse;
+// }
+//
+// @keyframes noise-anim-1 {
+//   $steps: 20;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       $top: random(100);
+//       $bottom: random(101 - $top);
+//       clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+//     }
+//   }
+// }
+//
+// @keyframes noise-anim-2 {
+//   $steps: 20;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       $top: random(100);
+//       $bottom: random(101 - $top);
+//       clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+//     }
+//   }
+// }
