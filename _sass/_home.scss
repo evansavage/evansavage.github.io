@@ -27,10 +27,14 @@ a {
 .social-widgets h2 {
   font-family: 'Rubik';
   color: #ca6464;
-  float: right;
+  // float: right;
+  text-align: right;
   font-size: 1.5rem;
 }
 
+.social-widgets-mid-wrapper {
+  position: relative;
+}
 
 .home-title {
   font-family: angled;
@@ -92,6 +96,7 @@ a {
   @include textGlitch("example-one", 10, #636363, #D8C1BB, #019B00, #04F700, 450, 115);
 }
 
+
 .lightwidget-widget {
   // background-color: #636363;
   // padding: 2px;
@@ -119,16 +124,18 @@ a {
 }
 
 .social-widgets {
+  // position: absolute;
   @include breakpoint($xs) {
-    // position: relative;
+    position: relative;
     width: 90%;
     margin: 0 5%;
   }
   @include breakpoint($sm) {
-    // position: absolute;
-    bottom: 0;
+    position: absolute;
+    bottom: -290px;
     right: 0;
-    width: 350px;
+    // width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0 20px 20px;
   }
@@ -137,7 +144,7 @@ a {
     float: right;
     margin-bottom: 10px;
   }
-  text-align: center;
+  // text-align: center;
   // padding: 20px;
   // margin-bottom: 10px;
 }
