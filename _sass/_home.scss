@@ -1,12 +1,22 @@
 html {
+  @include breakpoint($xs) {
+    overflow: visible;
+  }
+  @include breakpoint($sm) {
     overflow: hidden;
     height: 100%;
+  }
 }
 
 body {
+  background-color: #D8C1BB;
+  @include breakpoint($xs) {
+    overflow: visible;
+  }
+  @include breakpoint($sm) {
     height: 100%;
     overflow: auto;
-    background-color: #D8C1BB;
+  }
 }
 
 a {
