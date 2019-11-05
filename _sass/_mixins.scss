@@ -51,6 +51,6 @@
   &::before {
     left: -2px;
     text-shadow: 1px 0 $highlightColor2;
-    animation: #{$name}-anim-2 4s 1 linear alternate-reverse;
+    animation: #{$name}-anim-2 4s infinite linear alternate-reverse;
   }
 }

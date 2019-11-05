@@ -17,12 +17,20 @@ body {
     height: 100%;
     overflow: auto;
   }
+  margin: 0;
 }
 
 a {
   color: black;
   text-decoration: none; /* no underline */
 }
+.social-widgets h2 {
+  font-family: 'Rubik';
+  color: #ca6464;
+  float: right;
+  font-size: 1.5rem;
+}
+
 
 .home-title {
   font-family: angled;
@@ -43,7 +51,7 @@ a {
     font-size: 2.25rem;
     position: absolute;
     top: -7px;
-    right: 30px;
+    left: 30px;
     h1 {
       padding: 0;
     }
@@ -58,13 +66,13 @@ a {
   @include breakpoint($xs) {
     position: absolute;
     // text-align: center;
-    bottom: 3px;
-    left: calc(50vw - 110px/2)
+    bottom: 6px;
+    left: calc(50vw - 134px/2)
   }
   @include breakpoint($sm) {
     position: absolute;
-    bottom: 3px;
-    left: 10px;
+    bottom: 8px;
+    left: 15px;
   }
   a {
     text-decoration: none;
@@ -82,4 +90,77 @@ a {
 
 .glitch:hover {
   @include textGlitch("example-one", 10, #636363, #D8C1BB, #019B00, #04F700, 450, 115);
+}
+
+.lightwidget-widget {
+  // background-color: #636363;
+  // padding: 2px;
+  // .lightwidget__image {
+  //   border-radius: 5px;
+  // }
+  // @include breakpoint($xs) {
+  //   position: relative;
+  //   width: 90%;
+  //   margin: 0 5%;
+  // }
+  // @include breakpoint($sm) {
+  //   position: absolute;
+  //   top: 200px;
+  //   right: 20px;
+  //   width: 350px;
+  //   margin: 0;
+  // }
+  @include breakpoint($xs) {
+    display: block;
+  }
+  @include breakpoint($sm) {
+    display: inline-block;
+  }
+}
+
+.social-widgets {
+  @include breakpoint($xs) {
+    // position: relative;
+    width: 90%;
+    margin: 0 5%;
+  }
+  @include breakpoint($sm) {
+    // position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    margin: 0;
+    padding: 0 20px 20px;
+  }
+  .sc-player {
+    width: 100%;
+    float: right;
+    margin-bottom: 10px;
+  }
+  text-align: center;
+  // padding: 20px;
+  // margin-bottom: 10px;
+}
+
+.social-widgets-wrapper {
+  // height: 100%;
+  background-color: #614456;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // width: 390px;
+  @include breakpoint($xs) {
+    position: relative;
+    width: 100%;
+    padding: 0 5%;
+  }
+  @include breakpoint($sm) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 390px;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+  }
 }

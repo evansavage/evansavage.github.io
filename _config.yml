@@ -21,8 +21,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  evansavage
 linkedin_username: evan-savage-45050694
+soundcloud_username: s4v4ge1
 instagram_username: _evansavage
 twitter_username: e_swag_savage # replace with your_twitter_username or comment to remove link from footer
+
 
 # Build settings
 markdown: kramdown
