@@ -1,0 +1,19 @@
+<script>
+  (function($){
+      $(window).on('load', function(){
+          $.instagramFeed({
+              'username': '_evansavage',
+              'container': "#instagram-feed1",
+              'display_profile': false,
+              'display_biography': false,
+              'display_gallery': true,
+              'callback': null,
+              'styling': true,
+              'items': 4,
+              'items_per_row': 2,
+              'margin': 2,
+              // 'image_size': 150,
+          });
+      });
+  })(jQuery);
+</script>
