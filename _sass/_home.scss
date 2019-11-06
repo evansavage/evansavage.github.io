@@ -78,7 +78,7 @@ a {
   }
   .music-content-wrapper {
     position: relative;
-    background-color: #3e2c37;
+    // background-color: #3e2c37;
     @include breakpoint($xs) {
       width: 100%;
     }
@@ -94,7 +94,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 90%;
+      height: 95%;
       > div {
         display: flex;
         flex-direction: row;
@@ -111,7 +111,7 @@ a {
         width: 90%;
         margin: 0 2%;
         padding: 10px 3%;
-        background-color: black;
+        background-color: #636363;
         border-radius: 4px;
         // float: right;
         margin-bottom: 10px;
@@ -215,7 +215,8 @@ a {
   padding: 16px 9px 11px 15px;
   border-top: 2px solid #636363;
   border-left: 2px solid #636363;
-  border-radius: 4px 0 0 0;
+  border-right: 2px solid #636363;
+  border-radius: 4px 4px 0 0;
   @include breakpoint($xs) {
     // position: absolute;
     // text-align: center;
@@ -247,33 +248,6 @@ a {
 
 .home-content {
   @include textGlitch("example-one", 10, #636363, #D8C1BB, #019B00, #04F700, 450, 115);
-}
-
-
-.lightwidget-widget {
-  // background-color: #636363;
-  // padding: 2px;
-  // .lightwidget__image {
-  //   border-radius: 5px;
-  // }
-  // @include breakpoint($xs) {
-  //   position: relative;
-  //   width: 90%;
-  //   margin: 0 5%;
-  // }
-  // @include breakpoint($sm) {
-  //   position: absolute;
-  //   top: 200px;
-  //   right: 20px;
-  //   width: 350px;
-  //   margin: 0;
-  // }
-  @include breakpoint($xs) {
-    display: block;
-  }
-  @include breakpoint($sm) {
-    display: inline-block;
-  }
 }
 
 .social-widgets {
