@@ -14,11 +14,13 @@ $(document).ready(function(){
     dots: true,
     autoplay: true,
     autoplaySpeed: 12000,
+    verticalSwiping: true,
+    // draggable: true,
   });
-  $('.second').slick({
-    vertical: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 11000,
-  });
+  // $('.second').slick({
+  //   vertical: true,
+  //   dots: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 11000,
+  // });
 });
