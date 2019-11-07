@@ -350,18 +350,22 @@ a {
 
 .inner-wrapper {
   // position: absolute;
-  width: 50%;
+
   height: 100%;
-  &.second {
-    // margin-left: 50%;
-    border-left: 3px solid #636363;
-    .slick-dots {
-      right: -7px;
-    }
-  }
+
   &.first {
     border-right: 3px solid #636363;
+    width: auto;
+    flex: 1;
   }
+  // &.second {
+  //   // margin-left: 50%;
+  //   border-left: 3px solid #636363;
+  //   width: 50px;
+  //   .slick-dots {
+  //     right: -7px;
+  //   }
+  // }
 }
 
 .carousel-cell {
