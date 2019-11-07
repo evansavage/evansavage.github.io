@@ -1,6 +1,6 @@
 ---
 title: WEB DEV
-background-color: ECC8AE
+background-color: D8E1FF
 carousel: 1
 ---
 

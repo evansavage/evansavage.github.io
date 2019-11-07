@@ -1,6 +1,6 @@
 ---
 title: CIRMMT WEBSITE
-background-color: C4B2BC
+background-color: F9F7F3
 carousel: 2
 ---
 
