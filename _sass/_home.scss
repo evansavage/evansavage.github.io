@@ -357,6 +357,9 @@ a {
     border-right: 3px solid #636363;
     width: auto;
     flex: 1;
+    .slick-dots {
+        right: -36px;
+      }
   }
   // &.second {
   //   // margin-left: 50%;

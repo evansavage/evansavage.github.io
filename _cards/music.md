@@ -1,5 +1,5 @@
 ---
-title: WEB DEVELOPMENT
+title: MUSIC
 background-color: F9F7F3
 carousel: 1
 ---
