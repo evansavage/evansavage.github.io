@@ -355,6 +355,9 @@ a {
   &.second {
     // margin-left: 50%;
     border-left: 3px solid #636363;
+    .slick-dots {
+      right: -7px;
+    }
   }
   &.first {
     border-right: 3px solid #636363;

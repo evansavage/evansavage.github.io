@@ -9,10 +9,16 @@
 
 
 $(document).ready(function(){
-  $('.inner-wrapper').slick({
+  $('.first').slick({
     vertical: true,
     dots: true,
     autoplay: true,
     autoplaySpeed: 12000,
+  });
+  $('.second').slick({
+    vertical: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 11000,
   });
 });
