@@ -312,7 +312,7 @@ a {
 }
 
 .glitch:hover {
-  @include textGlitch("example-one", 10, #636363, #D8C1BB, #019B00, #04F700, 450, 115);
+  @include textGlitch("example-one", 10, #636363, #D8C1BB, #04F700, #04F700, 450, 115);
 }
 
 .home-content-wrapper {
