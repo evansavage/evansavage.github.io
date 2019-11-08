@@ -30,7 +30,7 @@ $(document).ready(function(){
   $('.first').on('wheel', (function(e) {
     var scroll = e.originalEvent.deltaY;
     var scroll_log = Math.sqrt(Math.abs(scroll))
-    console.log(scroll_log);
+    // console.log(scroll_log);
     if (Math.abs(scroll_log) > compareVal && !isMoving) {
       isMoving = true;
       compareVal = 10
