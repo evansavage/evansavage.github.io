@@ -336,7 +336,7 @@ a {
   // left: 70px;
 
   .home-content {
-      @include textGlitch("example-one", 10, #636363, inherit, #019B00, #04F700, 450, 115);
+      // @include textGlitch("example-one", 10, #636363, inherit, #019B00, #04F700, 450, 115);
       font-family: 'Rubik';
       color: #636363;
       // font-size: 60px;
@@ -408,7 +408,7 @@ a {
     width: auto;
     flex: 1;
     .slick-dots {
-        right: -36px;
+        right: -48px;
       }
   }
   // &.second {
@@ -433,6 +433,18 @@ a {
   }
 }
 
+.button-box {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 40px;
+  height: calc(65% + 40px);
+  border: 2px solid #636363;
+  border-radius: 5px 0 0 0;
+  z-index: 10;
+  background-color: #636363;
+}
+
 .slick-list {
   height: 100% !important;
 }
@@ -441,3 +453,61 @@ a {
   height: calc(70vh + 2px) !important;
   width: 100%;
 }
+
+.scanlines {
+    // position: relative;
+    overflow: hidden; // only to animate the unique scanline
+    z-index: 1;
+    &:before,
+    &:after {
+        display: block;
+        pointer-events: none;
+        content: '';
+        position: absolute;
+    }
+
+    // unique scanline travelling on the screen
+    &:before {
+        position: absolute;
+        top: 0;
+        // bottom: 100%;
+        width: 100%;
+        height: $scan-width * 1;
+        z-index: $scan-z-index + 1;
+        background: $scan-color;
+        opacity: $scan-opacity;
+        // animation: scanline 6s linear infinite;
+        @include scan-moving($scan-moving-line);
+    }
+
+    // the scanlines, so!
+    &:after {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $scan-z-index;
+        background: linear-gradient(
+            to bottom,
+            transparent 50%,
+            $scan-color 51%
+        );
+        background-size: 100% $scan-width*2;
+        @include scan-crt($scan-crt);
+    }
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+ @keyframes scanline {
+     0% {
+         transform: translate3d(0,200000%,0);
+         // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+     }
+ }
+
+ @keyframes scanlines {
+     0% {
+         background-position: 0 30%;
+         // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+     }
+ }

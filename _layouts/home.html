@@ -6,13 +6,18 @@ layout: default
   <a href="{{ site.baseurl }}" class="home-title"><h1 class="glitch" data-text="EVAN SAVAGE">EVAN SAVAGE</h1></a>
 
   <div class="main-content-wrapper">
-    <div class="home-content-wrapper">
+    <div class="home-content-wrapper ">
       {% assign cards = site.cards %}
+      <!-- <div class="scanlines"></div> -->
       <div class="inner-wrapper first">
         {% for card in cards %}
           {% include card.html %}
         {% endfor %}
+        <span class="button-box"></span>
+        <span class="scanlines"></span>
       </div>
+
+
       {% assign cards2 = site.cards_2 %}
       <!-- <div class="inner-wrapper second">
         {% for card in cards2 %}
