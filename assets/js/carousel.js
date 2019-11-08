@@ -15,6 +15,7 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 12000,
     verticalSwiping: true,
+    pauseOnFocus: false,
     // draggable: true,
   });
   // $('.second').slick({
