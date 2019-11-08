@@ -7,7 +7,7 @@
 //
 // });
 var isMoving = false
-var compareVal = 4
+var compareVal = 0
 
 $(document).ready(function(){
   $('.first').slick({
@@ -31,7 +31,7 @@ $(document).ready(function(){
     var scroll = e.originalEvent.deltaY;
     var scroll_log = Math.sqrt(Math.abs(scroll))
     console.log(scroll_log);
-    if (Math.abs(scroll_log) > 6 && !isMoving) {
+    if (Math.abs(scroll_log) > compareVal && !isMoving) {
       isMoving = true;
       compareVal = 10
       if (scroll < 0) {
@@ -41,7 +41,7 @@ $(document).ready(function(){
       }
       setTimeout(function() {
         isMoving=false;
-        compareVal = 8
+        compareVal = 5.5
       }, 800);
     }
 
