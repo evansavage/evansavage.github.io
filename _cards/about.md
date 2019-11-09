@@ -1,6 +1,6 @@
 ---
 title: ABOUT
-background-color: F9F7F3
+background-color: F9F7F322
 carousel: 1
 ---
 

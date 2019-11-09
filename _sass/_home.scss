@@ -351,8 +351,8 @@ a {
       position: absolute;
       // margin-top: 6px;
       width: 22px;
-      height: 20vh;
-      top: -20vh;
+      height: calc(15vh - 53px);
+      top: calc(-15vh + 53px);
       left: calc(50% - 11px);
       border-left: 2px solid #636363;
       border-right: 2px solid #636363;
@@ -376,7 +376,7 @@ a {
   display: flex;
   border-radius: 0 20px;
   margin-left: 20px;
-  background-color: #636363;
+  // background-color: #636363;
   z-index: 5;
   // padding:;
   width: 90%;
