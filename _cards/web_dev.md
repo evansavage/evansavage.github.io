@@ -1,9 +1,9 @@
 ---
 title: WEB DEVELOPMENT
-background-color: F9F7F322
+background-color: 4e4e4e22
 carousel: 1
+overlay-color: C4B2BC
+spin-content: 👌😌👌
 ---
 
 Coming soon!
-
-👌😔👌

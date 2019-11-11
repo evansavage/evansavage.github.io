@@ -13,9 +13,11 @@ $(document).ready(function(){
   $('.first').slick({
     vertical: true,
     dots: true,
+    infinite: false,
     autoplay: true,
     autoplaySpeed: 12000,
     verticalSwiping: true,
+    pauseOnHover: true,
     pauseOnFocus: false,
     slide: 'div',
     swipe: true,
