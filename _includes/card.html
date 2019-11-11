@@ -1,13 +1,15 @@
 <div class="carousel-cell" style="background-color: #{{ card.background-color }};">
   <div class="inner-cell">
     <h1 class="home-content">{{ card.title | strip_html }}</h1>
-    <p>{{ card.content }}</p>
-    <img class="me_lol" src='{{ site.baseurl }}/assets/img/Facebook_June_19.jpg'/>
+    <!-- <p>{{ card.content }}</p> -->
+    <img class="holder-image" src='{{ site.baseurl }}/assets/img/{{ card.holder-image }}'/>
     <!-- <img class="me_lol" src='{{ site.baseurl }}/assets/img/Facebook_June_19.jpg'/> -->
-    <button class="slide-btn">Button</button>
-    <button class="slide-btn-2">Button</button>
+    <div class="spin-content {{ card.holder-class-2 }}"><p>{{ card.spin-content }}</p></div>
+    <div class="{{ card.holder-class }}">{{ card.holder-content }}</div>
+    <!-- <button class="slide-btn">Open overlay</button> -->
+    <!-- <button class="slide-btn-2">Button</button> -->
   </div>
-  <div class="screen-overlay">
+  <div class="screen-overlay" style="background-color: #{{ card.overlay-color }}">
     <div class="overlay-content">
       <div class="button-background"></div>
       <button class="exit-button">X</button>
