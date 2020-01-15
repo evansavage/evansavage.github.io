@@ -198,6 +198,7 @@ a {
         @include breakpoint($md) {
           width: 100%;
           flex: none;
+          height: 45%;
         }
       }
       .tracks-content, .mixes-content {
