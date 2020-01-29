@@ -285,7 +285,7 @@ a {
   z-index: 100;
   // position: absolute;
 
-  color: $frame-color;
+  color: $title-color;
   @include breakpoint($xs) {
     font-size: 2rem;
     position: relative;
@@ -363,7 +363,7 @@ a {
 }
 
 .glitch:hover {
-  @include textGlitch("example-one", 10, $frame-color, #D8C1BB00, #04F700, #04F700, 450, 115);
+  @include textGlitch("example-one", 10, $title-color, #D8C1BB00, #04F700, #04F700, 450, 115);
 }
 
 .home-content-wrapper {
