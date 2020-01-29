@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #e8cece;
+  background-color: $page-background-color;
   position: relative;
 
   justify-content: center;
@@ -87,7 +87,7 @@ a {
     }
     .top-border {
       position: absolute;
-      border-bottom: 2px solid #636363;
+      border-bottom: 2px solid $frame-color;
       top: 24px;
       width: calc(100% - 420px);
       left: 420px;
@@ -104,7 +104,7 @@ a {
       .bottom-border {
         // position: absolute;
         // bottom: 5px;
-        border-bottom: 2px solid #636363;
+        border-bottom: 2px solid $frame-color;
         width: auto;
         flex: 1;
         // line-height: 13px;
@@ -180,7 +180,7 @@ a {
         width: 90%;
         margin: 0 2%;
         padding: 10px 3%;
-        background-color: #636363;
+        background-color: $frame-color;
         border-radius: 4px;
         // float: right;
         margin-bottom: 10px;
@@ -218,7 +218,7 @@ a {
     }
     h2 {
       font-family: 'Rubik';
-      color: #ca6464;
+      color: $side-column-text-color;
       writing-mode: vertical-rl;
       width: 1%;
       letter-spacing: 2px;
@@ -230,7 +230,7 @@ a {
           margin-top: 6px;
           width: 12px;
           height: 100%;
-          border-left: 2px solid #ca6464;
+          border-left: 2px solid $side-column-text-color;
           line-height: 10px;
           // display: block;
         }
@@ -285,7 +285,7 @@ a {
   z-index: 100;
   // position: absolute;
 
-  color: #636363;
+  color: $frame-color;
   @include breakpoint($xs) {
     font-size: 2rem;
     position: relative;
@@ -313,9 +313,9 @@ a {
   margin: 0;
   position: relative;
   padding: 16px 9px 11px 15px;
-  border-top: 2px solid #636363;
-  border-left: 2px solid #636363;
-  border-right: 2px solid #636363;
+  border-top: 2px solid $frame-color;
+  border-left: 2px solid $frame-color;
+  border-right: 2px solid $frame-color;
   // border-bottom: 0;
 
   @include breakpoint($xs) {
@@ -338,7 +338,7 @@ a {
   a {
     text-decoration: none;
     fill: currentColor;
-    color: #636363;
+    color: $frame-color;
     transition: color 0.1s ease-in-out;
     margin-right: 5px;
   }
@@ -355,22 +355,22 @@ a {
       height: calc(15vh - 53px);
       top: calc(-15vh + 53px);
       left: calc(50% - 11px);
-      border-left: 2px solid #636363;
-      border-right: 2px solid #636363;
+      border-left: 2px solid $frame-color;
+      border-right: 2px solid $frame-color;
       // line-height: 10px;
       // display: block;
     }
 }
 
 .glitch:hover {
-  @include textGlitch("example-one", 10, #636363, #D8C1BB00, #04F700, #04F700, 450, 115);
+  @include textGlitch("example-one", 10, $frame-color, #D8C1BB00, #04F700, #04F700, 450, 115);
 }
 
 .home-content-wrapper {
 
-  border: 10px solid #636363;
-  border-top: 10px solid #636363;
-  border-bottom: 10px solid #636363;
+  border: 10px solid $frame-color;
+  border-top: 10px solid $frame-color;
+  border-bottom: 10px solid $frame-color;
   overflow: hidden;
   // position: absolute;
   position: relative;
@@ -520,10 +520,10 @@ a {
   right: -2px;
   width: 40px;
   height: calc(65% + 40px);
-  border: 2px solid #636363;
+  border: 2px solid $frame-color;
   border-radius: 5px 0 0 0;
   z-index: 10;
-  background-color: #636363;
+  background-color: $frame-color;
 }
 
 .slick-list {

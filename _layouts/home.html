@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign buttonColor = "53DD6C" %}
+
 <div id="home-wrapper">
   <a href="{{ site.baseurl }}" class="home-title"><h1 class="glitch" data-text="EVAN SAVAGE">EVAN SAVAGE</h1></a>
 
@@ -34,16 +36,16 @@ layout: default
       <div class="tracks-content">
         <h2 class="tracks-title">TRACKS</h2>
         <div class="tm">
-          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/712993093&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
+          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/712993093&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
         </div>
       </div>
       <div class="mixes-content">
         <h2 class="mixes-title">MIXES</h2>
         <div class="tm">
-          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741365293&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693009370&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
+          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741365293&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693009370&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+          <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
         </div>
       </div>
       <!-- <iframe class="sc-player" width="96%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/52235327&color=%2354ff48&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
@@ -51,8 +53,20 @@ layout: default
   </div>
 </div>
 <!-- <script src="{{ site.baseurl }}/assets/js/carousel.js"></script> -->
+
 {% include js_scripts.html %}
+
 {% include insta_feed.html %}
+<script>
+  const demoClasses = document.querySelectorAll('.playButton__play');
+  console.log('yuh');
+  $( ".playButton__play" ).css( "fill", "black" );
+  // Change the text of multiple elements with a loop
+  demoClasses.forEach(element => {
+    console.log('yeah');
+    element.setAttribute("fill", "#{{ pageBackground }}");
+  });
+</script>
 <!-- <div class="social-widgets-wrapper">
   <div class="social-widgets-mid-wrapper">
     <div class="social-widgets">
@@ -60,16 +74,16 @@ layout: default
 
       <br><br><br>
       <h2>M I X E S</h2>
-      <iframe class="sc-player" height="20" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693009370&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693009370&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
       <br><br><br>
       <h2>T R A C K S</h2>
-      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/689487826&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/604478418&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
-      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/588178482&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/689487826&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/604478418&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/588178482&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
       <br><br><br><br><br>
       <h2>A N G L E R</h2>
-      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%2304f700&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
     </div>
   </div>
 </div> -->

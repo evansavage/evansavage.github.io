@@ -1,9 +1,10 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/three.r92.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/jquery.instagramFeed.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/js/slick.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/js/carousel.js"></script>
-<script src="{{ site.baseurl }}/assets/js/three.r92.min.js"></script>
+
 <!-- <script src="{{ site.baseurl }}/assets/js/vanta.fog.min.js"></script>
 <script>
 VANTA.FOG({
@@ -26,13 +27,19 @@ VANTA.CELLS({
   size: 3.90
 })
 </script> -->
+<!-- COMBO:
+  F2F4F3 D7D9B1,
+-->
+{% assign pageBackground = "F2F4F3" %} <!-- ORIG: EBD1CB,  -->
+{% assign swirlColor = "D7D9B1" %} <!-- D7D9B1,  -->
+
 <script src="{{ site.baseurl }}/assets/js/p5.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/vanta.topology.min.js"></script>
 <script>
 VANTA.TOPOLOGY({
   el: "body",
-  color: 0xb9cfd4, // f79f79, 9da9a0, ffffff, bdfffd, b9cfd4
-  backgroundColor: 0xe8cece
+  color: 0x{{ swirlColor }}, // f79f79, 9da9a0, ffffff, bdfffd, b9cfd4
+  backgroundColor: 0x{{ pageBackground }}
 })
 </script>
 <script src="{{ site.baseurl}}/assets/js/overlay.js"></script>
