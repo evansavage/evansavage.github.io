@@ -70,6 +70,7 @@
     }
     img {
         display: block;
+        z-index: -1;
     }
     &.slick-loading img {
         display: none;

@@ -395,7 +395,7 @@ a {
   .home-content {
       // @include textGlitch("example-one", 10, #636363, inherit, #019B00, #04F700, 450, 115);
       font-family: 'Rubik';
-      color: #636363;
+      color: #000;
       // font-size: 60px;
   }
 
@@ -539,6 +539,7 @@ a {
 .slick-vertical .slick-slide {
   height: calc(85vh + 2px) !important;
   width: 100%;
+  overflow: hidden;
 }
 
 .holder-image {
@@ -650,4 +651,13 @@ a {
          background-position: 0 30%;
          // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
      }
+ }
+
+ .card-background {
+    position:absolute;
+    height: 120%;
+    top: 0;
+    left: 0px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
  }
