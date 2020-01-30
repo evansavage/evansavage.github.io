@@ -311,11 +311,14 @@ a {
 
 .social-links {
   margin: 0;
-  position: relative;
-  padding: 16px 9px 11px 15px;
-  border-top: 2px solid $frame-color;
-  border-left: 2px solid $frame-color;
-  border-right: 2px solid $frame-color;
+  padding: 26px 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  // padding: 16px 9px 11px 15px;
+  // border-top: 2px solid $frame-color;
+  // border-left: 2px solid $frame-color;
+  // border-right: 2px solid $frame-color;
   // border-bottom: 0;
 
   @include breakpoint($xs) {
@@ -328,7 +331,7 @@ a {
   }
   @include breakpoint($sm) {
     // position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
   }
   @media (min-height: 950px) {
@@ -340,26 +343,28 @@ a {
     fill: currentColor;
     color: $frame-color;
     transition: color 0.1s ease-in-out;
-    margin-right: 5px;
+    margin-right: 11px;
+    margin-left: 9px;
+    margin-bottom: 10px;
   }
   a:hover {
     fill: currentColor;
-    color: $button-color;
+    color: $highlight-color;
     transition: color 0.1s ease-in-out;
   }
-  &::after {
-      content: "";
-      position: absolute;
-      // margin-top: 6px;
-      width: 22px;
-      height: calc(15vh - 53px);
-      top: calc(-15vh + 53px);
-      left: calc(50% - 11px);
-      border-left: 2px solid $frame-color;
-      border-right: 2px solid $frame-color;
-      // line-height: 10px;
-      // display: block;
-    }
+  // &::after {
+  //     content: "";
+  //     position: absolute;
+  //     // margin-top: 6px;
+  //     width: 22px;
+  //     height: calc(15vh - 53px);
+  //     top: calc(-15vh + 53px);
+  //     left: calc(50% - 11px);
+  //     border-left: 2px solid $frame-color;
+  //     border-right: 2px solid $frame-color;
+  //     // line-height: 10px;
+  //     // display: block;
+  //   }
 }
 
 .glitch:hover {
@@ -377,11 +382,12 @@ a {
   display: flex;
   border-radius: 0 20px;
   margin-left: 20px;
+  margin-top: 40px;
   // background-color: #636363;
   z-index: 5;
   // padding:;
   width: 90%;
-  height: 70%;
+  height: 85vh;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   // top: 35%;
   // left: 70px;
@@ -519,7 +525,7 @@ a {
   bottom: -3px;
   right: -2px;
   width: 40px;
-  height: calc(65% + 40px);
+  height: calc(65% + 25px);
   border: 2px solid $frame-color;
   border-radius: 5px 0 0 0;
   z-index: 10;
@@ -531,7 +537,7 @@ a {
 }
 
 .slick-vertical .slick-slide {
-  height: calc(70vh + 2px) !important;
+  height: calc(85vh + 2px) !important;
   width: 100%;
 }
 

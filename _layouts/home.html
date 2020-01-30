@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign buttonColor = "7AA095" %}
+{% assign buttonColor = "61E294" %}
 
 <div id="home-wrapper">
   <a href="{{ site.baseurl }}" class="home-title"><h1 class="glitch" data-text="EVAN SAVAGE">EVAN SAVAGE</h1></a>
@@ -15,16 +15,19 @@ layout: default
         {% for card in cards %}
           {% include card.html %}
         {% endfor %}
+
         <span class="button-box"></span>
         <span class="scanlines"></span>
+
       </div>
+      {% include social_links.html %}
     </div>
     <div class="top-border">
     </div>
-    <div class="main-bottom">
+    <!-- <div class="main-bottom">
       <div class="bottom-border"></div>
-      {% include social_links.html %}
-    </div>
+
+    </div> -->
   </div>
   <div class="music-content-wrapper">
     <div class="music-content">
