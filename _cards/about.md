@@ -4,8 +4,9 @@ background-color: 4e4e4e22
 carousel: 1
 overlay-color: ECC8AE
 background-image: personal_pic.jpg
-content-bg-color: fff3
-opacity: 0.25
+# content-bg-color: fff3
+content-width: calc(85% - 60px)
+opacity: 0.18
 ---
 
 Evan is a second-year masters student at McGill. He received his bachelors degree from Penn State in Computer Science with minors in Music Technology and Arts Entrepreneurship. During his undergraduate studies, he played trombone for five seasons with the Penn State Marching Blue Band, co-founded the university’s first arts entrepreneurship organization, and worked as a resident assistant for three years.

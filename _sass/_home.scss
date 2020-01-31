@@ -445,8 +445,9 @@ a {
   .home-content {
       // @include textGlitch("example-one", 10, #636363, inherit, #019B00, #04F700, 450, 115);
       font-family: 'Rubik';
-      color: #000;
+      color: $frame-color;
       margin-top: 0;
+      width: 100%;
       // font-size: 60px;
   }
 
@@ -543,19 +544,23 @@ a {
     font-family: 'Rubik';
     display: flex;
     flex-flow: column;
+    align-items: center;
+
     .card-content {
       // background-color: #fff3;
-      width: calc(100% - 90px);
+      // width: calc(55% - 90px);
+      color: $frame-color;
       min-height: calc(76%);
       margin-bottom: 20px;
       margin-top: 10px;
-      padding: 20px;
+      padding: 0 10px;
       border-radius: 5px;
-      font-size: 1em;
+      font-size: 1.18em;
       text-align: justify;
       flex: 1 1 auto;
+      transform: translateX(-20px);
       p {
-        margin: 0 0 20px 0;
+        margin: 0 0 25px 0;
       }
 
     }

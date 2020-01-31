@@ -6,7 +6,7 @@
     {% if card.background-image %}
       <img class="card-background" style="opacity: {{ card.opacity }};" src='{{ site.baseurl }}/assets/img/{{ card.background-image }}'/>
     {% endif %}
-    <div class="card-content" style="background-color: #{{ card.content-bg-color }};">
+    <div class="card-content" style="background-color: #{{ card.content-bg-color }}; width: {{ card.content-width }}">
       {{ card.content }}
     </div>
     <div class="spin-content {{ card.holder-class-2 }}"><p>{{ card.spin-content }}</p></div>
