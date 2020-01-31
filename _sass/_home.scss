@@ -50,7 +50,7 @@ a {
   // grid-template-columns: 144px 144px 144px 144px 144px 144px 144px 144px 144px 144px;
   // grid-template-rows: 79px 79px 79px 79px 79px 79px 79px 79px 79px 79px ;
   grid-template-columns: 432px calc(72% - 432px) auto;
-  grid-template-rows: 59px calc(45% - 79px) 26% calc(29%);
+  grid-template-rows: 59px calc(45% - 59px) 24% calc(31% - 20px);
   // flex-wrap: wrap;
   // position: relative;
   // justify-content: space-between;
@@ -355,10 +355,15 @@ a {
 
 .social-links {
   margin: 0;
-  padding: 24px 0px;
+  // padding: 24px 0px;
+  width: 43px;
+  height: calc(35% - 25px);
+  // background-color: #5933;
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   // padding: 16px 9px 11px 15px;
   // border-top: 2px solid $frame-color;
   // border-left: 2px solid $frame-color;
@@ -371,7 +376,7 @@ a {
     bottom: 6px;
     right: calc(50vw - 134px/2);
     border-bottom: 0;
-    border-radius: 4px 4px 0 0;
+    // border-radius: 4px 4px 0 0;
   }
   @include breakpoint($sm) {
     // position: absolute;
@@ -380,16 +385,16 @@ a {
   }
   @media (min-height: 950px) {
     border-bottom: 2px solid #636363;
-    border-radius: 4px;
+    // border-radius: 4px;
   }
   a {
     text-decoration: none;
     fill: currentColor;
     color: $frame-color;
     transition: color 0.1s ease-in-out;
-    margin-right: 11px;
-    margin-left: 9px;
-    margin-bottom: 10px;
+    // margin-right: 11px;
+    // margin-left: 11px;
+    // margin-bottom: 10px;
   }
   a:hover {
     fill: currentColor;
@@ -412,7 +417,7 @@ a {
 }
 
 .glitch:hover {
-  @include textGlitch("example-one", 10, $title-color, #D8C1BB00, $button-color, $button-color, 450, 115);
+  @include textGlitch("example-one", 30, $title-color, #D8C1BB00, $button-color, $button-color, 450, 115);
 }
 
 .home-content-wrapper {
@@ -441,6 +446,7 @@ a {
       // @include textGlitch("example-one", 10, #636363, inherit, #019B00, #04F700, 450, 115);
       font-family: 'Rubik';
       color: #000;
+      margin-top: 0;
       // font-size: 60px;
   }
 
@@ -533,7 +539,26 @@ a {
   .inner-cell {
 
     margin: 30px 50px;
-    height: 100%;
+    height: 86%;
+    font-family: 'Rubik';
+    display: flex;
+    flex-flow: column;
+    .card-content {
+      // background-color: #fff3;
+      width: calc(100% - 90px);
+      min-height: calc(76%);
+      margin-bottom: 20px;
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      text-align: justify;
+      flex: 1 1 auto;
+      p {
+        margin: 0 0 20px 0;
+      }
+
+    }
   }
   .screen-overlay {
     position: absolute;
