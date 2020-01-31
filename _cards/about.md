@@ -13,4 +13,4 @@ Evan is a second-year masters student at McGill. He received his bachelors degre
 
 Evan is researching the application of generative adversarial networks to create synthetic 12th-century chant manuscripts from scratch, and see whether novel and existing automatic transciption operations will yield higher accuracy when trained on extentable fake data instead of finite real data. As more real manuscript data is gathered, Evan will also consider how the fake data will generalize to previously ‘unseen’ handwriting styles, backgrounds, and non-musical information.
 
-High-stepping away from the football field and onto the dance floor, Evan is now an avid music producer and DJ in his spare time, mainly focusing on techno, trance, and ambient textures in his compositions.
+High-stepping away from the football field and onto the dance floor, Evan is now an avid music producer and DJ under the alias *S4V4GE*, mainly focusing on techno, trance, and ambient textures in his compositions and performances.

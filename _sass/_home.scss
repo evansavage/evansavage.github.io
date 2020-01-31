@@ -357,7 +357,7 @@ a {
   margin: 0;
   // padding: 24px 0px;
   width: 43px;
-  height: calc(35% - 25px);
+  height: calc(40% - 25px);
   // background-color: #5933;
   position: absolute;
   display: flex;
@@ -392,6 +392,10 @@ a {
     fill: currentColor;
     color: $frame-color;
     transition: color 0.1s ease-in-out;
+    .mail-icon {
+      stroke-width: 20;
+      stroke: $frame-color;
+    }
     // margin-right: 11px;
     // margin-left: 11px;
     // margin-bottom: 10px;
@@ -400,6 +404,11 @@ a {
     fill: currentColor;
     color: $highlight-color;
     transition: color 0.1s ease-in-out;
+    .mail-icon {
+      fill: currentColor;
+      stroke: $highlight-color;
+      transition: stroke 0.1s ease-in-out;
+    }
   }
   // &::after {
   //     content: "";
@@ -417,7 +426,7 @@ a {
 }
 
 .glitch:hover {
-  @include textGlitch("example-one", 30, $title-color, #D8C1BB00, $button-color, $button-color, 450, 115);
+  @include textGlitch("example-one", 30, $title-color, #D8C1BB00, $button-color, #61E294, 450, 115);
 }
 
 .home-content-wrapper {
@@ -600,7 +609,7 @@ a {
   bottom: -3px;
   right: -2px;
   width: 40px;
-  height: calc(65% + 25px);
+  height: calc(60% + 25px);
   border: 2px solid $frame-color;
   border-radius: 5px 0 0 0;
   z-index: 10;
