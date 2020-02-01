@@ -7,7 +7,20 @@
       <img class="card-background" style="opacity: {{ card.opacity }};" src='{{ site.baseurl }}/assets/img/{{ card.background-image }}'/>
     {% endif %}
     {% if card.card-type == "music" %}
-
+      <div class="card-content music-container" style="background-color: #{{ card.content-bg-color }}; width: {{ card.content-width }}">
+        <div class="music-carousel">
+          {% for image in card.music-images %}
+            <div>
+              <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ image }}.png"/>
+              <h3>{{ image }}</h3>
+            </div>
+          {% endfor %}
+        </div>
+        <!-- {% for image in card.music-images %}
+          <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ image }}.png"/>
+          <h3>{{ image }}</h3>
+        {% endfor %} -->
+      </div>
     {% else %}
       <div class="card-content" style="background-color: #{{ card.content-bg-color }}; width: {{ card.content-width }}">
         {{ card.content }}

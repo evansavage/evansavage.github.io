@@ -14,14 +14,20 @@ $(document).ready(function(){
     vertical: true,
     dots: true,
     infinite: false,
-    autoplay: true,
-    autoplaySpeed: 12000,
+    initialSlide: 1,
+    // autoplay: true,
+    // autoplaySpeed: 12000,
     verticalSwiping: true,
     pauseOnHover: true,
     pauseOnFocus: false,
     slide: 'div',
     swipe: true,
     // draggable: true,
+  });
+  $('.music-carousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
   });
   // $('.second').slick({
   //   vertical: true,

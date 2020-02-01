@@ -559,14 +559,15 @@ a {
       // background-color: #fff3;
       // width: calc(55% - 90px);
       color: $frame-color;
-      min-height: calc(76%);
+      // min-height: calc(76%);
       margin-bottom: 20px;
       margin-top: 20px;
       padding: 0 10px;
-      border-radius: 5px;
+      // border-radius: 5px;
       font-size: 1.18em;
       text-align: justify;
-      flex: 1 1 auto;
+      // flex: 1 1 auto;
+      // border-left: 2px solid $frame-color;
       transform: translateX(-20px);
       p {
         margin: 0 0 25px 0;
@@ -745,3 +746,17 @@ a {
     opacity: 0.3;
     filter: alpha(opacity=30);
  }
+
+.music-container {
+  position: relative;
+  width: 100%;
+}
+
+.music-carousel {
+  width: 80%;
+  height: 40%;
+}
+
+.music-image {
+ width: 25%;
+}
