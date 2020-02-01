@@ -7,7 +7,7 @@
       <img class="card-background" style="opacity: {{ card.opacity }};" src='{{ site.baseurl }}/assets/img/{{ card.background-image }}'/>
     {% endif %}
     {% if card.card-type == "music" %}
-      <div class="card-content music-container" style="background-color: #{{ card.content-bg-color }}; width: {{ card.content-width }}">
+      <div class="music-container" style="background-color: #{{ card.content-bg-color }};">
         <div class="music-carousel">
           {% for image in card.music-images %}
             <div>

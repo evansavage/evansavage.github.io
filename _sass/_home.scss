@@ -6,12 +6,13 @@ html {
     overflow: hidden;
     height: 100%;
   }
+  overscroll-behavior-x: none;
 }
 
 body {
   background-color: $page-background-color;
   position: relative;
-
+  overscroll-behavior-x: none;
   justify-content: center;
   align-items: center;
   @include breakpoint($xs) {
@@ -457,6 +458,7 @@ a {
       color: $frame-color;
       margin-top: 0;
       width: 100%;
+      z-index: 5;
       // font-size: 60px;
   }
 
@@ -748,15 +750,20 @@ a {
  }
 
 .music-container {
-  position: relative;
+  position: absolute;
   width: 100%;
+  height: 100%;
+  top: 0;
 }
 
 .music-carousel {
-  width: 80%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
+  // z-index: 100;
+  // position: absolute;
 }
 
 .music-image {
- width: 25%;
+ width: 100%;
+ opacity: 0.4;
 }

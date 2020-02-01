@@ -27,7 +27,13 @@ $(document).ready(function(){
   $('.music-carousel').slick({
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    dots: true,
+    slidesToScroll: 1,
+    swipe: true,
+    slide: 'div',
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true
   });
   // $('.second').slick({
   //   vertical: true,
@@ -37,6 +43,25 @@ $(document).ready(function(){
   // });
   $('.first').on('wheel', (function(e) {
     var scroll = e.originalEvent.deltaY;
+    var scroll_log = Math.sqrt(Math.abs(scroll))
+    // console.log(scroll_log);
+    if (Math.abs(scroll_log) > compareVal && !isMoving) {
+      isMoving = true;
+      compareVal = 10
+      if (scroll < 0) {
+        $(this).slick('slickPrev');
+      } else {
+        $(this).slick('slickNext');
+      }
+      setTimeout(function() {
+        isMoving=false;
+        compareVal = 5.5
+      }, 800);
+    }
+
+  }));
+  $('.music-carousel').on('wheel', (function(e) {
+    var scroll = e.originalEvent.deltaX;
     var scroll_log = Math.sqrt(Math.abs(scroll))
     // console.log(scroll_log);
     if (Math.abs(scroll_log) > compareVal && !isMoving) {
