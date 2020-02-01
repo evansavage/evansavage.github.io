@@ -14,7 +14,7 @@ $(document).ready(function(){
     vertical: true,
     dots: true,
     infinite: false,
-    initialSlide: 1,
+    // initialSlide: 1,
     // autoplay: true,
     // autoplaySpeed: 12000,
     verticalSwiping: true,
