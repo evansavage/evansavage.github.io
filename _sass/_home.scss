@@ -48,13 +48,12 @@ a {
   margin: 20px;
   // margin-top: -20px;
   margin-top: 0;
-  // grid-template-columns: 144px 144px 144px 144px 144px 144px 144px 144px 144px 144px;
-  // grid-template-rows: 79px 79px 79px 79px 79px 79px 79px 79px 79px 79px ;
+
+
+  // NEED TO  UPDATE THESE
+
   grid-template-columns: 432px calc(72% - 432px) auto;
   grid-template-rows: 59px calc(45% - 59px) 24% calc(31% - 20px);
-  // flex-wrap: wrap;
-  // position: relative;
-  // justify-content: space-between;
 
   width: 100vw;
   max-width: 1800px;
