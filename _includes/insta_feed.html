@@ -1,19 +1,28 @@
 <script>
+  var screenWidth =  screen.width;
+  var screenHeight = screen.height;
+  console.log("Screen dimensions:" + screenHeight  + "*" + screenWidth);
+
+
   (function($){
       $(window).on('load', function(){
-          $.instagramFeed({
-              'username': '_s4v4ge',
-              'container': "#instagram-feed1",
-              'display_profile': false,
-              'display_biography': false,
-              'display_gallery': true,
-              'callback': null,
-              'styling': true,
-              'items': 4,
-              'items_per_row': 2,
-              'margin': 2,
-              // 'image_size': 150,
-          });
+          if (screenWidth > 1200) {
+            $.instagramFeed({
+                'username': '_s4v4ge',
+                'container': "#instagram-feed1",
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'callback': null,
+                'styling': true,
+                'items': 4,
+                'items_per_row': 2,
+                'margin': 2,
+                // 'image_size': 150,
+            });
+          }
+
+
       });
   })(jQuery);
 </script>
