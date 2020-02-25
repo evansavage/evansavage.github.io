@@ -12,5 +12,7 @@ music-images:
   - STASIS
 ---
 
+YEAH COME ON
+
 <!-- <img class="music-image" src="{{ site.baseurl }}/assets/img/Borealis.png"/>
 <img class="music-image" src="{{ site.baseurl }}/assets/img/Borealis.png"/> -->

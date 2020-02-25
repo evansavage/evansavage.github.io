@@ -9,10 +9,25 @@
     {% if card.card-type == "music" %}
       <div class="music-container" style="background-color: #{{ card.content-bg-color }};">
         <div class="music-carousel">
-          {% for image in card.music-images %}
+          {% for track in site.music_cards %}
             <div>
-              <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ image }}.png"/>
-              <h3>{{ image }}</h3>
+              <div class="music-text">
+                {{ track.content }}
+              </div>
+              <div class="music-image-container">
+                <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/>
+                <h3>{{ track.title }}</h3>
+              </div>
+            </div>
+            <div class="stage" style="width: 120px; height: 120px;">
+              <div class="cubespinner">
+                <div class="face1"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+                <div class="face2"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+                <div class="face3"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+                <div class="face4"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+                <div class="face5"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+                <div class="face6"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+              </div>
             </div>
           {% endfor %}
         </div>
