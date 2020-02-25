@@ -984,7 +984,8 @@ a {
   height: 100%;
   width: 0;
   position: fixed;
-
+  display: flex;
+  align-items: center;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -1004,7 +1005,7 @@ a {
   // top: 25%;
   width: 90%;
   // text-align: center;
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 
 .overlay a {
@@ -1055,7 +1056,7 @@ a {
     #instagram-feed2 {
       position: relative;
       width: 100%;
-      margin: 0 10px;
+      margin: 0 0 0 10px;
       // top: -5px;
     }
 
@@ -1068,7 +1069,7 @@ a {
       .playlist-player {
         margin-top: 5%;
         margin-bottom: 5%;
-
+        width: 94%;
       }
     }
   }
@@ -1081,6 +1082,7 @@ a {
       color: $side-column-text-color;
       writing-mode: vertical-rl;
       margin-right: 0px;
+      margin-left: 0px;
       letter-spacing: 2px;
       font-size: 2em;
       position: relative;
@@ -1090,7 +1092,7 @@ a {
           content: "";
           position: absolute;
           margin-top: 6px;
-          width: 12px;
+          width: 19px;
           height: 150%;
           border-left: 2px solid $side-column-text-color;
           line-height: 10px;
