@@ -10,21 +10,37 @@ html {
 }
 
 body {
-  background-color: $page-background-color;
+  // display: table;
   position: relative;
-  overscroll-behavior-x: none;
-  justify-content: center;
-  align-items: center;
-  @include breakpoint($xs) {
-    overflow: visible;
-    display: block;
-  }
-  @include breakpoint($md) {
-    // height: 100%;
-    overflow: auto;
+  height: 100%;
+  width: 100%;
+  .body-wrap {
+    background-color: $page-background-color;
     display: flex;
+
+    max-width: 1440px;
+    margin: auto;
+    overscroll-behavior-x: none;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($xs) {
+      overflow: visible;
+      display: block;
+    }
+    @include breakpoint($md) {
+      // height: 100%;
+      overflow: auto;
+      display: flex;
+    }
+    @include breakpoint($lg) {
+      height: auto;
+    }
+    @include breakpoint($xl) {
+      height: 100%;
+    }
   }
-  margin: 0;
+
+  // margin: 0;
 }
 
 a {
@@ -36,18 +52,25 @@ a {
   @include breakpoint($xs) {
     flex-direction: column;
     height: auto;
-    max-height: 2000px;
+    max-height: 900px;
   }
   @include breakpoint($md) {
     flex-direction: row;
     height: calc(100vh);
     // max-height: 950px;
   }
+
   display: grid;
   grid-auto-flow: column;
   margin: 20px;
   // margin-top: -20px;
   margin-top: 0;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%); /* IE 9 */
+  // -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
 
 
   // NEED TO  UPDATE THESE
@@ -796,6 +819,7 @@ a {
     // grid-template-columns: 175px 82px calc(72% - 432px) auto;
     grid-template-columns: auto 55%;
     grid-template-rows: 59px calc(45% - 59px) 24% calc(31% - 20px);
+    max-height: none;
     .home-title {
       grid-column: 1 / 3;
     }
