@@ -5,5 +5,5 @@ carousel: 1
 overlay-color: BCEBCB
 # background-image: pointy_building.jpg
 # content-width: calc(85% - 60px)
-image: ATTUNE
+image: ATTUNE.png
 ---
