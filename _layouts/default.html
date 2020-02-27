@@ -5,6 +5,40 @@
 
   {% include head.html %}
   <body class="site">
-    {{ content }}
+    <div class="body-wrap">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <div class="insta-content">
+            <h2 class="insta-title">INSTAGRAM</h2>
+            <div id="instagram-feed2"></div>
+          </div>
+          <div class="tracks-content">
+            <h2 class="tracks-title">TRACKS</h2>
+            <div class="tm">
+              <!-- <iframe class="playlist-player" width="100%" height="250" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/999232057&color=%23{{ buttonColor }}&inverse=true&auto_play=false&hide_related=true&show_comments=true&show_user=false&show_reposts=false&show_teaser=false"></iframe> -->
+              <iframe class="playlist-player" height="240" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/999232057&color=%23{{ buttonColor }}&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+          </div>
+          <div class="mixes-content">
+            <h2 class="mixes-title">MIXES</h2>
+            <div class="tm">
+              <iframe class="playlist-player" height="240" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/999231994&color=%23{{ buttonColor }}&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <!-- <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ content }}
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
   </body>
 </html>
