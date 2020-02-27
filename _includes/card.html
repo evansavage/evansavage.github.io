@@ -15,11 +15,13 @@
                 {{ track.content }}
               </div>
               <div class="music-image-container">
-                <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/>
+                <div class="music-image" >
+                  <a href="#"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png/"></a>
+                </div>
                 <h3>{{ track.title }}</h3>
               </div>
             </div>
-            <div class="stage" style="width: 120px; height: 120px;">
+            <!-- <div class="stage" style="width: 120px; height: 120px;">
               <div class="cubespinner">
                 <div class="face1"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
                 <div class="face2"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
@@ -28,7 +30,7 @@
                 <div class="face5"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
                 <div class="face6"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
               </div>
-            </div>
+            </div> -->
           {% endfor %}
         </div>
         <!-- {% for image in card.music-images %}

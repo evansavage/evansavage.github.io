@@ -19,7 +19,7 @@ $(document).ready(function(){
     autoplaySpeed: 12000,
     verticalSwiping: true,
     pauseOnHover: true,
-    pauseOnFocus: false,
+    pauseOnFocus: true,
     slide: 'div',
     swipe: true,
     // draggable: true,

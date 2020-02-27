@@ -5,3 +5,5 @@ carousel: 1
 overlay-color: C4B2BC
 background-image: habitat67.jpg
 ---
+
+Coming soon!
