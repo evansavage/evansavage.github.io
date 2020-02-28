@@ -7,6 +7,7 @@ html {
     // height: 100x%;
   }
   overscroll-behavior-x: none;
+  height: 100vh;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  margin-top: 0;
+  margin: 0;
   .body-wrap {
     background-color: $page-background-color;
     display: flex;
@@ -57,7 +58,7 @@ a {
   }
   @include breakpoint($md) {
     flex-direction: row;
-    height: calc(100vh);
+    height: 96%;
     // max-height: 950px;
   }
 
@@ -77,7 +78,7 @@ a {
   // NEED TO  UPDATE THESE
 
   grid-template-columns: 432px calc(72% - 432px) auto;
-  grid-template-rows: 59px calc(45% - 59px) 21% calc(34% - 20px);
+  grid-template-rows: 59px calc(45% - 59px) 21% calc(34%);
 
   width: calc(100vw - 40px);
   max-width: 1800px;
