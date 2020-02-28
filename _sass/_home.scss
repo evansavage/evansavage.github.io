@@ -189,7 +189,7 @@ a {
     }
   }
   .insta-content, .tracks-content, .mixes-content {
-    padding-top: 18px;
+    padding-top: 29px;
     // padding-right: 31px;
     overflow: hidden;
     h2 {
@@ -481,7 +481,7 @@ a {
   position: relative;
   display: flex;
   border-radius: 0 20px;
-  margin: 30px 20px 20px 20px;
+  margin: 30px 20px 15px 20px;
   // margin-left: 3%;
   // margin-top: 40px;
   // background-color: #636363;
@@ -713,7 +713,7 @@ a {
     padding-right: 20px;
     font-size: 1.7em;
     margin-top: -150px;
-    margin-left: 350px;
+    margin-left: 310px;
     position:  absolute;
   }
   // opacity: 0.4;
@@ -839,7 +839,7 @@ a {
 	transition: transform 0.8s;
 }
 .hover-zone:hover + .music-image a {
-  transform: rotateX(70deg) translateX(50px);
+  transform: rotateX(70deg) translateX(30px);
 }
 .music-image a {
   .bottom-width {

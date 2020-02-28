@@ -70,9 +70,13 @@ $('.music-image-container').children().each(function() {
     $('.music-image .music-title').hide();
 
     $('.hover-zone').hover(function() {
-        $(this).next().find('.music-title').fadeIn(800);
+        if (!$(this).hasClass('hover-selected')) {
+            $(this).next().find('.music-title').fadeIn(800);
+        }
     }, function () {
-        $(this).next().find('.music-title').fadeOut(400);
+        if (!$(this).hasClass('hover-selected')) {
+            $(this).next().find('.music-title').fadeOut(400);
+        }
     });
 })(jQuery);
 
@@ -82,15 +86,21 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
 
 (function($) {
     $('.hover-zone').on("click", function() {
+
+        $(this).next().find('.music-title').fadeOut(100);
         $(".card-link.selected-card").css({
             transform:  'rotateX(70deg)',
             transitionDuration: 400 + 'ms',
         });
         var negImageTranslateY = $(this).next('.music-image').position().top;
         console.log("Abs pos: " + negImageTranslateY);
+        $(this).parent().siblings().find('.hover-zone').removeClass("hover-selected");
         $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
         // $(this).parent().siblings().find('.music-image').find('.card-link')
+
+        $(this).addClass("hover-selected");
         $(this).next().find('.card-link').addClass("selected-card");
+
         $(".selected-card").css({
             transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
             transitionDuration: 800 + 'ms',
