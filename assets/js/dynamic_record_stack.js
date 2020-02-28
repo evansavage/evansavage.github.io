@@ -72,11 +72,11 @@ $('.music-image-container').children().each(function() {
 
     $('.hover-zone').hover(function() {
         if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeIn(800);
+            $(this).next().find('.music-title').fadeIn(400);
         }
     }, function () {
         if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeOut(400);
+            $(this).next().find('.music-title').fadeOut(150);
         }
     });
 })(jQuery);
