@@ -76,17 +76,23 @@ $('.music-image-container').children().each(function() {
     });
 })(jQuery);
 
+var musicContainerPos = $('.music-image-container').offset().top - $( window ).height();
+
+// console.log("Top pos: " + musicContainerPos);
+
 (function($) {
     $('.hover-zone').on("click", function() {
         $(".card-link.selected-card").css({
-            transform:  'rotateX(70deg) translateX(0px)',
+            transform:  'rotateX(70deg)',
             transitionDuration: 400 + 'ms',
         });
+        var negImageTranslateY = $(this).next('.music-image').position().top;
+        console.log("Abs pos: " + negImageTranslateY);
         $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
         // $(this).parent().siblings().find('.music-image').find('.card-link')
         $(this).next().find('.card-link').addClass("selected-card");
         $(".selected-card").css({
-            transform: 'translateX(500px)',
+            transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
             transitionDuration: 800 + 'ms',
         });
     });
