@@ -8,3 +8,5 @@ overlay-color: BCEBCB
 image: STASIS.jpg
 order: 1
 ---
+
+Evangelis up in here. To be featured on the probable "Aggressive Spa Music 2051" EP coming next year.

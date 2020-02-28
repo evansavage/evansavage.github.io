@@ -8,3 +8,5 @@ overlay-color: BCEBCB
 image: ATTUNE.png
 order: 3
 ---
+
+A mix featuring more industrial and ravey sounds, I offset light-hearted euphorics with darker atmospheric tonalities.
