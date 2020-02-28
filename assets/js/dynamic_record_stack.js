@@ -74,18 +74,20 @@ $('.music-image-container').children().each(function() {
     }, function () {
         $(this).next().find('.music-title').fadeOut(400);
     });
+})(jQuery);
 
-    // $('.music-image').mouseout(function() {
-    //     $(this).find('.music-title').fadeOut();
-    // });
-    //
-    // $('ol.sub-menu').mouseover(function() {
-    //     $(this).find('ol.sub-sub-menu').show();
-    //     $(this).children().children('.li_options').show();
-    // }).mouseout(function() {
-    //     $(this).find('ol.sub-sub-menu').hide();
-    //     $(this).children().children('.li_options').hide();
-    // });
-
-
+(function($) {
+    $('.hover-zone').on("click", function() {
+        $(".card-link.selected-card").css({
+            transform:  'rotateX(70deg) translateX(0px)',
+            transitionDuration: 400 + 'ms',
+        });
+        $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
+        // $(this).parent().siblings().find('.music-image').find('.card-link')
+        $(this).next().find('.card-link').addClass("selected-card");
+        $(".selected-card").css({
+            transform: 'translateX(500px)',
+            transitionDuration: 800 + 'ms',
+        });
+    });
 })(jQuery);

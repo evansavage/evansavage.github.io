@@ -669,116 +669,7 @@ a {
   position: relative;
 }
 
-.holder-image {
-  width: 25%;
-  border-radius: 15px;
-}
 
-.spin-content {
-  position: absolute;
-  top: calc(50% - 170px);
-  left: 26%;
-  font-size: 140px;
-}
-
-.spin-content {
-  animation-name: spin, depth;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  text-align: center;
-}
-@keyframes spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(-360deg); }
-}
-@keyframes depth {
-  0% { text-shadow: 0 0 black; }
-  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
-  50% { text-shadow: 0 0 black; }
-  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
-  100% { text-shadow: 0 0 black; }
-}
-
-.hold-1 {
-  position: absolute;
-  top: 25%;
-  left: 26.8%;
-  font-size: 60px;
-  font-family: 'Rubik';
-}
-
-.hold-2 {
-  position: absolute;
-  bottom: 25%;
-  left: 24%;
-  width: 50%;
-  font-size: 30px;
-  font-family: 'Rubik';
-  text-align: center;
-}
-
-.hold-2-2 {
-  top: 0% !important;
-}
-
-.scanlines {
-    // position: relative;
-    overflow: hidden; // only to animate the unique scanline
-    z-index: 1;
-    &:before,
-    &:after {
-        display: block;
-        pointer-events: none;
-        content: '';
-        position: absolute;
-    }
-
-    // unique scanline travelling on the screen
-    &:before {
-        position: absolute;
-        top: 0;
-        // bottom: 100%;
-        width: 100%;
-        height: $scan-width * 1;
-        z-index: $scan-z-index + 1;
-        background: $scan-color;
-        opacity: $scan-opacity;
-        // animation: scanline 6s linear infinite;
-        @include scan-moving($scan-moving-line);
-    }
-
-    // the scanlines, so!
-    &:after {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: $scan-z-index;
-        background: linear-gradient(
-            to bottom,
-            transparent 50%,
-            $scan-color 51%
-        );
-        background-size: 100% $scan-width*2;
-        @include scan-crt($scan-crt);
-    }
-}
-
-/* ANIMATE UNIQUE SCANLINE */
- @keyframes scanline {
-     0% {
-         transform: translate3d(0,200000%,0);
-         // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
-     }
- }
-
- @keyframes scanlines {
-     0% {
-         background-position: 0 30%;
-         // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
-     }
- }
 
  .card-background {
     position:absolute;
@@ -820,7 +711,7 @@ a {
     padding-right: 20px;
     font-size: 1.7em;
     margin-top: -150px;
-    margin-left: 400px;
+    margin-left: 350px;
     position:  absolute;
   }
   // opacity: 0.4;
@@ -913,22 +804,7 @@ a {
   }
 }
 
-.music-image {
-
-  // img {
-  //   width: 100%;
-  //   height: 100%;
-  // }
-  // -webkit-animation:spin 9s linear infinite;
-  // -moz-animation:spin 9s linear infinite;
-  // animation:spin 9s linear infinite;
-}
-
-
-
-// @-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
-// @-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
-// @keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform: rotateX(-360deg) rotateY(360deg); } }
+// MUSIC CARDS
 
 .music-image {
   position: absolute;
@@ -962,7 +838,7 @@ a {
 	transition: transform 0.8s;
 }
 .hover-zone:hover + .music-image a {
-  transform: rotateX(70deg) translateX(100px);
+  transform: rotateX(70deg) translateX(50px);
 }
 .music-image a {
   .bottom-width {
@@ -988,6 +864,10 @@ a {
     transform-origin: bottom;
     margin-left: - $music-image-width / 2;
   }
+}
+
+.selected-card {
+    transform: rotateX(10deg) translateX(300px);
 }
 
 .overlay {
@@ -1129,3 +1009,116 @@ a {
     }
   }
 }
+
+// HOLDER CONTENTOF OLD STUFF
+
+// .holder-image {
+//   width: 25%;
+//   border-radius: 15px;
+// }
+//
+// .spin-content {
+//   position: absolute;
+//   top: calc(50% - 170px);
+//   left: 26%;
+//   font-size: 140px;
+// }
+//
+// .spin-content {
+//   animation-name: spin, depth;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+//   animation-duration: 3s;
+//   text-align: center;
+// }
+// @keyframes spin {
+//   from { transform: rotateY(0deg); }
+//   to { transform: rotateY(-360deg); }
+// }
+// @keyframes depth {
+//   0% { text-shadow: 0 0 black; }
+//   25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+//   50% { text-shadow: 0 0 black; }
+//   75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+//   100% { text-shadow: 0 0 black; }
+// }
+//
+// .hold-1 {
+//   position: absolute;
+//   top: 25%;
+//   left: 26.8%;
+//   font-size: 60px;
+//   font-family: 'Rubik';
+// }
+//
+// .hold-2 {
+//   position: absolute;
+//   bottom: 25%;
+//   left: 24%;
+//   width: 50%;
+//   font-size: 30px;
+//   font-family: 'Rubik';
+//   text-align: center;
+// }
+//
+// .hold-2-2 {
+//   top: 0% !important;
+// }
+//
+// .scanlines {
+//     // position: relative;
+//     overflow: hidden; // only to animate the unique scanline
+//     z-index: 1;
+//     &:before,
+//     &:after {
+//         display: block;
+//         pointer-events: none;
+//         content: '';
+//         position: absolute;
+//     }
+//
+//     // unique scanline travelling on the screen
+//     &:before {
+//         position: absolute;
+//         top: 0;
+//         // bottom: 100%;
+//         width: 100%;
+//         height: $scan-width * 1;
+//         z-index: $scan-z-index + 1;
+//         background: $scan-color;
+//         opacity: $scan-opacity;
+//         // animation: scanline 6s linear infinite;
+//         @include scan-moving($scan-moving-line);
+//     }
+//
+//     // the scanlines, so!
+//     &:after {
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         z-index: $scan-z-index;
+//         background: linear-gradient(
+//             to bottom,
+//             transparent 50%,
+//             $scan-color 51%
+//         );
+//         background-size: 100% $scan-width*2;
+//         @include scan-crt($scan-crt);
+//     }
+// }
+//
+// /* ANIMATE UNIQUE SCANLINE */
+//  @keyframes scanline {
+//      0% {
+//          transform: translate3d(0,200000%,0);
+//          // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+//      }
+//  }
+//
+//  @keyframes scanlines {
+//      0% {
+//          background-position: 0 30%;
+//          // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+//      }
+//  }
