@@ -44,7 +44,7 @@ var j = 400;
 let boxTop = 84
 const container_height = $('.music-image-container').height();
 console.log(container_height);
-var vert_offset = container_height / img_range / 1.7;
+var vert_offset = container_height / img_range / 1.5;
 let top_coord = 0;
 console.log(vert_offset, top_coord);
 

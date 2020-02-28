@@ -24,7 +24,8 @@
           {% endfor %}
         </div> -->
         <div class="music-image-container">
-          {% for track in site.music_cards %}
+          {% assign tracks = site.music_cards | sort: 'order' %}
+          {% for track in tracks %}
             <div class="music-image-wrapper">
               <div class="music-image" >
                 <a>

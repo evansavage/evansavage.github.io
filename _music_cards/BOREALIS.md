@@ -6,4 +6,5 @@ overlay-color: BCEBCB
 # background-image: pointy_building.jpg
 # content-width: calc(85% - 60px)
 image: BOREALIS_50.jpg
+order: 4
 ---
