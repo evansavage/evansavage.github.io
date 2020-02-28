@@ -31,6 +31,8 @@
       </div>
       {{ content }}
     </div>
+    {% include js_scripts.html %}
+    {% include insta_feed.html %}
     <script>
       function openNav() {
         document.getElementById("myNav").style.width = "100%";
@@ -40,5 +42,6 @@
         document.getElementById("myNav").style.width = "0%";
       }
     </script>
+
   </body>
 </html>

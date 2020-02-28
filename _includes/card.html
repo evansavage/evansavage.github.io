@@ -8,7 +8,7 @@
     {% endif %}
     {% if card.card-type == "music" %}
       <div class="music-container" style="background-color: #{{ card.content-bg-color }};">
-        <div class="music-carousel">
+        <!-- <div class="music-carousel">
           {% for track in site.music_cards %}
             <div>
               <div class="music-text">
@@ -21,16 +21,21 @@
                 <h3>{{ track.title }}</h3>
               </div>
             </div>
-            <!-- <div class="stage" style="width: 120px; height: 120px;">
-              <div class="cubespinner">
-                <div class="face1"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
-                <div class="face2"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
-                <div class="face3"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
-                <div class="face4"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
-                <div class="face5"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
-                <div class="face6"><img src="{{ site.baseurl }}/assets/img/{{ track.image }}.png"/></div>
+          {% endfor %}
+        </div> -->
+        <div class="music-image-container">
+          {% for track in site.music_cards %}
+            <div class="music-image-wrapper">
+              <div class="music-image" >
+                <a>
+                  <img class="image-avg-target" src="{{ site.url }}/assets/img/{{ track.image }}">
+                  <div class="bottom-width"></div>
+                  <div class="left-width"></div>
+                </a>
+                <h3 class="music-title">{{ track.title }}</h3>
               </div>
-            </div> -->
+          </div>
+            <!-- <h3>{{ track.title }}</h3> -->
           {% endfor %}
         </div>
         <!-- {% for image in card.music-images %}
@@ -44,7 +49,7 @@
       </div>
     {% endif %}
 
-    <div class="spin-content {{ card.holder-class-2 }}"><p>{{ card.spin-content }}</p></div>
+    <!-- <div class="spin-content {{ card.holder-class-2 }}"><p>{{ card.spin-content }}</p></div> -->
     <!-- <div class="{{ card.holder-class }}">{{ card.holder-content }}</div> -->
     <!-- <button class="slide-btn">Open overlay</button> -->
     <!-- <button class="slide-btn-2">Button</button> -->
