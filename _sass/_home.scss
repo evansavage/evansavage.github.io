@@ -4,7 +4,7 @@ html {
   }
   @include breakpoint($md) {
     overflow: hidden;
-    height: 100%;
+    // height: 100x%;
   }
   overscroll-behavior-x: none;
 }
@@ -14,6 +14,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  margin-top: 0;
   .body-wrap {
     background-color: $page-background-color;
     display: flex;
@@ -76,7 +77,7 @@ a {
   // NEED TO  UPDATE THESE
 
   grid-template-columns: 432px calc(72% - 432px) auto;
-  grid-template-rows: 59px calc(45% - 59px) 24% calc(31% - 20px);
+  grid-template-rows: 59px calc(45% - 59px) 21% calc(34% - 20px);
 
   width: calc(100vw - 40px);
   max-width: 1800px;
