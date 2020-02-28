@@ -68,6 +68,7 @@ $('.music-image-container').children().each(function() {
 
 (function($) {
     $('.music-image .music-title').hide();
+    $('.track-writeup-container').hide();
 
     $('.hover-zone').hover(function() {
         if (!$(this).hasClass('hover-selected')) {
@@ -94,12 +95,16 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         });
         var negImageTranslateY = $(this).next('.music-image').position().top;
         console.log("Abs pos: " + negImageTranslateY);
+
         $(this).parent().siblings().find('.hover-zone').removeClass("hover-selected");
         $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
+        $(this).parent().siblings().find('.track-writeup-container').fadeOut(200);
         // $(this).parent().siblings().find('.music-image').find('.card-link')
 
         $(this).addClass("hover-selected");
         $(this).next().find('.card-link').addClass("selected-card");
+
+        $(this).siblings('.track-writeup-container').fadeIn(800);
 
         $(".selected-card").css({
             transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
