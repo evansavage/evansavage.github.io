@@ -66,28 +66,15 @@ $('.music-image-container').children().each(function() {
     // console.log($(this));
 });
 
-(function($) {
-    $('.music-image .music-title').hide();
-    $('.track-writeup-container').hide();
-
-    $('.hover-zone').hover(function() {
-        if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeIn(400);
-        }
-    }, function () {
-        if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeOut(150);
-        }
-    });
-})(jQuery);
-
 var musicContainerPos = $('.music-image-container').offset().top - $( window ).height();
 
 // console.log("Top pos: " + musicContainerPos);
-
 (function($) {
     $('.hover-zone').on("click", function() {
-
+        var avgImage = $(this).next('.music-image').find('.card-link').find('.image-avg-target')[0];
+        var bkgdColor = colorGrabber.getColor(avgImage)['hex'];
+        var bkgdColorBrighter = pSBC(0.2, bkgdColor);
+        console.log("" + bkgdColor);
         $(this).next().find('.music-title').fadeOut(100);
         $(".card-link.selected-card").css({
             transform:  'rotateX(70deg)',
@@ -105,10 +92,42 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         $(this).next().find('.card-link').addClass("selected-card");
 
         $(this).siblings('.track-writeup-container').fadeIn(800);
+        $(this).parent().parent().parent().parent().parent().animate({
+          backgroundColor: "" + bkgdColorBrighter,
+        }, 400);
+
+        // .css('background-color', bkgdColor)
 
         $(".selected-card").css({
             transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
             transitionDuration: 800 + 'ms',
         });
+    });
+})(jQuery);
+
+(function($) {
+    $('.music-image .music-title').hide();
+    $('.track-writeup-container').hide();
+
+    $('.hover-zone').hover(function() {
+      // .hover-zone:hover + .music-image .card-link {
+      //   transform: rotateX(70deg) translateX(30px);
+      // }
+
+        if (!$(this).hasClass('hover-selected')) {
+            $(this).next().find('.music-title').fadeIn(400);
+            $(this).next().find('.card-link').css({
+              transform: 'rotateX(70deg) translateX(30px)',
+              transitionDuration: 500 + 'ms',
+            });
+        }
+    }, function () {
+        if (!$(this).hasClass('hover-selected')) {
+            $(this).next().find('.music-title').fadeOut(150);
+            $(this).next().find('.card-link').css({
+              transform: 'rotateX(70deg)',
+              transitionDuration: 500 + 'ms',
+            });
+        }
     });
 })(jQuery);

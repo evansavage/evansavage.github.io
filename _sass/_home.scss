@@ -828,7 +828,7 @@ a {
   z-index: 5;
 }
 
-.music-image a {
+.music-image .card-link {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -838,10 +838,10 @@ a {
 	transform: rotateX(70deg);
 	transition: transform 0.8s;
 }
-.hover-zone:hover + .music-image a {
-  transform: rotateX(70deg) translateX(30px);
-}
-.music-image a {
+// .hover-zone:hover + .music-image .card-link {
+//   transform: rotateX(70deg) translateX(30px);
+// }
+.music-image .card-link {
   .bottom-width {
     content: '';
     position: absolute;
