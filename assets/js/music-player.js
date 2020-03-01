@@ -1,5 +1,6 @@
 var el = document.getElementById('sc-iframe'),
 widget = SC.Widget(el);
+var listener = new window.keypress.Listener();
 
 window.addEventListener("load", pageFullyLoaded, false);
 
@@ -114,29 +115,43 @@ function pageFullyLoaded(e) {
           console.log(seekVar);
       });
 
-      $(window).keyup(function(e){
-
-          if((e.target == document.body) && (e.which === 32 || e.keyCode === 32)){
-              e.preventDefault();
-              if (toggleVar % 2 == 0) {
-                widget.play();
-                $('#toggle-play').toggleClass("play pause");
-              }
-              else if (toggleVar % 2 == 1) {
-                widget.pause();
-                $('#toggle-play').toggleClass("pause play");
-              }
-              toggleVar += 1;
-              toggleVar = toggleVar % 2;
-              // if ($('#toggle-play').hasClass('play')) {
-              //     widget.play();
-              //     $('#toggle-play').toggleClass("play pause");
-              // }
-              // else {
-              //     widget.pause();
-              //     $('#toggle-play').toggleClass("pause play");
-              //     // document.getElementById('toggle-play').className = "toggle-play play";
-              // }
-          }
+      listener.simple_combo("space", function(e) {
+        e.preventDefault();
+        if (toggleVar % 2 == 0) {
+          widget.play();
+          $('#toggle-play').toggleClass("play pause");
+        }
+        else if (toggleVar % 2 == 1) {
+          widget.pause();
+          $('#toggle-play').toggleClass("pause play");
+        }
+        toggleVar += 1;
+        toggleVar = toggleVar % 2;
       });
+
+      // $(window).keyup(function(e){
+      //
+      //     if((e.target == document.body) && (e.which === 32 || e.keyCode === 32)){
+      //         e.preventDefault();
+      //         if (toggleVar % 2 == 0) {
+      //           widget.play();
+      //           $('#toggle-play').toggleClass("play pause");
+      //         }
+      //         else if (toggleVar % 2 == 1) {
+      //           widget.pause();
+      //           $('#toggle-play').toggleClass("pause play");
+      //         }
+      //         toggleVar += 1;
+      //         toggleVar = toggleVar % 2;
+      //         // if ($('#toggle-play').hasClass('play')) {
+      //         //     widget.play();
+      //         //     $('#toggle-play').toggleClass("play pause");
+      //         // }
+      //         // else {
+      //         //     widget.pause();
+      //         //     $('#toggle-play').toggleClass("pause play");
+      //         //     // document.getElementById('toggle-play').className = "toggle-play play";
+      //         // }
+      //     }
+      // });
 		}
