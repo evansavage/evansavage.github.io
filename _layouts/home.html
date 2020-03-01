@@ -40,20 +40,64 @@ layout: default
   <div class="tracks-content">
     <h2 class="tracks-title">TRACKS</h2>
     <div class="tm">
-      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/712993093&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
-      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+      <!-- <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/712993093&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
+      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe> -->
+      <div class="iframe-container">
+    		<!-- <iframe width="400" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270485931&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false" id="sc-iframe"></iframe> -->
+        <iframe id="sc-iframe" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/s4v4ge1/sets/web&auto_play=false&buying=true&liking=true&download=true&sharing=true&show_artwork=true&show_comments=true&show_playcount=true&show_user=true&hide_related=false&visual=true&start_track=0&callback=true"></iframe>
+    	</div>
+      <div id="sc-photo-container">
+        {% assign tracks = site.music_cards | sort: 'order' %}
+        {% for track in tracks %}
+          <div class="music-player-cover">
+            <img src="{{ site.baseurl }}/assets/img/{{ track.image }}"/>
+            <h3>{{ track.title }}</h3>
+          </div>
+        {% endfor %}
+      </div>
+    	<div class="progress-bar">
+    		<div id="total">00:00</div>
+    		<input type="range" min="0" max="100" step="0.1" value="0" id="progress">
+    		<div id="position">00:00</div>
+        <div id="sc-prev">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"
+          	 viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+            <g>
+            	<g>
+            		<path d="M239.081,245.333L466.217,18.219c3.051-3.051,3.968-7.637,2.304-11.627C466.857,2.603,462.974,0,458.665,0h-192
+            			c-2.837,0-5.547,1.131-7.552,3.115L24.446,237.781c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667
+            			c2.005,2.005,4.715,3.136,7.552,3.136h192c4.309,0,8.213-2.603,9.856-6.592c1.643-3.989,0.725-8.576-2.304-11.627L239.081,245.333
+            			z"/>
+            	</g>
+            </g>
+          </svg>
+        </div>
+        <div class="toggle-play play" id="toggle-play"></div>
+        <div id="sc-next">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"
+            	 viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+            <g>
+            	<g>
+            		<path d="M466.201,237.781L231.534,3.115C229.55,1.131,226.841,0,224.003,0h-192c-4.309,0-8.213,2.603-9.856,6.592
+            			s-0.725,8.555,2.304,11.627l227.136,227.115L24.451,472.448c-3.051,3.051-3.968,7.637-2.304,11.627
+            			c1.664,3.989,5.547,6.592,9.856,6.592h192c2.837,0,5.547-1.131,7.552-3.115l234.667-234.667
+            			C470.382,248.704,470.382,241.963,466.201,237.781z"/>
+            	</g>
+            </g>
+          </svg>
+        </div>
+    	</div>
     </div>
   </div>
-  <div class="mixes-content">
+  <!-- <div class="mixes-content">
     <h2 class="mixes-title">MIXES</h2>
     <div class="tm">
       <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/760007977&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
       <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741365293&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
       <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/763853764&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
       <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693009370&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
-      <!-- <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650354081&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe> -->
     </div>
-  </div>
+  </div> -->
   <!-- <div class="music-content-wrapper">
     <div class="music-content">
 

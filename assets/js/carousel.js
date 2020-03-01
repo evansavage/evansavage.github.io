@@ -35,6 +35,19 @@ $(document).ready(function(){
     touchMove: true,
     draggable: true
   });
+  $('#sc-photo-container').slick({
+    infinite: true,
+    slidesToShow: 1,
+    // dots: true,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: false,
+    swipe: false,
+    // slide: 'div',
+    swipeToSlide: false,
+    touchMove: false,
+    draggable: false,
+  });
   // $('.second').slick({
   //   vertical: true,
   //   dots: true,
