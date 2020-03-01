@@ -25,6 +25,7 @@ const pSBC=(p,c0,c1,l)=>{
 }
 
 const colorGrabber = new FastAverageColor()
+
 $('.image-avg-target').each(function() {
     var myColor = colorGrabber.getColor($(this)['context']);
     var myColorDarker = pSBC(-0.4, myColor['hex']);
@@ -35,7 +36,7 @@ $('.image-avg-target').each(function() {
     $(this).next().css('border', "1px solid " + myBorderDarker);
     $(this).next().next().css('background', myColorDarker);
     $(this).next().next().css('border', "1px solid " + myBorderDarker);
-    $(this).parent().next().css('color', myBorderDarker);
+    // $(this).parent().next().css('color', myBorderDarker);
 });
 
 const img_range = $('.music-image-container').children().length;
