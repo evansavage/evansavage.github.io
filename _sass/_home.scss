@@ -79,7 +79,7 @@ a {
 
   grid-template-columns: 432px calc(72% - 432px) auto;
   // grid-template-rows: 59px calc(47% - 59px) 20% calc(33%);
-  grid-template-rows: 59px calc(47% - 59px) 53%;
+  grid-template-rows: 59px calc(53% - 59px) calc(47%);
 
   width: calc(100vw - 40px);
   max-width: 1800px;
@@ -235,7 +235,7 @@ a {
   .insta-content {
     display: flex;
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-row: 3;
     padding-top: 25px;
     // margin-bottom: 10px;
 
@@ -260,7 +260,7 @@ a {
   }
   .tracks-content {
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 1 / 3;
     overflow: hidden;
   }
   .mixes-content {
