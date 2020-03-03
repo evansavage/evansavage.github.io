@@ -22,7 +22,7 @@ $(document).ready(function(){
     pauseOnFocus: true,
     slide: 'div',
     swipe: true,
-    // draggable: true,
+    draggable: false,
   });
   $('.music-carousel').slick({
     infinite: true,
