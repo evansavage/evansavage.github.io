@@ -24,30 +24,39 @@ const pSBC=(p,c0,c1,l)=>{
     else return"#"+(4294967296+r*16777216+g*65536+b*256+(f?m(a*255):0)).toString(16).slice(1,f?undefined:-2)
 }
 
-const colorGrabber = new FastAverageColor()
+const colorGrabber = new FastAverageColor();
+var bkgdPlayerColors = [];
+var titlePlayerColors = [];
+var musicCount = 0;
+var brightnessPerc = 0.35;
 
 $('.image-avg-target').each(function() {
     var myColor = colorGrabber.getColor($(this)['context']);
     var myColorDarker = pSBC(-0.4, myColor['hex']);
     var myBorderDarker = pSBC(-0.6, myColor['hex']);
-    console.log(myColorDarker);
+    // console.log(myColorDarker);
     // console.log(myColor['hex'])
     $(this).next().css('background', myColorDarker);
     $(this).next().css('border', "1px solid " + myBorderDarker);
     $(this).next().next().css('background', myColorDarker);
     $(this).next().next().css('border', "1px solid " + myBorderDarker);
     // $(this).parent().next().css('color', myBorderDarker);
+    bkgdPlayerColors.push(pSBC(brightnessPerc, myColor['hex']));
+    titlePlayerColors.push(myBorderDarker);
+    musicCount += 1;
 });
+
+console.log(titlePlayerColors);
 
 const img_range = $('.music-image-container').children().length;
 var i = 100;
 var j = 400;
 let boxTop = 84
 const container_height = $('.music-image-container').height();
-console.log(container_height);
+// console.log(container_height);
 var vert_offset = container_height / img_range / 1.5;
 let top_coord = 0;
-console.log(vert_offset, top_coord);
+// console.log(vert_offset, top_coord);
 
 $('.music-image-container').children().each(function() {
     let img_object = $(this).find('.music-image');
@@ -55,7 +64,7 @@ $('.music-image-container').children().each(function() {
     hover_div.classList.add("hover-zone")
     img_object.parent().prepend(hover_div);
     // coord = top;
-    console.log(top_coord + 'px');
+    // console.log(top_coord + 'px');
     img_object.css('top', top_coord + 'px');
     img_object.css('z-index', i);
     hover_div.style.top = top_coord + boxTop + 'px';
@@ -74,15 +83,15 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
     $('.hover-zone').on("click", function() {
         var avgImage = $(this).next('.music-image').find('.card-link').find('.image-avg-target')[0];
         var bkgdColor = colorGrabber.getColor(avgImage)['hex'];
-        var bkgdColorBrighter = pSBC(0.2, bkgdColor);
-        console.log("" + bkgdColor);
+        var bkgdColorBrighter = pSBC(brightnessPerc, bkgdColor);
+        // console.log("" + bkgdColor);
         $(this).next().find('.music-title').fadeOut(100);
         $(".card-link.selected-card").css({
             transform:  'rotateX(70deg)',
             transitionDuration: 400 + 'ms',
         });
         var negImageTranslateY = $(this).next('.music-image').position().top;
-        console.log("Abs pos: " + negImageTranslateY);
+        // console.log("Abs pos: " + negImageTranslateY);
 
         $(this).parent().siblings().find('.hover-zone').removeClass("hover-selected");
         $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
@@ -131,4 +140,37 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
             });
         }
     });
-})(jQuery);
+    var playerPos = 0;
+
+    $('.tm, #progress').css('backgroundColor', bkgdPlayerColors[0]);
+    $('.tm .slick-slide').find('h3').css('color', titlePlayerColors[0]);
+    // $('#progress').css('backgroundColor', bkgdPlayerColors[0]);
+
+    $('#sc-prev').on('click', function() {
+        if (playerPos <= 0) {
+          playerPos = musicCount - 1;
+        } else {
+          playerPos -= 1;
+        }
+        $('.tm, #progress').animate({
+          backgroundColor: bkgdPlayerColors[playerPos]
+        }, 400);
+        $('.tm .slick-slide').find('h3').animate({
+          color: titlePlayerColors[playerPos]
+        }, 400);
+    });
+    $('#sc-next').on('click', function() {
+        if (playerPos >= musicCount - 1) {
+          playerPos = 0;
+        } else {
+          playerPos += 1;
+        }
+        $('.tm, #progress').animate({
+          backgroundColor: bkgdPlayerColors[playerPos]
+        }, 400);
+        $('.tm .slick-slide').find('h3').animate({
+          color: titlePlayerColors[playerPos]
+        }, 400);
+    });
+
+}) (jQuery);
