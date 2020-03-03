@@ -96,3 +96,20 @@ $scan-opacity: 0.15;
     }
     @else { animation: none; }
 }
+
+// Recoloring the damned input range object
+
+@mixin track() {
+	// box-sizing: border-box;
+	// border: none;
+	// width: $track-w; height: $track-h;
+	background: var(--fading, currentcolor);
+}
+
+@mixin thumb() {
+	// box-sizing: border-box;
+	// border: none;
+	// width: $thumb-d; height: $thumb-d;
+	// border-radius: 50%;
+	background: var(--impact, currentcolor);
+}

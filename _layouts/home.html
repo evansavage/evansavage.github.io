@@ -55,38 +55,55 @@ layout: default
           </div>
         {% endfor %}
       </div>
+      <div class="nav-underlay"></div>
     	<div class="progress-bar">
     		<div id="total">00:00</div>
     		<input type="range" min="0" max="100" step="0.1" value="0" id="progress">
     		<div id="position">00:00</div>
-        <div id="sc-prev">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"
-          	 viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
-            <g>
-            	<g>
-            		<path d="M239.081,245.333L466.217,18.219c3.051-3.051,3.968-7.637,2.304-11.627C466.857,2.603,462.974,0,458.665,0h-192
-            			c-2.837,0-5.547,1.131-7.552,3.115L24.446,237.781c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667
-            			c2.005,2.005,4.715,3.136,7.552,3.136h192c4.309,0,8.213-2.603,9.856-6.592c1.643-3.989,0.725-8.576-2.304-11.627L239.081,245.333
-            			z"/>
-            	</g>
-            </g>
-          </svg>
-        </div>
-        <div class="toggle-play play" id="toggle-play"></div>
-        <div id="sc-next">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"
-            	 viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
-            <g>
-            	<g>
-            		<path d="M466.201,237.781L231.534,3.115C229.55,1.131,226.841,0,224.003,0h-192c-4.309,0-8.213,2.603-9.856,6.592
-            			s-0.725,8.555,2.304,11.627l227.136,227.115L24.451,472.448c-3.051,3.051-3.968,7.637-2.304,11.627
-            			c1.664,3.989,5.547,6.592,9.856,6.592h192c2.837,0,5.547-1.131,7.552-3.115l234.667-234.667
-            			C470.382,248.704,470.382,241.963,466.201,237.781z"/>
-            	</g>
-            </g>
-          </svg>
-        </div>
+
     	</div>
+      <div id="music-control-wrapper">
+        <div id="sc-prev">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"
+             viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M239.081,245.333L466.217,18.219c3.051-3.051,3.968-7.637,2.304-11.627C466.857,2.603,462.974,0,458.665,0h-192
+                  c-2.837,0-5.547,1.131-7.552,3.115L24.446,237.781c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667
+                  c2.005,2.005,4.715,3.136,7.552,3.136h192c4.309,0,8.213-2.603,9.856-6.592c1.643-3.989,0.725-8.576-2.304-11.627L239.081,245.333
+                  z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="toggle-play play" id="toggle-play">
+          <svg class="pause-svg" width="18px" height="18px"
+          	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+            <path d="M112,0H16C7.168,0,0,7.168,0,16v288c0,8.832,7.168,16,16,16h96c8.832,0,16-7.168,16-16V16C128,7.168,120.832,0,112,0z"/>
+            <path d="M304,0h-96c-8.832,0-16,7.168-16,16v288c0,8.832,7.168,16,16,16h96c8.832,0,16-7.168,16-16V16C320,7.168,312.832,0,304,0z"
+            	/>
+          </svg>
+          <svg class="play-svg" width="20px" height="20px"
+          	 viewBox="0 0 320.001 320.001" style="enable-background:new 0 0 320.001 320.001;" xml:space="preserve">
+            <path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288
+            	c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144
+            	c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+          </svg>
+        </div>
+        <div id="sc-next">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"
+               viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M466.201,237.781L231.534,3.115C229.55,1.131,226.841,0,224.003,0h-192c-4.309,0-8.213,2.603-9.856,6.592
+                  s-0.725,8.555,2.304,11.627l227.136,227.115L24.451,472.448c-3.051,3.051-3.968,7.637-2.304,11.627
+                  c1.664,3.989,5.547,6.592,9.856,6.592h192c2.837,0,5.547-1.131,7.552-3.115l234.667-234.667
+                  C470.382,248.704,470.382,241.963,466.201,237.781z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
   <!-- <div class="mixes-content">

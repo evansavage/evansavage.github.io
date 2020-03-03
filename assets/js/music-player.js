@@ -3,6 +3,9 @@ widget = SC.Widget(el);
 var listener = new window.keypress.Listener();
 
 window.addEventListener("load", pageFullyLoaded, false);
+$("#progress::-webkit-slider-runnable-track").css("background-color", "purple");
+
+
 
 
 function pageFullyLoaded(e) {
@@ -61,11 +64,13 @@ function pageFullyLoaded(e) {
       $('#toggle-play').on('click', function(){
         if (toggleVar % 2 == 0) {
           widget.play();
-          $('#toggle-play').toggleClass("play pause");
+          $('.pause-svg').css('display', 'block');
+					$('.play-svg').css('display', 'none');
         }
         else if (toggleVar % 2 == 1) {
           widget.pause();
-          $('#toggle-play').toggleClass("pause play");
+					$('.pause-svg').css('display', 'none');
+					$('.play-svg').css('display', 'block');
         }
         toggleVar += 1;
         toggleVar = toggleVar % 2;
@@ -119,11 +124,13 @@ function pageFullyLoaded(e) {
         e.preventDefault();
         if (toggleVar % 2 == 0) {
           widget.play();
-          $('#toggle-play').toggleClass("play pause");
+					$('.pause-svg').css('display', 'block');
+					$('.play-svg').css('display', 'none');
         }
         else if (toggleVar % 2 == 1) {
           widget.pause();
-          $('#toggle-play').toggleClass("pause play");
+					$('.pause-svg').css('display', 'none');
+					$('.play-svg').css('display', 'block');
         }
         toggleVar += 1;
         toggleVar = toggleVar % 2;
