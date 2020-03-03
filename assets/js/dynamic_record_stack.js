@@ -112,7 +112,7 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         if (screenWidth <= 600) {
           negImageTranslateY -= 50;
           $(".selected-card").css({
-              transform: 'translateX(270px) translateY(' + -1 * negImageTranslateY + 'px)',
+              transform: 'translateX(255px) translateY(' + -1 * negImageTranslateY + 'px)',
               transitionDuration: 800 + 'ms',
           });
         } else {
