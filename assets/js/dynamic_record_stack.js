@@ -29,6 +29,8 @@ var bkgdPlayerColors = [];
 var titlePlayerColors = [];
 var musicCount = 0;
 var brightnessPerc = 0.35;
+var screenWidth =  screen.width;
+var screenHeight = screen.height;
 
 $('.image-avg-target').each(function() {
     var myColor = colorGrabber.getColor($(this)['context']);
@@ -107,11 +109,18 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         }, 400);
 
         // .css('background-color', bkgdColor)
-
-        $(".selected-card").css({
-            transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
-            transitionDuration: 800 + 'ms',
-        });
+        if (screenWidth <= 600) {
+          negImageTranslateY -= 50;
+          $(".selected-card").css({
+              transform: 'translateX(270px) translateY(' + -1 * negImageTranslateY + 'px)',
+              transitionDuration: 800 + 'ms',
+          });
+        } else {
+          $(".selected-card").css({
+              transform: 'translateX(500px) translateY(' + -1 * negImageTranslateY + 'px)',
+              transitionDuration: 800 + 'ms',
+          });
+        }
     });
 })(jQuery);
 
@@ -125,7 +134,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
       // }
 
         if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeIn(400);
+            if (screenWidth > 600) {
+              $(this).next().find('.music-title').fadeIn(400);
+            }
             $(this).next().find('.card-link').css({
               transform: 'rotateX(70deg) translateX(30px)',
               transitionDuration: 500 + 'ms',
@@ -133,7 +144,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         }
     }, function () {
         if (!$(this).hasClass('hover-selected')) {
-            $(this).next().find('.music-title').fadeOut(150);
+            if (screenWidth > 600) {
+              $(this).next().find('.music-title').fadeOut(150);
+            }
             $(this).next().find('.card-link').css({
               transform: 'rotateX(70deg)',
               transitionDuration: 500 + 'ms',

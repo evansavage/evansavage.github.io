@@ -620,6 +620,7 @@ a {
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding-right: 44px;
 
     .card-content {
       // background-color: #fff3;
@@ -632,6 +633,7 @@ a {
       // border-radius: 5px;
       font-size: 1.15em;
       text-align: justify;
+      width: calc(85% - 60px);
       // flex: 1 1 auto;
       // border-left: 2px solid $frame-color;
       // transform: translateX(-20px);
@@ -688,7 +690,7 @@ a {
 }
 
 .slick-vertical .slick-slide {
-  height: calc(85vh + 2px) !important;
+  height: calc(85vh + 2px);
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -729,7 +731,7 @@ a {
   margin-top: 7.5%;
   margin-left: -50px;
   .music-image {
-    width: 300px;
+    // width: 300px;
   }
   .music-title {
     text-align: right;
@@ -747,104 +749,25 @@ a {
 
 }
 
-// IPAD MEDIA QUERIES
 
-
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-  .burger-menu {
-    display: block;
-  }
-  #home-wrapper{
-    // grid-template-columns: 175px 82px calc(72% - 432px) auto;
-    // grid-template-columns: auto auto auto;
-    grid-auto-rows: max-content;
-    grid-template-columns: 435px auto;
-    max-height: 98vh;
-    .home-title {
-      grid-column: 1 / 3;
-      font-size: 2.5em;
-    }
-    .main-content-wrapper {
-      grid-column: 1 / 3;
-      grid-row: 2 / 5;
-    }
-    .top {
-      grid-column: 2;
-      // width: 100%;
-      margin-top: 15px;
-      margin-right:  5px;
-      &:before {
-        margin-right: 20px;
-        margin-top: 0px;
-      }
-    }
-    .insta-content {
-      // padding-top: 0;
-      // grid-column: 1;
-      // grid-row: 4;
-      display: none;
-    }
-    .mixes-content {
-      // padding-top: 0;
-      // grid-column: 2 / 4;
-      // grid-row: 4;
-      display: none;
-      // .mixes-title {
-      //   margin-left: 5px;
-      // }
-    }
-    .tracks-content {
-      // padding-top: 0;
-      // grid-column: 4 / 5;
-      // grid-row: 4;
-      display: none;
-      // .tracks-title {
-      //   margin-left: 5px;
-      // }
-    }
-    .tm {
-      .sc-player {
-        width: 94%;
-      }
-    }
-    .inner-cell {
-      .card-content {
-        font-size: 0.9em;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
 
 // MUSIC CARDS
 
 .music-image {
   position: absolute;
-	width: $music-image-width;
+	@include music-image-width(0);
 	// height: $music-image-width;
 	// margin: -20px 60px;
 	perspective: 1000px;
   img {
-    width: $music-image-width;
+    @include music-image-width(0);
   }
 
 }
 .hover-zone {
   // position: relative;
   position: absolute;
-  width: $music-image-width;
+  @include music-image-width(0);
   height: 20%;
   top: 86px;
   // border: 1px solid black;
@@ -870,7 +793,7 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: $music-image-width - 2px;
+    @include music-image-width(2px);
     height: 10px;
     background: black;
    	transform: rotateX(90deg);
@@ -881,7 +804,7 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: $music-image-width - 2px;
+    @include music-image-width(2px);
     height: 10px;
     background: black;
    	transform: rotateZ(90deg) rotateX(90deg) translateX(-50%);
@@ -1424,4 +1347,204 @@ input[type=range] {
   left: calc(29%);
   // top: 52.3px;
   fill: $button-color;
+}
+
+// IPAD MEDIA QUERIES
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .burger-menu {
+    display: block;
+  }
+  #home-wrapper{
+    .slick-vertical .slick-slide {
+      height: 89vh;
+    }
+    // grid-template-columns: 175px 82px calc(72% - 432px) auto;
+    // grid-template-columns: auto auto auto;
+    grid-auto-rows: max-content;
+    grid-template-columns: 435px auto;
+    max-height: 98vh;
+    .home-title {
+      grid-column: 1 / 3;
+      font-size: 2.5em;
+    }
+    .main-content-wrapper {
+      grid-column: 1 / 3;
+      grid-row: 2 / 4;
+    }
+    .top {
+      grid-column: 2;
+      // width: 100%;
+      margin-top: 15px;
+      margin-right:  5px;
+      &:before {
+        margin-right: 20px;
+        margin-top: 0px;
+      }
+    }
+    .insta-content {
+      // padding-top: 0;
+      // grid-column: 1;
+      // grid-row: 4;
+      display: none;
+    }
+    .mixes-content {
+      // padding-top: 0;
+      // grid-column: 2 / 4;
+      // grid-row: 4;
+      display: none;
+      // .mixes-title {
+      //   margin-left: 5px;
+      // }
+    }
+    .tracks-content {
+      // padding-top: 0;
+      // grid-column: 4 / 5;
+      // grid-row: 4;
+      display: none;
+      // .tracks-title {
+      //   margin-left: 5px;
+      // }
+    }
+    .tm {
+      .sc-player {
+        width: 94%;
+      }
+    }
+    .inner-cell {
+      .card-content {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+// PHONE MEDIA QUERIES
+
+@media only screen and (max-width: 600px) {
+  body {
+    overscroll-behavior-y: none;
+  }
+  .inner-wrapper.first .slick-dots {
+    right: -48px;
+    li.slick-active button:before {
+      color: $title-color;
+    }
+    li button:before {
+      color: gray;
+    }
+  }
+  .first .slick-prev:before, .first .slick-next:before {
+    color: $title-color;
+  }
+
+  .slick-vertical .slick-slide {
+    height: 100vh;
+  }
+  .social-links {
+    bottom: 10px;
+    height: auto;
+    left: 0px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .music-image-container {
+    margin-left: -140px;
+    margin-top: 100px;
+  }
+  .music-image .card-link .left-width {
+    transform: rotateZ(90deg) rotateX(90deg) translateX(-50%) translateZ(25px);
+  }
+  .track-writeup-container {
+    top: 33%;
+    left: 280px;
+    width: 55%;
+  }
+  // .selected-card {
+  //     transform: rotateX(10deg) translateX(200px);
+  // }
+
+  #home-wrapper {
+    margin: 0;
+    grid-auto-rows: auto;
+    grid-template-columns: 100vw;
+    max-height: 100vh;
+    .top {
+      grid-row: 1;
+      grid-column: 1;
+      display: block;
+      // TEMPORARY
+      display: none;
+      .burger-menu {
+        display: block;
+      }
+    }
+    .home-title {
+      font-size: 1.9em;
+      position: absolute;
+      left: 50%;
+      width: 90vw;
+      transform: translateX(-50%);
+      // text-align: center;
+      // margin-left:
+    }
+    .main-content-wrapper {
+      grid-row: 1 / 4;
+      grid-column: 1;
+      .home-content-wrapper {
+        margin: 0;
+        border: 0px;
+        border-radius: 0px;
+        .inner-wrapper {
+          max-width: 100vw;
+          .button-box {
+            display: none;
+          }
+          .inner-cell {
+            align-items: baseline;
+            // margin-left: 36px;
+            margin: 0px;
+            margin-top: 65px;
+            padding-right: 0px;
+            // margin-bottom: 0px;
+            .home-content {
+              font-size: 1.5em;
+              margin-left: 30px;
+              margin-bottom: 20px;
+            }
+
+            .card-content {
+              margin-top: 0px;
+              margin-left: 30px;
+              margin-right: 30px;
+              padding: 0;
+              width: auto;
+              font-size: 0.95em;
+
+            }
+          }
+        }
+      }
+
+    }
+    .insta-content {
+      display: none;
+    }
+    .tracks-content {
+      display: none;
+    }
+  }
 }

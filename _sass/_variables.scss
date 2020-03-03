@@ -23,3 +23,10 @@ $title-color: #3454D1;// ABA9BF, 1B998B, 29339B
 $highlight-color: #3454D1;
 
 $music-image-width: 250px;
+
+@mixin music-image-width($subtract) {
+    @media only screen and (max-width: 600px) {
+        width: 200px - $subtract;
+    }
+    width: 250px - $subtract;
+}
