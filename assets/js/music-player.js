@@ -1,5 +1,15 @@
-var el = document.getElementById('sc-iframe'),
+var el = document.getElementById('sc-iframe');
 widget = SC.Widget(el);
+
+var screenWidth =  screen.width;
+var screenHeight = screen.height;
+
+// if (screenWidth < 600) {
+//
+// } else {
+//
+// }
+
 var listener = new window.keypress.Listener();
 
 window.addEventListener("load", pageFullyLoaded, false);
