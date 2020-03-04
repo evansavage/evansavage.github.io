@@ -873,11 +873,12 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  display: none;
 }
 
 .overlay {
   height: 0%;
-  width: 100%;
+  width: 100.2%;
   position: fixed;
   z-index: 1001;
   bottom: 0;
@@ -1483,6 +1484,9 @@ input[type=range] {
   }
   #myNav .tm {
     background-color: transparent;
+  }
+  .open-nav-button {
+    display: block;
   }
 
   .inner-wrapper.first .slick-dots {
