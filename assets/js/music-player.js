@@ -1,25 +1,37 @@
-var el = document.getElementById('sc-iframe');
-widget = SC.Widget(el);
+
 
 var screenWidth =  screen.width;
 var screenHeight = screen.height;
 
-// if (screenWidth < 600) {
-//
-// } else {
-//
-// }
+var parentContainer = $('.tracks-content');
+
+var el = document.getElementById('sc-iframe');
+
+if (screenWidth < 600) {
+	el = document.getElementById('sc-iframe-overlay');
+	parentContainer = $('#myNav');
+}
+
+var total = parentContainer.find('.total')[0];
+var position = parentContainer.find('.position')[0];
+var progress = parentContainer.find('.progress')[0];
+var togglePlay = parentContainer.find('.toggle-play')[0];
+var pauseSVG = parentContainer.find('.pause-svg')[0];
+var playSVG = parentContainer.find('.play-svg')[0];
+var scPrev = parentContainer.find('.sc-prev')[0];
+var scNext = parentContainer.find('.sc-next')[0];
+var photoContainer = parentContainer.find('.sc-photo-container')[0];
+// console.log('Parent container: ', parentContainer);
+console.log(total, position, progress, togglePlay, pauseSVG, playSVG);
 
 var listener = new window.keypress.Listener();
 
 window.addEventListener("load", pageFullyLoaded, false);
-$("#progress::-webkit-slider-runnable-track").css("background-color", "purple");
-
-
 
 
 function pageFullyLoaded(e) {
 
+			widget = SC.Widget(el);
 			window._total_duration = 0;
       var toggleVar = 0;
       var seekVar = 0;
@@ -28,7 +40,7 @@ function pageFullyLoaded(e) {
 					var seconds = duration / (1000),
 					minutes = Math.floor(seconds / 60);
 					seconds = Math.floor(seconds % 60);
-					document.getElementById('total').innerHTML = minutes + ':' + seconds;
+					total.innerHTML = minutes + ':' + seconds;
 					window._total_duration = duration;
 				});
 			});
@@ -38,55 +50,55 @@ function pageFullyLoaded(e) {
 					var seconds = position / (1000),
 					minutes = Math.floor(seconds / 60);
 					seconds = Math.floor(seconds % 60);
-					document.getElementById('position').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
-					document.getElementById('progress').value = (position / window._total_duration) * 100;
+					position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+					progress.value = (position / window._total_duration) * 100;
 				});
 			});
 
 
-			document.getElementById('progress').addEventListener('mousedown', function(){
+			progress.addEventListener('mousedown', function(){
 				widget.unbind(SC.Widget.Events.PLAY_PROGRESS);
 			});
 
-			document.getElementById('progress').addEventListener('mouseup', function(){
+			progress.addEventListener('mouseup', function(){
 
 				widget.bind(SC.Widget.Events.PLAY_PROGRESS, function(){
 					widget.getPosition(function(position){
 						var seconds = position / (1000),
 						minutes = Math.floor(seconds / 60);
 						seconds = Math.floor(seconds % 60);
-						document.getElementById('position').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
-						document.getElementById('progress').value = (position / window._total_duration) * 100;
+						position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+						progress.value = (position / window._total_duration) * 100;
 					});
 				});
 			});
 
-			document.getElementById('progress').addEventListener('input', function(){
+			progress.addEventListener('input', function(){
 				var newPos = (this.value * window._total_duration)/ 100;
 				var seconds = newPos / (1000),
 				minutes = Math.floor(seconds / 60);
 				seconds = Math.floor(seconds % 60);
-				document.getElementById('position').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+				position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
 				widget.seekTo(newPos);
 			});
       // document.getElementById('toggle-play').className = "toggle-play play";
       // widget.skip('2');
-      $('#toggle-play').on('click', function(){
+      parentContainer.find('.toggle-play').on('click', function(){
         if (toggleVar % 2 == 0) {
           widget.play();
-          $('.pause-svg').css('display', 'block');
-					$('.play-svg').css('display', 'none');
+          parentContainer.find('.pause-svg').css('display', 'block');
+					parentContainer.find('.play-svg').css('display', 'none');
         }
         else if (toggleVar % 2 == 1) {
           widget.pause();
-					$('.pause-svg').css('display', 'none');
-					$('.play-svg').css('display', 'block');
+					parentContainer.find('.pause-svg').css('display', 'none');
+					parentContainer.find('.play-svg').css('display', 'block');
         }
         toggleVar += 1;
         toggleVar = toggleVar % 2;
       });
 
-      $('#sc-prev').on('click', function() {
+      parentContainer.find('.sc-prev').on('click', function() {
           if (seekVar === 0) {
             seekVar = 5;
           } else {
@@ -99,16 +111,16 @@ function pageFullyLoaded(e) {
     					var seconds = duration / (1000),
     					minutes = Math.floor(seconds / 60);
     					seconds = Math.floor(seconds % 60);
-    					document.getElementById('total').innerHTML = minutes + ':' + seconds;
+    					total.innerHTML = minutes + ':' + seconds;
     					window._total_duration = duration;
     				});
     			});
-          $('#sc-photo-container').slick('slickPrev');
+          parentContainer.find('.sc-photo-container').slick('slickPrev');
           widget.skip(seekVar);
           console.log(seekVar);
       });
 
-      $('#sc-next').on('click', function() {
+      parentContainer.find('.sc-next').on('click', function() {
           seekVar += 1;
           seekVar = seekVar % 6;
           widget.bind(SC.Widget.Events.READY, function(){
@@ -117,15 +129,15 @@ function pageFullyLoaded(e) {
     					minutes = Math.floor(seconds / 60);
     					seconds = Math.floor(seconds % 60);
               if (seconds < 10) {
-                document.getElementById('total').innerHTML = minutes + ':0' + seconds;
+                total.innerHTML = minutes + ':0' + seconds;
               } else {
-                document.getElementById('total').innerHTML = minutes + ':' + seconds;
+                total.innerHTML = minutes + ':' + seconds;
               }
     					// document.getElementById('total').innerHTML = minutes + ':' + seconds;
     					window._total_duration = duration;
     				});
     			});
-          $('#sc-photo-container').slick('slickNext');
+          parentContainer.find('.sc-photo-container').slick('slickNext');
           widget.skip(seekVar);
           console.log(seekVar);
       });
@@ -134,13 +146,13 @@ function pageFullyLoaded(e) {
         e.preventDefault();
         if (toggleVar % 2 == 0) {
           widget.play();
-					$('.pause-svg').css('display', 'block');
-					$('.play-svg').css('display', 'none');
+					parentContainer.find('.pause-svg').css('display', 'block');
+					parentContainer.find('.play-svg').css('display', 'none');
         }
         else if (toggleVar % 2 == 1) {
           widget.pause();
-					$('.pause-svg').css('display', 'none');
-					$('.play-svg').css('display', 'block');
+					parentContainer.find('.pause-svg').css('display', 'none');
+					parentContainer.find('.play-svg').css('display', 'block');
         }
         toggleVar += 1;
         toggleVar = toggleVar % 2;

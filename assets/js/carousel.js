@@ -35,7 +35,7 @@ $(document).ready(function(){
     touchMove: true,
     draggable: true
   });
-  $('#sc-photo-container').slick({
+  $('.sc-photo-container').slick({
     infinite: true,
     slidesToShow: 1,
     // dots: true,

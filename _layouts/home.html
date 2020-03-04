@@ -40,13 +40,10 @@ layout: default
   <div class="tracks-content">
     <h2 class="tracks-title">TRACKS</h2>
     <div class="tm">
-      <!-- <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/712993093&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe>
-      <iframe class="sc-player" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/691059976&color=%23{{ buttonColor }}&inverse=true&auto_play=false&show_user=false"></iframe> -->
       <div class="iframe-container">
-    		<!-- <iframe width="400" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270485931&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false" id="sc-iframe"></iframe> -->
         <iframe id="sc-iframe" height="20" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/s4v4ge1/sets/web&auto_play=false&buying=true&liking=true&download=true&sharing=true&show_artwork=true&show_comments=true&show_playcount=true&show_user=true&hide_related=false&visual=true&start_track=0&callback=true"></iframe>
-    	</div>
-      <div id="sc-photo-container">
+      </div>
+      <div class="sc-photo-container">
         {% assign tracks = site.music_cards | sort: 'order' %}
         {% for track in tracks %}
           <div class="music-player-cover">
@@ -56,14 +53,14 @@ layout: default
         {% endfor %}
       </div>
       <div class="nav-underlay"></div>
-    	<div class="progress-bar">
-    		<div id="total">00:00</div>
-    		<input type="range" min="0" max="100" step="0.1" value="0" id="progress">
-    		<div id="position">00:00</div>
+      <div class="progress-bar">
+        <div class="total">00:00</div>
+        <input type="range" min="0" max="100" step="0.1" value="0" class="progress">
+        <div class="position">00:00</div>
 
-    	</div>
-      <div id="music-control-wrapper">
-        <div id="sc-prev">
+      </div>
+      <div class="music-control-wrapper">
+        <div class="sc-prev">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"
              viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
             <g>
@@ -76,21 +73,21 @@ layout: default
             </g>
           </svg>
         </div>
-        <div class="toggle-play play" id="toggle-play">
+        <div class="toggle-play play" class="toggle-play">
           <svg class="pause-svg" width="18px" height="18px"
-          	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+             viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
             <path d="M112,0H16C7.168,0,0,7.168,0,16v288c0,8.832,7.168,16,16,16h96c8.832,0,16-7.168,16-16V16C128,7.168,120.832,0,112,0z"/>
             <path d="M304,0h-96c-8.832,0-16,7.168-16,16v288c0,8.832,7.168,16,16,16h96c8.832,0,16-7.168,16-16V16C320,7.168,312.832,0,304,0z"
-            	/>
+              />
           </svg>
           <svg class="play-svg" width="20px" height="20px"
-          	 viewBox="0 0 320.001 320.001" style="enable-background:new 0 0 320.001 320.001;" xml:space="preserve">
+             viewBox="0 0 320.001 320.001" style="enable-background:new 0 0 320.001 320.001;" xml:space="preserve">
             <path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288
-            	c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144
-            	c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+              c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144
+              c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
           </svg>
         </div>
-        <div id="sc-next">
+        <div class="sc-next">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px"
                viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
             <g>

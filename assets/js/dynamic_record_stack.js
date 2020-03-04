@@ -155,32 +155,32 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
     });
     var playerPos = 0;
     if (screenWidth > 600) {
-      $('.tm, #progress').css('backgroundColor', bkgdPlayerColors[0]);
+      $('.tm, .progress').css('backgroundColor', bkgdPlayerColors[0]);
       $('.tm .slick-slide').find('h3').css('color', titlePlayerColors[0]);
     }
 
     // $('#progress').css('backgroundColor', bkgdPlayerColors[0]);
 
-    $('#sc-prev').on('click', function() {
+    $('.sc-prev').on('click', function() {
         if (playerPos <= 0) {
           playerPos = musicCount - 1;
         } else {
           playerPos -= 1;
         }
-        $('.tm, #progress').animate({
+        $('.tm, .progress').animate({
           backgroundColor: bkgdPlayerColors[playerPos]
         }, 400);
         $('.tm .slick-slide').find('h3').animate({
           color: titlePlayerColors[playerPos]
         }, 400);
     });
-    $('#sc-next').on('click', function() {
+    $('.sc-next').on('click', function() {
         if (playerPos >= musicCount - 1) {
           playerPos = 0;
         } else {
           playerPos += 1;
         }
-        $('.tm, #progress').animate({
+        $('.tm, .progress').animate({
           backgroundColor: bkgdPlayerColors[playerPos]
         }, 400);
         $('.tm .slick-slide').find('h3').animate({

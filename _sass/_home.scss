@@ -869,11 +869,15 @@ a {
 
 .open-nav-button {
   position: absolute;
-  bottom: 30px;
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: none;
+  width: 12%;
+  svg {
+    fill: $title-color;
+  }
 }
 
 .overlay {
@@ -901,7 +905,7 @@ a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: $title-color;
   display: block;
   transition: 0.3s;
 }
@@ -912,9 +916,15 @@ a {
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  bottom: 90px;
+  left: 49.8%;
+  transform: translateX(-50%);
+  width: 12%;
+  // font-size: 60px;
+  svg {
+    fill: $title-color;
+    transform: rotateZ(-180deg);
+  }
 }
 
 @media screen and (max-height: 450px) {
@@ -1216,7 +1226,7 @@ input[type=range] {
     overflow: hidden;
 
   }
-  #sc-photo-container {
+  .sc-photo-container {
     width: 250px;
     // height: 250px;
     position: relative;
@@ -1252,7 +1262,7 @@ input[type=range] {
     background-color: $frame-color;
     bottom: -2px;
   }
-  #progress{
+  .progress {
     width: 100%;
     margin: 0;
     margin-top: 0.25em;
@@ -1308,22 +1318,22 @@ input[type=range] {
     box-sizing: border-box;
     font-family: 'Rubik';
   }
-  #total,
-  #position{
+  .total,
+  .position{
     position: absolute;
     top: 42.2%;
     transform: translateY(-50%);
     width: 4em;
     text-align: center;
   }
-  #total{
+  .total{
     right: 0;
   }
-  #position{
+  .position{
     left: 0;
   }
 
-#music-control-wrapper {
+.music-control-wrapper {
     // display: flex;
     // align-items: center;
     // justify-content: space-evenly;
@@ -1373,11 +1383,11 @@ input[type=range] {
   // background-image: url('../svg/pause.svg')
 }
 
-#sc-prev, #sc-next {
+.sc-prev, .sc-next {
   top: 2px;
 }
 
-#sc-next {
+.sc-next {
   position: absolute;
   cursor: pointer;
   right: calc(29% + 4px);
@@ -1386,7 +1396,7 @@ input[type=range] {
   fill: $button-color;
 }
 
-#sc-prev {
+.sc-prev {
   position: absolute;
   cursor: pointer;
   left: calc(29%);
@@ -1606,7 +1616,7 @@ input[type=range] {
               margin-right: 45px;
               padding: 0;
               width: auto;
-              font-size: 0.9em;
+              font-size: 0.88em;
 
             }
           }
