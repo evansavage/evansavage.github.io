@@ -61,7 +61,7 @@ var rack_offset = vert_offset
 if (screenHeight < 700) {
   vert_offset = vert_offset / 1.3;
 } else if (screenHeight < 900) {
-  vert_offset = vert_offset / 1.15;
+  vert_offset = vert_offset / 1.05;
 }
 
 let top_coord = 0;

@@ -1575,9 +1575,9 @@ input[type=range] {
 
   .music-image-container {
     margin-left: -140px;
-    margin-top: calc(22% + 20px);
+    margin-top: calc(23% + 60px);
     @media (max-height: 750px) {
-      margin-top: 22%;
+      margin-top: calc(25% + 40px);
     }
   }
   .music-image .card-link .left-width {
@@ -1634,7 +1634,7 @@ input[type=range] {
             // margin-left: 36px;
             position: relative;
             margin: 0px;
-            margin-top: 65px;
+            margin-top: 0px;
             padding-right: 0px;
             // margin-bottom: 0px;
             .home-content {
@@ -1644,13 +1644,16 @@ input[type=range] {
               transform-origin: top left;
               // width: auto;
               transform: rotateZ(-90deg) translateX(-73%);
-              top: 24.5%;
+              top: calc(23% + 50px);
+              @media (max-height: 750px) {
+                top: calc(23% + 75px);
+              }
               left: 10px;
               margin-bottom: 0;
             }
 
             .card-content {
-              margin-top: 15px;
+              margin-top: 80px;
               margin-left: 45px;
               margin-right: 45px;
               padding: 0;
