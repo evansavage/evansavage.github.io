@@ -1543,7 +1543,7 @@ input[type=range] {
   }
 
   .inner-wrapper.first .slick-dots {
-    right: -57.5px;
+    right: -55.5px;
     bottom: calc(35% + 60px);
     li {
       margin: 0 10px;
@@ -1563,7 +1563,7 @@ input[type=range] {
     color: $title-color;
   }
   .first .slick-prev, .first .slick-next {
-    right: 9px;
+    right: 11px;
   }
   .first .slick-prev {
     bottom: 25%;
@@ -1671,17 +1671,17 @@ input[type=range] {
               @media (max-height: 750px) {
                 top: calc(23% + 75px);
               }
-              left: 10px;
+              left: 12px;
               margin-bottom: 0;
             }
 
             .card-content {
               margin-top: 80px;
-              margin-left: 45px;
-              margin-right: 45px;
+              margin-left: 50px;
+              margin-right: 50px;
               padding: 0;
               width: auto;
-              font-size: 1.15em;
+              font-size: 1.05em;
               p {
                 margin-bottom: 10px;
               }
