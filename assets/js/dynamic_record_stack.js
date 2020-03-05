@@ -166,6 +166,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
     if (screenWidth > 600) {
       $('.tm, .progress').css('backgroundColor', bkgdPlayerColors[0]);
       $('.tm .slick-slide').find('h3').css('color', titlePlayerColors[0]);
+    } else {
+      document.body.style.setProperty('--fading-mobile', titlePlayerColors[0]);
+      document.body.style.setProperty('--impact-mobile', titlePlayerColors[0]);
     }
 
     // $('#progress').css('backgroundColor', bkgdPlayerColors[0]);
@@ -180,6 +183,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
           $('.tm, .progress').animate({
             backgroundColor: bkgdPlayerColors[playerPos]
           }, 400);
+        } else {
+          document.body.style.setProperty('--fading-mobile', titlePlayerColors[playerPos]);
+          document.body.style.setProperty('--impact-mobile', titlePlayerColors[playerPos]);
         }
 
         $('.tm .slick-slide').find('h3').animate({
@@ -196,6 +202,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
           $('.tm, .progress').animate({
             backgroundColor: bkgdPlayerColors[playerPos]
           }, 400);
+        } else {
+          document.body.style.setProperty('--fading-mobile', titlePlayerColors[playerPos]);
+          document.body.style.setProperty('--impact-mobile', titlePlayerColors[playerPos]);
         }
         $('.tm .slick-slide').find('h3').animate({
           color: titlePlayerColors[playerPos]

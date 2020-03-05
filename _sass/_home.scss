@@ -753,7 +753,8 @@ a {
 
 .bottom-player-wrapper {
   position: absolute;
-  height: 60px;
+  height: 84px;
+  padding-left: 20px;
   // background: $frame-color;
   // border-radius: 15px 15px 0 0;
   width: 100%;
@@ -761,6 +762,26 @@ a {
   z-index: 400;
 
   display: none;
+  .bottom-player-photo-container {
+    height: 100%;
+    width: 60vw;
+    .music-player-cover {
+      display: flex;
+      flex-direction: row;
+      margin-left: 1px;
+      img {
+        width: 60px;
+      }
+      h3 {
+        margin-left: 20px;
+        font-family: 'Rubik';
+        font-size: 1.4em;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 
@@ -890,7 +911,7 @@ a {
   width: 12%;
 }
 .open-nav-button, .closebtn {
-  bottom: 65px;
+  bottom: 80px;
 }
 
 
@@ -1521,6 +1542,16 @@ input[type=range] {
     height: 100%;
     overflow-y: hidden;
   }
+  .extra-blur-bottom {
+    width: 100%;
+    z-index: 0;
+    // background: black;
+    height: 85px;
+    position: absolute;
+    bottom: 0px;
+    z-index: -2;
+    backdrop-filter: blur(10px)
+  }
   #myNav .tm {
     background-color: transparent;
     position: absolute;
@@ -1531,6 +1562,7 @@ input[type=range] {
     @media (max-height: 750px) {
       transform: translateX(-50%) translateY(-75%);
     }
+
     .progress-bar {
       width: 90%;
       margin-left: auto;
@@ -1662,7 +1694,7 @@ input[type=range] {
     height: 100vh;
   }
   .social-links {
-    bottom: 10px;
+    bottom: 15px;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
@@ -1767,11 +1799,11 @@ input[type=range] {
               margin-right: 50px;
               padding: 0;
               width: auto;
-              font-size: calc(1.88vh + 0.2em);
+              font-size: calc(1.95vh + 0.15em);
               @media(max-width: 370px) {
-                font-size: 0.95em;
+                font-size: 0.93em;
                 @media(max-height: 600px) {
-                  font-size: 0.78em;
+                  font-size: 0.76em;
                 }
               }
               p {

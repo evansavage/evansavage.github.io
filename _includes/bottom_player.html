@@ -1,3 +1,11 @@
 <div class="bottom-player-wrapper">
-
+  <div class="bottom-player-photo-container">
+    {% assign tracks = site.music_cards | sort: 'order' %}
+    {% for track in tracks %}
+      <div class="music-player-cover">
+        <img src="{{ site.baseurl }}/assets/img/{{ track.image }}"/>
+        <h3>{{ track.title }}</h3>
+      </div>
+    {% endfor %}
+  </div>
 </div>
