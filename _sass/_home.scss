@@ -1544,6 +1544,13 @@ input[type=range] {
   .research-background {
     object-position: -55vh 70%;
   }
+  .web-dev-background {
+    object-position: -77vh 70%;
+    height: 139%;
+    transform: rotateZ(5deg);
+    left: -110px;
+    transform-origin: center;
+  }
 
   .inner-wrapper.first .slick-dots {
     right: -55.5px;
