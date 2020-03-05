@@ -1527,6 +1527,10 @@ input[type=range] {
   .music-container {
     position: relative;
   }
+  .card-background {
+    object-fit: none;
+    object-position: 67% 80%;
+  }
 
   .inner-wrapper.first .slick-dots {
     right: -57.5px;
