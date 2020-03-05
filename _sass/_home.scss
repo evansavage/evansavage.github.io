@@ -1630,9 +1630,9 @@ input[type=range] {
               position: absolute;
               text-align: right;
               transform-origin: top left;
-              width: auto;
+              // width: auto;
               transform: rotateZ(-90deg) translateX(-73%);
-              top: 120px;
+              top: 200px;
               left: 10px;
               margin-bottom: 0;
             }
