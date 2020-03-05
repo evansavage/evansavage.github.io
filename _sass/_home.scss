@@ -1494,6 +1494,9 @@ input[type=range] {
   body {
     overscroll-behavior-y: none;
   }
+  .body-wrap {
+    height: 100vh;
+  }
   #myNav .tm {
     background-color: transparent;
   }
@@ -1566,7 +1569,7 @@ input[type=range] {
     margin: 0;
     grid-auto-rows: auto;
     grid-template-columns: 100vw;
-    max-height: 100vh;
+    height: 100%;
     .top {
       grid-row: 1;
       grid-column: 1;
