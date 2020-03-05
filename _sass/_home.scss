@@ -749,6 +749,18 @@ a {
 
 }
 
+.bottom-player-wrapper {
+  position: absolute;
+  height: 50px;
+  background: $frame-color;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  bottom: -4px;
+  z-index: 400;
+
+  display: none;
+}
+
 
 
 // MUSIC CARDS
@@ -1493,6 +1505,7 @@ input[type=range] {
 @media only screen and (max-width: 600px) {
   body {
     overscroll-behavior-y: none;
+    overflow: hidden;
   }
   .body-wrap {
     height: 100vh;
@@ -1501,6 +1514,9 @@ input[type=range] {
     background-color: transparent;
   }
   .open-nav-button {
+    display: block;
+  }
+  .bottom-player-wrapper {
     display: block;
   }
 
