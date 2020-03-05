@@ -1631,6 +1631,10 @@ input[type=range] {
       left: 50%;
       width: 90vw;
       transform: translateX(-50%);
+      @media (max-width: 350px) {
+        font-size: 1.7em;
+        margin-top: 15px;
+      }
       // text-align: center;
       // margin-left:
     }
