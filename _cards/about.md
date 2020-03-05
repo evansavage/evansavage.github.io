@@ -4,6 +4,7 @@ background-color: 4e4e4e22
 carousel: 1
 overlay-color: ECC8AE
 background-image: personal_pic.jpg
+background-image-class: about-background
 # content-bg-color: fff3
 content-width: calc(85% - 60px)
 opacity: 0.18

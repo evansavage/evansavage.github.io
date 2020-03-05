@@ -1537,9 +1537,12 @@ input[type=range] {
   .music-container {
     position: relative;
   }
-  .card-background {
-    // object-fit: none;
-    // object-position: 67% 80%;
+  .about-background {
+    object-fit: none;
+    object-position: calc(-82vh - 100vw) calc(-105vw - 60vh);
+  }
+  .research-background {
+    object-position: -55vh 70%;
   }
 
   .inner-wrapper.first .slick-dots {

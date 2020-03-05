@@ -4,7 +4,7 @@
 
     <!-- <img class="holder-image" src='{{ site.baseurl }}/assets/img/{{ card.holder-image }}'/> -->
     {% if card.background-image %}
-      <img class="card-background" style="opacity: {{ card.opacity }};" src='{{ site.baseurl }}/assets/img/{{ card.background-image }}'/>
+      <img class="card-background {{ card.background-image-class }}" style="opacity: {{ card.opacity }};" src='{{ site.baseurl }}/assets/img/{{ card.background-image }}'/>
     {% endif %}
     {% if card.card-type == "music" %}
       <div class="music-container" style="background-color: #{{ card.content-bg-color }};">
