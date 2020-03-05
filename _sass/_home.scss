@@ -893,7 +893,7 @@ a {
 
 
 
-.open-nav-button, .closebtn, .social-links {
+.open-nav-button, .closebtn {
   svg {
     fill: $title-color;
   }
@@ -1517,6 +1517,11 @@ input[type=range] {
   }
   #myNav .tm {
     background-color: transparent;
+  }
+  .social-links {
+    svg {
+      fill: $title-color;
+    }
   }
   .open-nav-button {
     display: block;
