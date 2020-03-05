@@ -22,6 +22,8 @@ body {
 
   --fading: #1B2021; // Frame colors
 	--impact: #1B2021;
+  --fading-mobile: #1B2021;
+  --impact-mobile: #1B2021;
 
   .body-wrap {
     background-color: $page-background-color;
@@ -906,8 +908,6 @@ a {
   z-index: 1001;
   bottom: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -1158,7 +1158,7 @@ a {
 
 input[type=range] {
     -webkit-appearance: none;
-    margin: 1em 0;
+    margin: 0.3em 0;
     width: 100%;
   }
   input[type=range]:focus {
@@ -1280,6 +1280,7 @@ input[type=range] {
     height: 40px;
     background-color: $frame-color;
     bottom: -2px;
+
   }
   .progress {
     width: 100%;
@@ -1522,12 +1523,80 @@ input[type=range] {
   }
   #myNav .tm {
     background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-70%);
+    width: 100vw;
+    .progress-bar {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sc-photo-container {
+      width: 100%;
+      .music-player-cover {
+        img {
+          width: 75vw;
+          max-width: 75vw;
+        }
+        h3 {
+          margin-top: 25px;
+        }
+      }
+
+    }
+    .music-control-wrapper {
+      bottom: -6px;
+      .sc-prev, .sc-next, .pause-svg, .play-svg {
+        fill: $title-color;
+      }
+      .sc-prev {
+        left: 24%;
+      }
+      .sc-next {
+        right: 24%;
+      }
+      .toggle-play {
+        width: 36px;
+        left: calc(50%);
+        transform: translateX(-37%);
+      }
+    }
   }
+  .overlay {
+    backdrop-filter: blur(2px);
+    // background-color: rgb(0,0,0);
+    background-color: #cececedd;
+  }
+
+
   .social-links {
     svg {
       fill: $title-color;
     }
   }
+  input[type='range']{
+    &::-webkit-slider-runnable-track {
+  		@include track-mobile
+  	}
+  	&::-moz-range-track { @include track-mobile }
+  	&::-ms-track { @include track-mobile }
+
+  	&::-webkit-slider-thumb {
+  		// margin-top: .5*($track-h - $thumb-d);
+  		@include thumb-mobile
+  	}
+  	&::-moz-range-thumb { @include thumb-mobile }
+  	&::-ms-thumb {
+  		// margin-top: 0;
+  		@include thumb-mobile
+  	}
+  }
+  .nav-underlay {
+    display: none;
+  }
+
   .open-nav-button {
     display: block;
   }

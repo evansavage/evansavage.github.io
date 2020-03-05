@@ -113,3 +113,18 @@ $scan-opacity: 0.15;
 	// border-radius: 50%;
 	background: var(--impact, currentcolor);
 }
+
+@mixin track-mobile() {
+	// box-sizing: border-box;
+	// border: none;
+	// width: $track-w; height: $track-h;
+	background: var(--fading-mobile, currentcolor);
+}
+
+@mixin thumb-mobile() {
+	// box-sizing: border-box;
+	// border: none;
+	// width: $thumb-d; height: $thumb-d;
+	// border-radius: 50%;
+	background: var(--impact-mobile, currentcolor);
+}

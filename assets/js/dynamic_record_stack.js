@@ -176,9 +176,12 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         } else {
           playerPos -= 1;
         }
-        $('.tm, .progress').animate({
-          backgroundColor: bkgdPlayerColors[playerPos]
-        }, 400);
+        if (screenWidth > 600) {
+          $('.tm, .progress').animate({
+            backgroundColor: bkgdPlayerColors[playerPos]
+          }, 400);
+        }
+
         $('.tm .slick-slide').find('h3').animate({
           color: titlePlayerColors[playerPos]
         }, 400);
@@ -189,9 +192,11 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         } else {
           playerPos += 1;
         }
-        $('.tm, .progress').animate({
-          backgroundColor: bkgdPlayerColors[playerPos]
-        }, 400);
+        if (screenWidth > 600) {
+          $('.tm, .progress').animate({
+            backgroundColor: bkgdPlayerColors[playerPos]
+          }, 400);
+        }
         $('.tm .slick-slide').find('h3').animate({
           color: titlePlayerColors[playerPos]
         }, 400);
