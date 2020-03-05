@@ -116,6 +116,9 @@ function pageFullyLoaded(e) {
     				});
     			});
           parentContainer.find('.sc-photo-container').slick('slickPrev');
+					if (screenWidth < 600) {
+						$('.bottom-player-photo-container').slick('slickPrev');
+					}
           widget.skip(seekVar);
           console.log(seekVar);
       });
@@ -138,6 +141,9 @@ function pageFullyLoaded(e) {
     				});
     			});
           parentContainer.find('.sc-photo-container').slick('slickNext');
+					if (screenWidth < 600) {
+						$('.bottom-player-photo-container').slick('slickNext');
+					}
           widget.skip(seekVar);
           console.log(seekVar);
       });

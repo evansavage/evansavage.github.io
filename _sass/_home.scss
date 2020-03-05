@@ -752,38 +752,8 @@ a {
 }
 
 .bottom-player-wrapper {
-  position: absolute;
-  height: 84px;
-  padding-left: 20px;
-  // background: $frame-color;
-  // border-radius: 15px 15px 0 0;
-  width: 100%;
-  bottom: -4px;
-  z-index: 400;
-
   display: none;
-  .bottom-player-photo-container {
-    height: 100%;
-    width: 60vw;
-    .music-player-cover {
-      display: flex;
-      flex-direction: row;
-      margin-left: 1px;
-      img {
-        width: 60px;
-      }
-      h3 {
-        margin-left: 20px;
-        font-family: 'Rubik';
-        font-size: 1.4em;
-        margin-top: auto;
-        margin-bottom: auto;
-        font-weight: 400;
-      }
-    }
-  }
 }
-
 
 
 // MUSIC CARDS
@@ -1723,6 +1693,53 @@ input[type=range] {
   // .selected-card {
   //     transform: rotateX(10deg) translateX(200px);
   // }
+
+  .bottom-player-wrapper {
+    position: absolute;
+    height: 84px;
+    padding-left: 20px;
+    // background: $frame-color;
+    // border-radius: 15px 15px 0 0;
+    width: 100%;
+    bottom: -4px;
+    z-index: 400;
+
+    .bottom-player-photo-container {
+      height: 100%;
+      width: 60vw;
+      .music-player-cover {
+        display: flex;
+        flex-direction: row;
+        margin-left: 1px;
+        img {
+          width: 60px;
+        }
+        h3 {
+          margin-left: 20px;
+          font-family: 'Rubik';
+          font-size: 1.4em;
+          margin-top: auto;
+          margin-bottom: auto;
+          font-weight: 400;
+        }
+      }
+    }
+    .music-control-wrapper {
+      height: 40px;
+      bottom: 32px;
+      right: 60px;
+      position: absolute;
+      width: 40px;
+      margin: 0px;
+      .toggle-play {
+        margin-top: 0px;
+        .pause-svg, .play-svg {
+          fill: $title-color;
+        }
+
+      }
+    }
+  }
 
   #home-wrapper {
     margin: 0;
