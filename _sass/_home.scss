@@ -1553,7 +1553,8 @@ input[type=range] {
 
     }
     .music-control-wrapper {
-      bottom: -6px;
+      bottom: -70px;
+      height: 40px;
       .sc-prev, .sc-next, .pause-svg, .play-svg {
         fill: $title-color;
       }
@@ -1661,7 +1662,7 @@ input[type=range] {
     height: 100vh;
   }
   .social-links {
-    bottom: 120px;
+    bottom: 10px;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
@@ -1766,7 +1767,13 @@ input[type=range] {
               margin-right: 50px;
               padding: 0;
               width: auto;
-              font-size: 1.05em;
+              font-size: calc(1.88vh + 0.2em);
+              @media(max-width: 370px) {
+                font-size: 0.95em;
+                @media(max-height: 600px) {
+                  font-size: 0.78em;
+                }
+              }
               p {
                 margin-bottom: 10px;
               }

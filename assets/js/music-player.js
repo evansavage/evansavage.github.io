@@ -13,7 +13,7 @@ if (screenWidth < 600) {
 }
 
 var total = parentContainer.find('.total')[0];
-var position = parentContainer.find('.position')[0];
+var position_value = parentContainer.find('.position')[0];
 var progress = parentContainer.find('.progress')[0];
 var togglePlay = parentContainer.find('.toggle-play')[0];
 var pauseSVG = parentContainer.find('.pause-svg')[0];
@@ -22,7 +22,7 @@ var scPrev = parentContainer.find('.sc-prev')[0];
 var scNext = parentContainer.find('.sc-next')[0];
 var photoContainer = parentContainer.find('.sc-photo-container')[0];
 // console.log('Parent container: ', parentContainer);
-console.log(total, position, progress, togglePlay, pauseSVG, playSVG);
+// console.log(total, position, progress, togglePlay, pauseSVG, playSVG);
 
 var listener = new window.keypress.Listener();
 
@@ -50,7 +50,7 @@ function pageFullyLoaded(e) {
 					var seconds = position / (1000),
 					minutes = Math.floor(seconds / 60);
 					seconds = Math.floor(seconds % 60);
-					position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+					position_value.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
 					progress.value = (position / window._total_duration) * 100;
 				});
 			});
@@ -67,7 +67,7 @@ function pageFullyLoaded(e) {
 						var seconds = position / (1000),
 						minutes = Math.floor(seconds / 60);
 						seconds = Math.floor(seconds % 60);
-						position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+						position_value.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
 						progress.value = (position / window._total_duration) * 100;
 					});
 				});
@@ -78,7 +78,7 @@ function pageFullyLoaded(e) {
 				var seconds = newPos / (1000),
 				minutes = Math.floor(seconds / 60);
 				seconds = Math.floor(seconds % 60);
-				position.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+				position_value.innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
 				widget.seekTo(newPos);
 			});
       // document.getElementById('toggle-play').className = "toggle-play play";
