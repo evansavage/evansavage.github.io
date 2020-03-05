@@ -1528,6 +1528,9 @@ input[type=range] {
     top: 50%;
     transform: translateX(-50%) translateY(-70%);
     width: 100vw;
+    @media (max-height: 750px) {
+      transform: translateX(-50%) translateY(-75%);
+    }
     .progress-bar {
       width: 90%;
       margin-left: auto;
@@ -1539,6 +1542,9 @@ input[type=range] {
         img {
           width: 75vw;
           max-width: 75vw;
+          @media (max-height: 750px) {
+            width: 70vw;
+          }
         }
         h3 {
           margin-top: 25px;
@@ -1704,7 +1710,7 @@ input[type=range] {
       }
     }
     .home-title {
-      font-size: 1.9em;
+      font-size: 1.96em;
       position: absolute;
       margin-top: 10px;
       left: 50%;
