@@ -1527,7 +1527,7 @@ input[type=range] {
 
   .inner-wrapper.first .slick-dots {
     right: -57.5px;
-    bottom: 300px;
+    bottom: calc(35% + 60px);
     li {
       margin: 0 10px;
     }
@@ -1549,10 +1549,10 @@ input[type=range] {
     right: 9px;
   }
   .first .slick-prev {
-    bottom: 170px;
+    bottom: 25%;
   }
   .first .slick-next {
-    bottom: calc(170px - 50px);
+    bottom: calc(25% - 50px);
   }
 
   .slick-vertical .slick-slide {
@@ -1637,7 +1637,7 @@ input[type=range] {
               transform-origin: top left;
               // width: auto;
               transform: rotateZ(-90deg) translateX(-73%);
-              top: 200px;
+              top: 24.5%;
               left: 10px;
               margin-bottom: 0;
             }
