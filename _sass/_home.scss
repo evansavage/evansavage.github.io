@@ -1681,9 +1681,12 @@ input[type=range] {
               margin-right: 45px;
               padding: 0;
               width: auto;
-              font-size: 0.93em;
+              font-size: 1.15em;
               p {
                 margin-bottom: 10px;
+              }
+              p:nth-child(2) {
+                  display: none;
               }
             }
           }
