@@ -1524,6 +1524,9 @@ input[type=range] {
   .bottom-player-wrapper {
     display: block;
   }
+  .music-container {
+    position: relative;
+  }
 
   .inner-wrapper.first .slick-dots {
     right: -57.5px;
@@ -1572,7 +1575,10 @@ input[type=range] {
 
   .music-image-container {
     margin-left: -140px;
-    margin-top: 120px;
+    margin-top: calc(22% + 20px);
+    @media (max-height: 750px) {
+      margin-top: 22%;
+    }
   }
   .music-image .card-link .left-width {
     transform: rotateZ(90deg) rotateX(90deg) translateX(-50%) translateZ(25px);

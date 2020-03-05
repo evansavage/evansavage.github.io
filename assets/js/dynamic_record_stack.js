@@ -57,11 +57,11 @@ let boxTop = 84
 const container_height = $('.music-image-container').height();
 // console.log(container_height);
 var vert_offset = container_height / img_range / 1.5;
-if (screenWidth < 700) {
-  vert_offset = vert_offset / 1.1;
-}
-if (screenHeight < 900) {
-  vert_offset = vert_offset / 1.2;
+var rack_offset = vert_offset
+if (screenHeight < 700) {
+  vert_offset = vert_offset / 1.3;
+} else if (screenHeight < 900) {
+  vert_offset = vert_offset / 1.15;
 }
 
 let top_coord = 0;
@@ -101,7 +101,7 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
         });
         var negImageTranslateY = $(this).next('.music-image').position().top;
         // console.log("Abs pos: " + negImageTranslateY);
-
+        console.log($(this).position().top);
         $(this).parent().siblings().find('.hover-zone').removeClass("hover-selected");
         $(this).parent().siblings().find('.music-image').find('.card-link').removeClass("selected-card");
         $(this).parent().siblings().find('.track-writeup-container').fadeOut(200);
@@ -117,7 +117,9 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
 
         // .css('background-color', bkgdColor)
         if (screenWidth <= 600) {
-          negImageTranslateY -= 50;
+          if (screenHeight <= 750) {
+            negImageTranslateY += 30;
+          }
           $(".selected-card").css({
               transform: 'translateX(255px) translateY(' + -1 * negImageTranslateY + 'px)',
               transitionDuration: 800 + 'ms',
