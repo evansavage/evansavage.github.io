@@ -1508,9 +1508,13 @@ input[type=range] {
 // PHONE MEDIA QUERIES
 
 @media only screen and (max-width: 600px) {
+  html {
+    position: fixed;
+  }
   body {
     overscroll-behavior-y: none;
     overflow: hidden;
+    width: 100vw;
   }
   .body-wrap {
     height: 100%;
