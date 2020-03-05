@@ -751,7 +751,7 @@ a {
 
 .bottom-player-wrapper {
   position: absolute;
-  height: 50px;
+  height: 60px;
   background: $frame-color;
   border-radius: 15px 15px 0 0;
   width: 100%;
@@ -881,13 +881,18 @@ a {
 
 .open-nav-button {
   position: absolute;
-  bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: none;
   width: 12%;
 }
+.open-nav-button, .closebtn {
+  bottom: 65px;
+}
+
+
+
 .open-nav-button, .closebtn, .social-links {
   svg {
     fill: $title-color;
@@ -930,7 +935,7 @@ a {
 
 .overlay .closebtn {
   position: absolute;
-  bottom: 45px;
+  // bottom: 45px;
   left: 49.8%;
   transform: translateX(-50%);
   width: 12%;
@@ -1644,7 +1649,9 @@ input[type=range] {
               padding: 0;
               width: auto;
               font-size: 0.91em;
-
+              p {
+                margin-bottom: 10px;
+              }
             }
           }
         }
