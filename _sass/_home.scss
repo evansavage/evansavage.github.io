@@ -869,12 +869,14 @@ a {
 
 .open-nav-button {
   position: absolute;
-  bottom: 90px;
+  bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: none;
   width: 12%;
+}
+.open-nav-button, .closebtn, .social-links {
   svg {
     fill: $title-color;
   }
@@ -916,13 +918,13 @@ a {
 
 .overlay .closebtn {
   position: absolute;
-  bottom: 90px;
+  bottom: 45px;
   left: 49.8%;
   transform: translateX(-50%);
   width: 12%;
   // font-size: 60px;
   svg {
-    fill: $title-color;
+    // fill: $title-cxolor;
     transform: rotateZ(-180deg);
   }
 }
@@ -1500,7 +1502,11 @@ input[type=range] {
   }
 
   .inner-wrapper.first .slick-dots {
-    right: -39px;
+    right: -57.5px;
+    bottom: 300px;
+    li {
+      margin: 0 10px;
+    }
     li.slick-active button:before {
       color: $title-color;
       opacity: 1;
@@ -1508,20 +1514,21 @@ input[type=range] {
     li button:before {
       color: gray;
       opacity: 0.5;
+      font-size: 11px;
     }
   }
   .first .slick-prev:before, .first .slick-next:before {
-    font-size: 25px;
+    font-size: 35px;
     color: $title-color;
   }
   .first .slick-prev, .first .slick-next {
-    right: 12px;
+    right: 9px;
   }
   .first .slick-prev {
-    bottom: 25vh;
+    bottom: 170px;
   }
   .first .slick-next {
-    bottom: calc(25vh - 35px);
+    bottom: calc(170px - 50px);
   }
 
   .slick-vertical .slick-slide {
@@ -1573,6 +1580,7 @@ input[type=range] {
     .home-title {
       font-size: 1.9em;
       position: absolute;
+      margin-top: 10px;
       left: 50%;
       width: 90vw;
       transform: translateX(-50%);
@@ -1599,14 +1607,14 @@ input[type=range] {
             padding-right: 0px;
             // margin-bottom: 0px;
             .home-content {
-              font-size: 1.2em;
+              font-size: 1.5em;
               position: absolute;
               text-align: right;
               transform-origin: top left;
               width: auto;
               transform: rotateZ(-90deg) translateX(-73%);
               top: 120px;
-              left: 13px;
+              left: 11px;
               margin-bottom: 0;
             }
 
