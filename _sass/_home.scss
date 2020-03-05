@@ -1513,7 +1513,7 @@ input[type=range] {
     overflow: hidden;
   }
   .body-wrap {
-    height: 100vh;
+    height: 100%;
   }
   #myNav .tm {
     background-color: transparent;
@@ -1620,10 +1620,12 @@ input[type=range] {
     .main-content-wrapper {
       grid-row: 1 / 4;
       grid-column: 1;
+      height: 100%;
       .home-content-wrapper {
         margin: 0;
         border: 0px;
         border-radius: 0px;
+        height: 100%;
         .inner-wrapper {
           max-width: 100vw;
           .button-box {
