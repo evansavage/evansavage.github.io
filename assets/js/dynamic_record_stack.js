@@ -57,6 +57,13 @@ let boxTop = 84
 const container_height = $('.music-image-container').height();
 // console.log(container_height);
 var vert_offset = container_height / img_range / 1.5;
+if (screenWidth < 700) {
+  vert_offset = vert_offset / 1.1;
+}
+if (screenHeight < 900) {
+  vert_offset = vert_offset / 1.2;
+}
+
 let top_coord = 0;
 // console.log(vert_offset, top_coord);
 
