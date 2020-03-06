@@ -255,12 +255,12 @@ function pageFullyLoaded(e) {
 
 		  });
 			$('.bottom-player-wrapper .music-control-wrapper .toggle-play').on('click', function() {
-				if (toggleVar % 2 == 0) {
+				if (toggleVar % 2 == 1) {
 					widget.play();
 					$(this).find('.pause-svg').css('display', 'block');
 					$(this).find('.play-svg').css('display', 'none');
 				}
-				else if (toggleVar % 2 == 1) {
+				else if (toggleVar % 2 == 0) {
 					widget.pause();
 					$(this).find('.pause-svg').css('display', 'none');
 					$(this).find('.play-svg').css('display', 'block');
