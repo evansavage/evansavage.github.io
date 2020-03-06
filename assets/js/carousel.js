@@ -8,6 +8,7 @@
 // });
 var isMoving = false
 var compareVal = 0
+var screenWidth = screen.width;
 
 $(document).ready(function(){
   $('.first').slick({
@@ -35,32 +36,49 @@ $(document).ready(function(){
     touchMove: true,
     draggable: true
   });
-  $('.sc-photo-container').slick({
-    infinite: true,
-    slidesToShow: 1,
-    // dots: true,
-    slidesToScroll: 1,
-    prevArrow: false,
-    nextArrow: false,
-    swipe: false,
-    // slide: 'div',
-    swipeToSlide: false,
-    touchMove: false,
-    draggable: false,
-  });
-  $('.bottom-player-photo-container').slick({
-    infinite: true,
-    slidesToShow: 1,
-    // dots: true,
-    slidesToScroll: 1,
-    prevArrow: false,
-    nextArrow: false,
-    swipe: true,
-    // slide: 'div',
-    swipeToSlide: false,
-    touchMove: true,
-    draggable: true,
-  });
+  if (screenWidth <= 600) {
+    $('#myNav .tm .sc-photo-container').slick({
+      infinite: true,
+      slidesToShow: 1,
+      // dots: true,
+      slidesToScroll: 1,
+      prevArrow: false,
+      nextArrow: false,
+      swipe: true,
+      // slide: 'div',
+      swipeToSlide: false,
+      touchMove: true,
+      draggable: true,
+    });
+    $('.bottom-player-photo-container').slick({
+      infinite: true,
+      slidesToShow: 1,
+      // dots: true,
+      slidesToScroll: 1,
+      prevArrow: false,
+      nextArrow: false,
+      swipe: true,
+      // slide: 'div',
+      swipeToSlide: false,
+      touchMove: true,
+      draggable: true,
+    });
+  } else {
+    $('.sc-photo-container').slick({
+      infinite: true,
+      slidesToShow: 1,
+      // dots: true,
+      slidesToScroll: 1,
+      prevArrow: false,
+      nextArrow: false,
+      swipe: false,
+      // slide: 'div',
+      swipeToSlide: false,
+      touchMove: false,
+      draggable: false,
+    });
+  }
+
   // $('.second').slick({
   //   vertical: true,
   //   dots: true,
