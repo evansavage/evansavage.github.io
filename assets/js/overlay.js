@@ -14,10 +14,12 @@ $(".exit-button").click(function(){
 });
 
 $(".open-nav-button, .bottom-player-photo-container").on('click', function() {
-    $('.bottom-player-wrapper').slideUp(100);
+    $('.bottom-player-wrapper').animate({
+      opacity: 0,
+    }, 100);
 });
 $(".closebtn").on('click', function() {
-  setTimeout(function () {
-      $('.bottom-player-wrapper').slideDown(200);
-  }, 350);
+  $('.bottom-player-wrapper').animate({
+    opacity: 1.0,
+  }, 400);
 });
