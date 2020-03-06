@@ -1152,7 +1152,7 @@ a {
 
 input[type=range] {
     -webkit-appearance: none;
-    margin: 0.6em 0;
+    margin: 0.3em 0;
     width: 100%;
   }
   input[type=range]:focus {
@@ -1489,6 +1489,34 @@ input[type=range] {
   }
 }
 
+.color-buttons-wrapper {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  top: 150px;
+  right: 12px;
+  .color-button {
+    border: 2px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    opacity: 0.5;
+    &.blue {
+      background-color: $title-color;
+    }
+    &.red {
+      background-color: red;
+    }
+    &.green {
+      background-color: green;
+    }
+  }
+
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
   html {
     transform: rotate(-90deg);
@@ -1559,21 +1587,33 @@ input[type=range] {
 
     }
     .music-control-wrapper {
+      width: 90%;
       bottom: -70px;
       height: 40px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      // align-items: center;
       .sc-prev, .sc-next, .pause-svg, .play-svg {
         fill: $title-color;
       }
       .sc-prev {
-        left: 24%;
+        position: relative;
+        left: auto;
       }
       .sc-next {
-        right: 24%;
+        position: relative;
+        right: auto;
       }
       .toggle-play {
+        position: relative;
+        left: auto;
         width: 36px;
-        left: calc(50%);
-        transform: translateX(-37%);
+        // left: calc(50%);
+        // transform: translateX(-45%);
       }
     }
   }

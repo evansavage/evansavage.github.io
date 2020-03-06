@@ -210,5 +210,31 @@ var musicContainerPos = $('.music-image-container').offset().top - $( window ).h
           color: titlePlayerColors[playerPos]
         }, 400);
     });
+    
+    $('.bottom-player-photo-container').on('swipe', function(event, slick, direction){
+        if (playerPos >= musicCount - 1) {
+          playerPos = 0;
+        } else {
+          playerPos += 1;
+        }
+        if (screenWidth <= 600) {
+          document.body.style.setProperty('--fading-mobile', titlePlayerColors[playerPos]);
+          document.body.style.setProperty('--impact-mobile', titlePlayerColors[playerPos]);
+        }
+    });
+
+    $('#myNav .tm .sc-photo-container').on('swipe', function(event, slick, direction){
+        if (playerPos >= musicCount - 1) {
+          playerPos = 0;
+        } else {
+          playerPos += 1;
+        }
+        if (screenWidth <= 600) {
+          document.body.style.setProperty('--fading-mobile', titlePlayerColors[playerPos]);
+          document.body.style.setProperty('--impact-mobile', titlePlayerColors[playerPos]);
+        }
+    });
+
+
 
 }) (jQuery);

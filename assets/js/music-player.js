@@ -33,7 +33,7 @@ function pageFullyLoaded(e) {
 
 			widget = SC.Widget(el);
 			window._total_duration = 0;
-      var toggleVar = 0;
+      var toggleVar = 1;
       var seekVar = 0;
 			widget.bind(SC.Widget.Events.READY, function(){
 				widget.getDuration(function(duration){
@@ -119,6 +119,11 @@ function pageFullyLoaded(e) {
 					if (screenWidth < 600) {
 						$('.bottom-player-photo-container').slick('slickPrev');
 					}
+					toggleVar = 0;
+					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
+					$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('#myNav .tm .music-control-wrapper').find('.play-svg').css('display', 'none');
           widget.skip(seekVar);
           console.log(seekVar);
       });
@@ -144,20 +149,25 @@ function pageFullyLoaded(e) {
 					if (screenWidth < 600) {
 						$('.bottom-player-photo-container').slick('slickNext');
 					}
+					toggleVar = 0;
+					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
+					$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('#myNav .tm .music-control-wrapper').find('.play-svg').css('display', 'none');
           widget.skip(seekVar);
           console.log(seekVar);
       });
 
       listener.simple_combo("space", function(e) {
         e.preventDefault();
-        if (toggleVar % 2 == 0) {
+        if (toggleVar % 2 == 1) {
           widget.play();
 					parentContainer.find('.pause-svg').css('display', 'block');
 					parentContainer.find('.play-svg').css('display', 'none');
 					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
 					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
         }
-        else if (toggleVar % 2 == 1) {
+        else if (toggleVar % 2 == 0) {
           widget.pause();
 					parentContainer.find('.pause-svg').css('display', 'none');
 					parentContainer.find('.play-svg').css('display', 'block');
@@ -168,6 +178,96 @@ function pageFullyLoaded(e) {
         toggleVar = toggleVar % 2;
       });
 
+			$('.bottom-player-photo-container').on('swipe', function(event, slick, direction){
+		    if (direction === 'left') {
+					seekVar += 1;
+          seekVar = seekVar % 6;
+		      $('#myNav .tm .sc-photo-container').slick('slickNext');
+		    } else if (direction === 'right') {
+					if (seekVar === 0) {
+            seekVar = 5;
+          } else {
+            seekVar -= 1;
+            // seekVar = seekVar % 6;
+          }
+		      $('#myNav .tm .sc-photo-container').slick('slickPrev');
+		    }
+				widget.bind(SC.Widget.Events.READY, function(){
+					widget.getDuration(function(duration){
+						var seconds = duration / (1000),
+						minutes = Math.floor(seconds / 60);
+						seconds = Math.floor(seconds % 60);
+						if (seconds < 10) {
+							total.innerHTML = minutes + ':0' + seconds;
+						} else {
+							total.innerHTML = minutes + ':' + seconds;
+						}
+						// document.getElementById('total').innerHTML = minutes + ':' + seconds;
+						window._total_duration = duration;
+					});
+				});
+				console.log(seekVar);
+				widget.skip(seekVar);
+				toggleVar = 0;
+				$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
+				$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
+				$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
+				$('#myNav .tm .music-control-wrapper').find('.play-svg').css('display', 'none');
+		  });
+
+			$('#myNav .tm .sc-photo-container').on('swipe', function(event, slick, direction){
+		    if (direction === 'left') {
+					seekVar += 1;
+          seekVar = seekVar % 6;
+		      $('.bottom-player-photo-container').slick('slickNext');
+		    } else if (direction === 'right') {
+					if (seekVar === 0) {
+            seekVar = 5;
+          } else {
+            seekVar -= 1;
+            // seekVar = seekVar % 6;
+          }
+		      $('.bottom-player-photo-container').slick('slickPrev');
+		    }
+				widget.bind(SC.Widget.Events.READY, function(){
+					widget.getDuration(function(duration){
+						var seconds = duration / (1000),
+						minutes = Math.floor(seconds / 60);
+						seconds = Math.floor(seconds % 60);
+						if (seconds < 10) {
+							total.innerHTML = minutes + ':0' + seconds;
+						} else {
+							total.innerHTML = minutes + ':' + seconds;
+						}
+						// document.getElementById('total').innerHTML = minutes + ':' + seconds;
+						window._total_duration = duration;
+					});
+				});
+				console.log(seekVar);
+				widget.skip(seekVar);
+				toggleVar = 0;
+				if (screenWidth <= 600) {
+					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
+					$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('#myNav .tm .music-control-wrapper').find('.play-svg').css('display', 'none');
+				}
+
+		  });
+			$('.bottom-player-wrapper .music-control-wrapper .toggle-play').on('click', function() {
+				if (toggleVar % 2 == 0) {
+					widget.play();
+					$(this).find('.pause-svg').css('display', 'block');
+					$(this).find('.play-svg').css('display', 'none');
+				}
+				else if (toggleVar % 2 == 1) {
+					widget.pause();
+					$(this).find('.pause-svg').css('display', 'none');
+					$(this).find('.play-svg').css('display', 'block');
+				}
+				toggleVar += 1;
+				toggleVar = toggleVar % 2;
+			});
       // $(window).keyup(function(e){
       //
       //     if((e.target == document.body) && (e.which === 32 || e.keyCode === 32)){
@@ -194,3 +294,25 @@ function pageFullyLoaded(e) {
       //     }
       // });
 		}
+
+$('.color-buttons-wrapper .blue').on('click', function () {
+	$('.home-title').animate({
+		color: 'blue'
+	}, 200);
+	$('.inner-wrapper .slick-dots li.slick-active button::before').animate({
+		color: 'blue'
+	}, 200);
+});
+
+$('.color-buttons-wrapper .red').on('click', function () {
+	$('.home-title').animate({
+		color: 'red'
+	}, 200);
+});
+
+
+$('.color-buttons-wrapper .green').on('click', function () {
+	$('.home-title').animate({
+		color: 'green'
+	}, 200);
+});
