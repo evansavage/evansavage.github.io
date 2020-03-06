@@ -128,7 +128,7 @@ function pageFullyLoaded(e) {
 					if (screenWidth < 600) {
 						$('.bottom-player-photo-container').slick('slickPrev');
 					}
-					toggleVar = 0;
+					toggleVar = 1;
 					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
 					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
 					$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
@@ -158,7 +158,7 @@ function pageFullyLoaded(e) {
 					if (screenWidth < 600) {
 						$('.bottom-player-photo-container').slick('slickNext');
 					}
-					toggleVar = 0;
+					toggleVar = 1;
 					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
 					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
 					$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
@@ -217,7 +217,7 @@ function pageFullyLoaded(e) {
 				});
 				console.log(seekVar);
 				widget.skip(seekVar);
-				toggleVar = 0;
+				toggleVar = 1;
 				$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
 				$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
 				$('#myNav .tm .music-control-wrapper').find('.pause-svg').css('display', 'block');
@@ -254,7 +254,7 @@ function pageFullyLoaded(e) {
 				});
 				console.log(seekVar);
 				widget.skip(seekVar);
-				toggleVar = 0;
+				toggleVar = 1;
 				if (screenWidth <= 600) {
 					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
 					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
