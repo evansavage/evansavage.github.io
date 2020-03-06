@@ -878,10 +878,13 @@ a {
   transform: translateX(-50%);
   z-index: 1000;
   display: none;
-  width: 20px;
+  width: 15px;
 }
-.open-nav-button, .closebtn {
-  bottom: 69px;
+.open-nav-button {
+  bottom: 71px;
+}
+.closebtn {
+  bottom: 64px;
 }
 
 
@@ -1149,7 +1152,7 @@ a {
 
 input[type=range] {
     -webkit-appearance: none;
-    margin: 0.3em 0;
+    margin: 0.6em 0;
     width: 100%;
   }
   input[type=range]:focus {
@@ -1575,9 +1578,9 @@ input[type=range] {
     }
   }
   .overlay {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     // background-color: rgb(0,0,0);
-    background-color: #cececedd;
+    background-color: #ffffff4d;
   }
 
 

@@ -12,3 +12,12 @@ $(".exit-button").click(function(){
   // console.log(select);
   // select.css("background-color", "red");
 });
+
+$(".open-nav-button, .bottom-player-photo-container").on('click', function() {
+    $('.bottom-player-wrapper').slideUp(100);
+});
+$(".closebtn").on('click', function() {
+  setTimeout(function () {
+      $('.bottom-player-wrapper').slideDown(200);
+  }, 350);
+});
