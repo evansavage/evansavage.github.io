@@ -55,11 +55,11 @@ $(document).ready(function(){
     slidesToScroll: 1,
     prevArrow: false,
     nextArrow: false,
-    swipe: false,
+    swipe: true,
     // slide: 'div',
     swipeToSlide: false,
-    touchMove: false,
-    draggable: false,
+    touchMove: true,
+    draggable: true,
   });
   // $('.second').slick({
   //   vertical: true,

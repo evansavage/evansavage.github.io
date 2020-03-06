@@ -154,11 +154,15 @@ function pageFullyLoaded(e) {
           widget.play();
 					parentContainer.find('.pause-svg').css('display', 'block');
 					parentContainer.find('.play-svg').css('display', 'none');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'block');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'none');
         }
         else if (toggleVar % 2 == 1) {
           widget.pause();
 					parentContainer.find('.pause-svg').css('display', 'none');
 					parentContainer.find('.play-svg').css('display', 'block');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.pause-svg').css('display', 'none');
+					$('.bottom-player-wrapper .music-control-wrapper').find('.play-svg').css('display', 'block');
         }
         toggleVar += 1;
         toggleVar = toggleVar % 2;
