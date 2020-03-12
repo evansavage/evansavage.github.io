@@ -14,7 +14,11 @@
   <!-- <script rel="preload" src="{{ site.baseurl }}/assets/js/flickity.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
   <!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script> -->
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+  <script type="text/javascript">
+   {% include loadCss.js %}
+  </script>
   <!-- <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}"> -->
   <!-- <script src="{{ '/assets/js/pixi.min.js' | relative_url }}"></script> -->
 </head>
