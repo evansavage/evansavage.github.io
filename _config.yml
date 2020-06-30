@@ -17,7 +17,7 @@ title: Evan Savage
 # email: your-email@example.com
 description: S4V4GE
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://evan-savage.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  evansavage
 linkedin_username: evan-savage-45050694
@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   cards:
