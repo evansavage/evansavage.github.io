@@ -42,6 +42,14 @@ collections:
   music_cards:
     output: true
 
+logo: /assets/img/20_03_05-sq-logo-4.png
+
+social:
+  name: Evan Savage
+  links:
+    - https://www.linkedin.com/in/evan-savage-45050694
+    - https://github.com/evansavage
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

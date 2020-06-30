@@ -2,8 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="Music technologist, producer, AI researcher, web developer"/>
 
-  {% seo %}
   <link rel="icon" href="{{ site.baseurl }}/assets/img/20_03_05-sq-logo-4.png">
   <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
   <meta property="og:image" content="{{ site.baseurl }}/assets/img/ra_cover.jpg" />
@@ -19,6 +20,18 @@
   <script type="text/javascript">
    {% include loadCss.js %}
   </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview');
+  </script>
+  {% seo %}
+  <!-- End Google Analytics -->
   <!-- <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}"> -->
   <!-- <script src="{{ '/assets/js/pixi.min.js' | relative_url }}"></script> -->
 </head>
