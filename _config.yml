@@ -19,6 +19,7 @@ description: S4V4GE
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://evan-savage.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
+location: Philadelphia, PA
 github_username:  evansavage
 linkedin_username: evan-savage-45050694
 soundcloud_username: s4v4ge1
