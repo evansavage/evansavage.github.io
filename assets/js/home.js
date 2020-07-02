@@ -60,14 +60,37 @@ $(document).ready(function(){
   if ($('.about-content-container').css('display') == 'block') {
 
   }
+  console.log($('.location path'));
+  var flicker = titles[Math.floor(Math.random() * titles.length)];
   window.setInterval(function(){
     /// call your function here
     var selection = titles[Math.floor(Math.random() * titles.length)];
+
     // setTimeout(
-    $(selection).toggleClass('glitch')
+    if (Math.floor(Math.random() * 60) == 50) {
+      $(flicker).toggleClass('glitch-color')
+      flicker = titles[Math.floor(Math.random() * titles.length)];
+    }
+    var toggle = Math.floor(Math.random() * 70)
+    if (toggle == 2) {
+      $(flicker).toggleClass('glitch-color')
+
+    }
+    else {
+      $(selection).toggleClass('glitch')
+    }
+    if (toggle == 1) {
+      $('.location svg').css('transform', `rotate(${(Math.floor(Math.random() * 8) * 45)}deg)`);
+      // $('.location svg path:nth-child(5)').css('transform', `rotate(${-1*(Math.floor(Math.random() * 8) * 45)} 256 256)`)
+    }
     // , Math.floor(Math.random() * 1500));
     // $(selection).removeClass('glitch')
-  }, Math.floor(Math.random() * 300));
+  }, Math.floor(Math.random() * 50) + 100);
+  window.setInterval(function(){
+    /// call your function here
+    $('.location svg').css('transform', `rotate(${(Math.floor(Math.random() * 8) * 45)}deg)`);
+      // $('.location svg path:nth-child(5)').css('transform', `rotate(${-1*(Math.floor(Math.random() * 8) * 45)} 256 256)`)
+  }, 10000);
   if (window.outerWidth > 769) {
     // $('.home-wrap').css('display', 'none');
     // $('.music-title').hover(function () {

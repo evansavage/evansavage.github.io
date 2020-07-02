@@ -339,6 +339,10 @@ a {
 .web-title.glitch {
   @include textGlitch("web", random(10), $title-color-2, #D8C1BB00, $lime-green-hover, #61E294, 450, 115);
 }
+.glitch-color {
+  color: #667A75;
+  @include textGlitch("music", random(10), #667A75, #D8C1BB00, $lime-green-hover, #61E294, 50, 55);
+}
 
 .home-content-wrapper {
 
