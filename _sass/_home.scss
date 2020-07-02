@@ -324,8 +324,20 @@ a {
 
 
 
-.glitch:hover {
+.home-title.glitch:hover {
   @include textGlitch("example-one", 30, $title-color, #D8C1BB00, $button-color, #61E294, 450, 115);
+}
+.music-title.glitch {
+  @include textGlitch("music", random(10), $title-color-2, #D8C1BB00, $lime-green-hover, #61E294, 50, 55);
+}
+.producer-title.glitch {
+  @include textGlitch("producer", random(10), $title-color-2, #D8C1BB00, $lime-green-hover, #61E294, 450, 115);
+}
+.research-title.glitch {
+  @include textGlitch("research", random(10), $title-color-2, #D8C1BB00, $lime-green-hover, #61E294, 450, 115);
+}
+.web-title.glitch {
+  @include textGlitch("web", random(10), $title-color-2, #D8C1BB00, $lime-green-hover, #61E294, 450, 115);
 }
 
 .home-content-wrapper {
@@ -363,8 +375,8 @@ a {
         h2 {
           text-align: right;
           font-size: 2rem;
-          padding: 10px 0;
-          margin: 0;
+          // padding: 10px 0;
+          margin: 10px 0;
           transition: transform 0.2s ease-in-out, color 0.1s ease-in-out;
           cursor: pointer;
           &:hover {
@@ -392,6 +404,7 @@ a {
         transform: translateY(-50%) translateX(-50%);
         left: 55%;
         width: fit-content;
+        width: -moz-max-content;
       }
       @media (max-width: 767px) {
         .hover-title-wrapper {
