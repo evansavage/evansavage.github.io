@@ -24,6 +24,15 @@
       transform: rotate(225deg);
     }
   }
+  @media (max-width: 500px) {
+    svg {
+      height: 20px;
+    }
+    font-size: 1rem;
+    span {
+      margin-left: 10px;
+    }
+  }
 }
 
 .social-links {
