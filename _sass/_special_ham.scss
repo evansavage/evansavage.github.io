@@ -1,0 +1,77 @@
+/* btn */
+.menu {
+	// position: relative;
+	// display:  inline-block;
+  position: absolute;
+	// width: 30px;
+	// height: 30px;
+  display: none;
+  width: 25px;
+  right: 0px;
+  // float: right;
+	// margin: 25px;
+
+  @media (max-width: 767px) {
+    display: inline-block;
+
+  }
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	// top: 14px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span {
+  background-color: transparent;
+}
+
+.menu span:before, .menu span:after {
+	width: 25px;
+	height: 3px;
+	background-color: $title-color-2;
+	display: block;
+}
+.menu span:before {
+	margin-top: -7px;
+}
+.menu span:after {
+	margin-top: 7px;
+}
+
+/* example 2 */
+.initial span:before, .initial span:after {
+	-webkit-transition: margin-top 0.2s ease-in-out;
+  transition: 0.2s margin-top ease-in-out;
+}
+.initial.open span:before, .initial.open span:after {
+	margin-top: 0px;
+}
+
+.mobile-nav-wrapper {
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  background-color: $lime-green-hover;
+  top: 0;
+  right: 0;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  font-family: catv;
+  padding-top: 60px;
+
+  &.open {
+    width: 100%;
+  }
+  h2 {
+    width: calc(100% - 60px);
+    text-align: right;
+    a {
+      color: $title-color-2;
+    }
+  }
+}
