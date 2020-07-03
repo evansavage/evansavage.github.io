@@ -1,11 +1,11 @@
 html {
-  @include breakpoint($xs) {
-    overflow: visible;
-  }
-  @include breakpoint($md) {
-    overflow: hidden;
+  // @include breakpoint($xs) {
+  //   overflow: visible;
+  // }
+  // @include breakpoint($md) {
+  overflow: hidden;
     // height: 100x%;
-  }
+  // }
   overscroll-behavior-x: none;
   height: 100%;
   height: 100%;
