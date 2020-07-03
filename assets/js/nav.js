@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // console.log("peepee poopoo 2!!")
   // $('.social-links').addClass('home-social');
+  var width = window.outerWidth;
   $('.menu').on('click', function() {
     $(this).toggleClass('open');
     $('.mobile-nav-wrapper').toggleClass('open');
@@ -15,7 +16,7 @@ $(document).ready(function() {
       $('html').removeClass('not-home');
       $('.home-content-container').fadeIn('medium');
     }
-    if ($('.mobile-nav-wrapper').hasClass('open')) {
+    if (width < 768 && $('.mobile-nav-wrapper').hasClass('open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
     }
@@ -30,7 +31,7 @@ $(document).ready(function() {
       $('html').addClass('not-home');
       $('.about-content-container').fadeIn('medium');
     }
-    if ($('.mobile-nav-wrapper.open')) {
+    if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
     }
@@ -45,7 +46,7 @@ $(document).ready(function() {
       $('html').addClass('not-home');
       $('.music-content-container').fadeIn('medium');
     }
-    if ($('.mobile-nav-wrapper.open')) {
+    if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
     }
@@ -60,7 +61,7 @@ $(document).ready(function() {
       $('html').addClass('not-home');
       $('.research-content-container').fadeIn('medium');
     }
-    if ($('.mobile-nav-wrapper.open')) {
+    if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
     }
@@ -75,7 +76,7 @@ $(document).ready(function() {
       $('html').addClass('not-home');
       $('.dev-content-container').fadeIn('medium');
     }
-    if ($('.mobile-nav-wrapper').hasClass('open')) {
+    if (width < 768 && $('.mobile-nav-wrapper').hasClass('open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
     }

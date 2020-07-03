@@ -58,14 +58,14 @@
   position: absolute;
   background-color: $lime-green-hover;
   top: 0;
-  right: 0;
+  right: -1px;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
   font-family: catv;
   padding-top: 60px;
 
   &.open {
-    width: 100%;
+    width: calc(100% + 1px);
   }
   h2 {
     width: calc(100% - 60px);
