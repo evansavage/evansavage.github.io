@@ -2,9 +2,18 @@ $(document).ready(function() {
   // console.log("peepee poopoo 2!!")
   // $('.social-links').addClass('home-social');
   var width = window.outerWidth;
+  var open = 0
   $('.menu').on('click', function() {
     $(this).toggleClass('open');
     $('.mobile-nav-wrapper').toggleClass('open');
+    open += 1;
+    open %= 2;
+    if (open == 1) {
+      $('body').css('overflow', 'hidden');
+    }
+    else {
+      $('body').css('overflow', 'scroll');
+    }
   });
   $('.home-title').on('click', function() {
     if ($('.home-content-container').css('display') == 'none') {
@@ -19,7 +28,10 @@ $(document).ready(function() {
     if (width < 768 && $('.mobile-nav-wrapper').hasClass('open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
+      open = 0;
+      $('body').css('overflow', 'scroll');
     }
+
   });
   $('.about-nav').on('click', function() {
     if ($('.about-content-container').css('display') == 'none') {
@@ -34,6 +46,8 @@ $(document).ready(function() {
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
+      open = 0;
+      $('body').css('overflow', 'scroll');
     }
   });
   $('.music-nav').on('click', function() {
@@ -49,6 +63,8 @@ $(document).ready(function() {
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
+      open = 0;
+      $('body').css('overflow', 'scroll');
     }
   });
   $('.research-nav').on('click', function() {
@@ -64,6 +80,8 @@ $(document).ready(function() {
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
+      open = 0;
+      $('body').css('overflow', 'scroll');
     }
   });
   $('.dev-nav').on('click', function() {
@@ -79,6 +97,8 @@ $(document).ready(function() {
     if (width < 768 && $('.mobile-nav-wrapper').hasClass('open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
       $('.menu').toggleClass('open');
+      open = 0;
+      $('body').css('overflow', 'scroll');
     }
   });
 })

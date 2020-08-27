@@ -58,7 +58,7 @@
   position: absolute;
   background-color: $lime-green-hover;
   top: 0;
-  right: -1px;
+  right: 0px;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
   font-family: catv;
@@ -67,7 +67,7 @@
   // display: none;
 
   &.open {
-    width: calc(100% + 1px);
+    width: calc(100%);
     // display: block;
   }
   h2 {
