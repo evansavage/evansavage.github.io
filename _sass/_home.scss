@@ -3,7 +3,7 @@ html {
   //   overflow: visible;
   // }
   // @include breakpoint($md) {
-  overflow: hidden;
+  // overflow: hidden;
     // height: 100x%;
   // }
   overscroll-behavior-x: none;
@@ -50,12 +50,12 @@ body {
     justify-content: center;
     align-items: center;
     @include breakpoint($xs) {
-      overflow: visible;
+      // overflow: visible;
       display: block;
     }
     @include breakpoint($md) {
       min-height: 100%;
-      overflow: auto;
+      // overflow: auto;
       display: flex;
     }
     @include breakpoint($lg) {
@@ -147,12 +147,13 @@ a {
 }
 #home-wrapper {
   // display: grid;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   // grid-auto-flow: column;
-  position: absolute;
+  // position: absolute;
   width: calc(100vw - 40px);
   z-index: 1000;
   // margin: 20px;
@@ -1540,16 +1541,16 @@ input[type=range] {
 
 @media only screen and (max-width: 600px) {
   html {
-    position: fixed;
+    // position: fixed;
   }
   body {
-    overscroll-behavior-y: none;
-    overflow: hidden;
+    // overscroll-behavior-y: none;
+    // overflow: hidden;
     width: 100vw;
   }
   .body-wrap {
     height: 100%;
-    overflow-y: hidden;
+    // overflow-y: hidden;
   }
   .extra-blur-bottom {
     width: 100%;

@@ -46,7 +46,8 @@
   flex-direction: column;
   // bottom: 0;
   // background-color: #5933;
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   display: flex;
   // flex-direction: column;
   justify-content: space-evenly;
@@ -62,7 +63,6 @@
   transition: bottom 0.8s ease-in-out;
   &.home-social {
     bottom: calc(100% - 300px);
-
   }
   a {
     text-decoration: none;
