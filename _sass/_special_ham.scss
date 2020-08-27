@@ -63,9 +63,12 @@
   transition: width 0.3s ease-in-out;
   font-family: catv;
   padding-top: 60px;
+  overflow-x: hidden;
+  // display: none;
 
   &.open {
     width: calc(100% + 1px);
+    // display: block;
   }
   h2 {
     width: calc(100% - 60px);
