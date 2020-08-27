@@ -17,8 +17,8 @@ html {
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: $html-home-background;
-  transition: background-color 0.4s ease-in-out;
+  background-color: $page-background-color;
+  transition: background-color 0.2s ease-in-out;
   &.not-home {
     background-color: $page-background-color;
   }
