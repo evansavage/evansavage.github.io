@@ -1,0 +1,135 @@
+$music-card-height-large: 250px;
+$music-card-height-medium: 170px;
+$music-image-height-large: 200px;
+
+.music-content-container {
+  width: 100%;
+  // height: 100%;
+  font-family: ambiant;
+  // display: flex;
+  .music-inner {
+    width: calc(100vw - 500px);
+    max-width: 1000px;
+    // height: calc(100vh - 300px);
+    // max-height: 600px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    .carousel-card {
+      // height: 200px;
+      width: 100%;
+      // height: calc(100vh - 300px);
+      // max-height: 600px;
+      display: grid;
+      grid-template-columns: 1.4fr 0.5fr;
+      grid-template-rows: 15% 25% 14% auto;
+      grid-column-gap: 60px;
+      max-height: $music-card-height-large;
+      margin-bottom: 60px;
+      // background: green;
+      .music-image {
+        // height: calc(100vh - 300px);
+        max-height: $music-image-height-large;
+        grid-column: 2;
+        margin-left: auto;
+      }
+      .card-meta {
+        display: flex;
+        justify-content: space-between;
+        grid-column: 1;
+        grid-row: 1;
+        padding: 10px 15px 0;
+        border-left: 1px solid black;
+        // width: 80%;
+      }
+      h2 {
+        margin: 0;
+        font-size: 2rem;
+        grid-column: 1;
+        grid-row: 2;
+        border-left: 1px solid black;
+        padding-left: 15px;
+        padding-top: 5px;
+      }
+      .genre-tags {
+        grid-column: 1;
+        grid-row: 3;
+        border-left: 1px solid black;
+        padding-left: 15px;
+        span {
+          margin-right: 15px;
+        }
+      }
+      .description {
+        grid-column: 1;
+        grid-row: 4;
+        padding: 5px 15px;
+        // font-size: 1.2rem;
+        // width: 80%;
+      }
+    }
+  }
+  @media(max-width: 1200px) {
+    .music-inner {
+      width: calc(100vw - 300px);
+    }
+  }
+  @media(max-width: 900px) {
+    .music-inner {
+      // max-height: 800px;
+      width: calc(100vw - 180px);
+    }
+  }
+
+  @media(max-width: 768px) {
+    .music-inner {
+      // max-height: 800px;
+      width: calc(100vw - 150px);
+      .carousel-card {
+        // grid-template-columns: auto;
+        // max-height: 800px;
+        // grid-template-rows: auto 5% 10% 5% 1fr;
+        // grid-column-gap: 0;
+        // grid-row-gap: 60px;
+        max-height: auto;
+        .music-image {
+          // max-height: 420px;
+          // margin-bottom: 20px;
+          max-height: $music-card-height-medium;
+        }
+        .card-meta {
+          // grid-column: 1;
+          // grid-row: 2;
+          // width: 420px;
+        }
+        h2 {
+          font-size: 1.5rem;
+          // grid-column: 1;
+          // grid-row: 3;
+        }
+        .genre-tags {
+          // grid-column: 1;
+          // grid-row: 4;
+        }
+        .description {
+          // grid-column: 1;
+          // grid-row: 5;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.carousel-card {
+  opacity: 0;
+  transform: translate(0, 20px);
+  transition: all 0.4s;
+
+}
+
+.carousel-card.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}

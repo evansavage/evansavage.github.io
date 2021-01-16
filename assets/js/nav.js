@@ -59,6 +59,7 @@ $(document).ready(function() {
       $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
       $('.music-content-container').fadeIn('medium');
+      $('.music-content-container').css('display', 'flex');
     }
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
@@ -66,6 +67,7 @@ $(document).ready(function() {
       open = 0;
       $('body').css('overflow', 'scroll');
     }
+    $('.music-inner.carousel').flickity('resize');
   });
   $('.research-nav').on('click', function() {
     if ($('.research-content-container').css('display') == 'none') {

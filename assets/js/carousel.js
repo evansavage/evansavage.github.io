@@ -11,116 +11,126 @@ var compareVal = 0
 var screenWidth = screen.width;
 
 $(document).ready(function(){
-  $('.first').slick({
-    vertical: true,
-    dots: true,
-    infinite: false,
-    // initialSlide: 1,
-    autoplay: false,
-    autoplaySpeed: 12000,
-    verticalSwiping: true,
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    slide: 'div',
-    swipe: true,
-    draggable: false,
-  });
-  $('.music-carousel').slick({
-    infinite: true,
-    slidesToShow: 1,
-    dots: true,
-    slidesToScroll: 1,
-    swipe: true,
-    slide: 'div',
-    swipeToSlide: true,
-    touchMove: true,
-    draggable: true
-  });
-  if (screenWidth <= 600) {
-    $('#myNav .tm .sc-photo-container').slick({
-      infinite: true,
-      slidesToShow: 1,
-      // dots: true,
-      slidesToScroll: 1,
-      prevArrow: false,
-      nextArrow: false,
-      swipe: true,
-      // slide: 'div',
-      swipeToSlide: false,
-      touchMove: true,
-      draggable: true,
-    });
-    $('.bottom-player-photo-container').slick({
-      infinite: true,
-      slidesToShow: 1,
-      // dots: true,
-      slidesToScroll: 1,
-      prevArrow: false,
-      nextArrow: false,
-      swipe: true,
-      // slide: 'div',
-      swipeToSlide: false,
-      touchMove: true,
-      draggable: true,
-    });
-  } else {
-    $('.sc-photo-container').slick({
-      infinite: true,
-      slidesToShow: 1,
-      // dots: true,
-      slidesToScroll: 1,
-      prevArrow: false,
-      nextArrow: false,
-      swipe: false,
-      // slide: 'div',
-      swipeToSlide: false,
-      touchMove: false,
-      draggable: false,
-    });
-  }
-
-  // $('.second').slick({
+  // $('.music-inner.carousel').slick({
+  //     pauseOnHover: true,
+  //     swipe: true,
+  //     dots: true,
+  // });
+  // $('.music-inner.carousel').flickity({
+  //     draggable: true,
+  //     wrapAround: true,
+  //     // pageDots: false,
+  // });
+  // $('.first').slick({
   //   vertical: true,
   //   dots: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 11000,
+  //   infinite: false,
+  //   // initialSlide: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 12000,
+  //   verticalSwiping: true,
+  //   pauseOnHover: true,
+  //   pauseOnFocus: true,
+  //   slide: 'div',
+  //   swipe: true,
+  //   draggable: false,
   // });
-  $('.first').on('wheel', (function(e) {
-    var scroll = e.originalEvent.deltaY;
-    var scroll_log = Math.sqrt(Math.abs(scroll))
-    // console.log(scroll_log);
-    if (Math.abs(scroll_log) > compareVal && !isMoving) {
-      isMoving = true;
-      compareVal = 10
-      if (scroll < 0) {
-        $(this).slick('slickPrev');
-      } else {
-        $(this).slick('slickNext');
-      }
-      setTimeout(function() {
-        isMoving=false;
-        compareVal = 5.5
-      }, 800);
-    }
-
-  }));
-  $('.music-carousel').on('wheel', (function(e) {
-    var scroll = e.originalEvent.deltaX;
-    var scroll_log = Math.sqrt(Math.abs(scroll))
-    // console.log(scroll_log);
-    if (Math.abs(scroll_log) > compareVal && !isMoving) {
-      isMoving = true;
-      compareVal = 10
-      if (scroll < 0) {
-        $(this).slick('slickPrev');
-      } else {
-        $(this).slick('slickNext');
-      }
-      setTimeout(function() {
-        isMoving=false;
-        compareVal = 5.5
-      }, 800);
-    }
-
-  }));
+  // $('.music-carousel').slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   dots: true,
+  //   slidesToScroll: 1,
+  //   swipe: true,
+  //   slide: 'div',
+  //   swipeToSlide: true,
+  //   touchMove: true,
+  //   draggable: true
+  // });
+  // if (screenWidth <= 600) {
+  //   $('#myNav .tm .sc-photo-container').slick({
+  //     infinite: true,
+  //     slidesToShow: 1,
+  //     // dots: true,
+  //     slidesToScroll: 1,
+  //     prevArrow: false,
+  //     nextArrow: false,
+  //     swipe: true,
+  //     // slide: 'div',
+  //     swipeToSlide: false,
+  //     touchMove: true,
+  //     draggable: true,
+  //   });
+  //   $('.bottom-player-photo-container').slick({
+  //     infinite: true,
+  //     slidesToShow: 1,
+  //     // dots: true,
+  //     slidesToScroll: 1,
+  //     prevArrow: false,
+  //     nextArrow: false,
+  //     swipe: true,
+  //     // slide: 'div',
+  //     swipeToSlide: false,
+  //     touchMove: true,
+  //     draggable: true,
+  //   });
+  // } else {
+  //   $('.sc-photo-container').slick({
+  //     infinite: true,
+  //     slidesToShow: 1,
+  //     // dots: true,
+  //     slidesToScroll: 1,
+  //     prevArrow: false,
+  //     nextArrow: false,
+  //     swipe: false,
+  //     // slide: 'div',
+  //     swipeToSlide: false,
+  //     touchMove: false,
+  //     draggable: false,
+  //   });
+  // }
+  //
+  // // $('.second').slick({
+  // //   vertical: true,
+  // //   dots: true,
+  // //   autoplay: true,
+  // //   autoplaySpeed: 11000,
+  // // });
+  // $('.first').on('wheel', (function(e) {
+  //   var scroll = e.originalEvent.deltaY;
+  //   var scroll_log = Math.sqrt(Math.abs(scroll))
+  //   // console.log(scroll_log);
+  //   if (Math.abs(scroll_log) > compareVal && !isMoving) {
+  //     isMoving = true;
+  //     compareVal = 10
+  //     if (scroll < 0) {
+  //       $(this).slick('slickPrev');
+  //     } else {
+  //       $(this).slick('slickNext');
+  //     }
+  //     setTimeout(function() {
+  //       isMoving=false;
+  //       compareVal = 5.5
+  //     }, 800);
+  //   }
+  //
+  // }));
+  // $('.music-carousel').on('wheel', (function(e) {
+  //   var scroll = e.originalEvent.deltaX;
+  //   var scroll_log = Math.sqrt(Math.abs(scroll))
+  //   // console.log(scroll_log);
+  //   if (Math.abs(scroll_log) > compareVal && !isMoving) {
+  //     isMoving = true;
+  //     compareVal = 10
+  //     if (scroll < 0) {
+  //       $(this).slick('slickPrev');
+  //     } else {
+  //       $(this).slick('slickNext');
+  //     }
+  //     setTimeout(function() {
+  //       isMoving=false;
+  //       compareVal = 5.5
+  //     }, 800);
+  //   }
+  //
+  // }));
 });
