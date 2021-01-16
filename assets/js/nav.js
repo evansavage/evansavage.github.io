@@ -41,7 +41,7 @@ $(document).ready(function() {
       $('.dev-content-container').fadeOut('fast');
       $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
-      $('.about-content-container').fadeIn('medium');
+      $('.about-content-container').css('display', 'flex').hide().fadeIn('medium');
     }
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
