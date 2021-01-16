@@ -14,4 +14,4 @@ tags:
   - Acid
 ---
 
-Coming soon!
+Coming soon.
