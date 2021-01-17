@@ -5,7 +5,16 @@ $(document).ready(function() {
   var open = 0
   $('.menu').on('click', function() {
     $(this).toggleClass('open');
+    console.log($(this).hasClass('open'));
+    if ($('.music-content-container').css('display') != 'none') {
+
+      $('.social-links').toggle(300);
+    }
+
     $('.mobile-nav-wrapper').toggleClass('open');
+    // if ($('.social-links').css('display') == 'none') {
+    //   $('.social-links').toggle(300);
+    // }
     open += 1;
     open %= 2;
     if (open == 1) {
@@ -14,6 +23,7 @@ $(document).ready(function() {
     else {
       $('body').css('overflow', 'scroll');
     }
+
   });
   $('.home-title').on('click', function() {
     if ($('.home-content-container').css('display') == 'none') {
@@ -66,6 +76,9 @@ $(document).ready(function() {
       $('.menu').toggleClass('open');
       open = 0;
       $('body').css('overflow', 'scroll');
+    }
+    if (width <= 576) {
+      $('.social-links').toggle(300);
     }
     $('.music-inner.carousel').flickity('resize');
   });

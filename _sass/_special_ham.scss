@@ -8,6 +8,7 @@
   display: none;
   width: 25px;
   right: 0px;
+  margin-top: 5px;
   // float: right;
 	// margin: 25px;
 
@@ -36,10 +37,10 @@
 	display: block;
 }
 .menu span:before {
-	margin-top: -7px;
+	margin-top: -6px;
 }
 .menu span:after {
-	margin-top: 7px;
+	margin-top: 4px;
 }
 
 /* example 2 */
@@ -71,8 +72,9 @@
     // display: block;
   }
   h2 {
-    width: calc(100% - 60px);
+    width: calc(100% - 85px);
     text-align: right;
+    font-size: 1.4rem;
     a {
       color: $title-color-2;
     }

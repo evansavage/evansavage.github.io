@@ -52,7 +52,7 @@
   // flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  left: 20px;
+  left: 15px;
   bottom: 20px;
   z-index: 11;
   // padding: 16px 9px 11px 15px;
@@ -105,9 +105,9 @@
     // border-bottom: 2px solid #636363;
     // border-radius: 4px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 575px) {
     &.home-social {
-      bottom: calc(100% - 280px);
+      bottom: calc(100% - 275px);
     }
   }
 }

@@ -6,7 +6,7 @@ overlay-color: BCEBCB
 # background-image: pointy_building.jpg
 # content-width: calc(85% - 60px)
 image: transference2FRONT.png
-order: 12
+order: 1
 type: single
 date: 21_01_??
 tags:
