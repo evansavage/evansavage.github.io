@@ -1,5 +1,5 @@
 .location {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   bottom: 20px;
@@ -46,12 +46,13 @@
   flex-direction: column;
   // bottom: 0;
   // background-color: #5933;
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   display: flex;
   // flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  left: 20px;
+  left: 15px;
   bottom: 20px;
   z-index: 11;
   // padding: 16px 9px 11px 15px;
@@ -62,7 +63,6 @@
   transition: bottom 0.8s ease-in-out;
   &.home-social {
     bottom: calc(100% - 300px);
-
   }
   a {
     text-decoration: none;
@@ -105,9 +105,9 @@
     // border-bottom: 2px solid #636363;
     // border-radius: 4px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 575px) {
     &.home-social {
-      bottom: calc(100% - 280px);
+      bottom: calc(100% - 275px);
     }
   }
 }

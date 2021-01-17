@@ -1,3 +1,22 @@
 <div class="music-content-container">
-  Coming soon
+  <div class="music-inner carousel">
+    {% assign music_cards = site.music_cards | sort: "order" %}
+    {% for card in music_cards %}
+
+      <div class="carousel-card">
+        <img class="music-image" src="{{ site.baseurl }}/assets/img/{{ card.image }}"/>
+        <div class="card-meta">
+          <div>[ {{ card.type }} ]</div>
+          <div>{{ card.date | date:"%Y-%m-%d" }}</div>
+        </div>
+        <h2>{{ card.title }}</h2>
+        <div class="genre-tags">
+          {% for tag in card.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="description">{{ card.content }}</div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

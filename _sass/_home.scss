@@ -3,7 +3,7 @@ html {
   //   overflow: visible;
   // }
   // @include breakpoint($md) {
-  overflow: hidden;
+  // overflow: hidden;
     // height: 100x%;
   // }
   overscroll-behavior-x: none;
@@ -17,8 +17,8 @@ html {
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: $html-home-background;
-  transition: background-color 0.4s ease-in-out;
+  background-color: $page-background-color;
+  transition: background-color 0.2s ease-in-out;
   &.not-home {
     background-color: $page-background-color;
   }
@@ -50,12 +50,12 @@ body {
     justify-content: center;
     align-items: center;
     @include breakpoint($xs) {
-      overflow: visible;
+      // overflow: visible;
       display: block;
     }
     @include breakpoint($md) {
       min-height: 100%;
-      overflow: auto;
+      // overflow: auto;
       display: flex;
     }
     @include breakpoint($lg) {
@@ -77,14 +77,16 @@ body {
 }
 
 .research-content-container,
-.music-content-container,
+// .music-content-container,
 .dev-content-container {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   font-family: catv;
-  font-size: 2rem;
-  padding-left: 20%;
-  padding-top: 90px;
+  font-size: 1.3rem;
+  // padding-left: 20%;
+  // padding-top: 90px;
+  margin-top: 80px;
+  margin-left: 50px;
 }
 
 a {
@@ -147,19 +149,20 @@ a {
 }
 #home-wrapper {
   // display: grid;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   // grid-auto-flow: column;
-  position: absolute;
-  width: calc(100vw - 40px);
+  // position: absolute;
+  width: calc(100vw - 30px);
   z-index: 1000;
   // margin: 20px;
   // margin-top: -20px;
   // margin-top: -15px;
   top: 0;
-  left: 20px;
+  left: 15px;
   // z-index: 1000;
   .break {
     flex-basis: 100%;
@@ -188,13 +191,18 @@ a {
   .nav-container {
     display: flex;
     // flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
+    flex-grow: 1;
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 20px;
     // margin-top: -25px;
     h2 {
       // margin-bottom: 10px;
-      margin-left: 20px;
+      // margin-left: 20px;
       transform: scale(1, 0.9);
       text-align: right;
+      font-weight: 400;
       a {
         color: #36413E;
         cursor: pointer;
@@ -213,7 +221,7 @@ a {
     border-radius: 0 0 10px 0;
     // background-color: $bright-yellow-background;
     .home-title {
-      font-family: catv;
+      font-family: ferrite-light;
       margin: 0;
       z-index: 100;
       justify-self: left;
@@ -222,7 +230,7 @@ a {
       grid-row: 1;
       // padding: 20px;
       // height: 60px;
-      transform: scale(1, 0.6);
+      // transform: scale(1, 0.8);
       display: inline-block;
       // position: asolute;
       // background-color: $bright-yellow-background;
@@ -237,8 +245,11 @@ a {
 
       color: $title-color-2;
       cursor: pointer;
+      @include breakpoint(350px) {
+        font-size: 1.6rem;
+      }
       @include breakpoint($xs) {
-        font-size: 3rem;
+        font-size: 1.8rem;
         // position: absolute;
 
         // text-align: center;
@@ -249,14 +260,16 @@ a {
       @include breakpoint($sm) {
 
         // align-self: start;
-        font-size: 4rem;
+        font-size: 2.4rem;
+        margin-top: -9px;
         h1 {
           padding: 0;
         }
       }
-      @media(max-width: 350px) {
-        font-size: 2.7rem;
+      @media (max-width: 767px) {
+        margin-top: 0;
       }
+
       h1 {
         margin: 0;
       }
@@ -302,53 +315,6 @@ a {
   position: relative;
 }
 
-.home-wrap {
-
-  // height: 20px;
-  // width: 20px;
-  // float: right;
-
-  width: 300px;
-  // position: absolute;
-  // top: 120px;
-  // left: 703px;
-  // border: 1px solid $title-color-2;
-  font-family: catv;
-  font-size: 1.15rem;
-  // border-left: 1px solid $title-color-2;
-  &.m {
-    // background-color: yellow;
-  }
-  &.p {
-    // background-color: blue;
-  }
-  &.r {
-    // background-color: purple;
-  }
-  &.w {
-    // background-color: red;
-  }
-  @media (min-width: 968px) {
-    // display: none;
-    top: 10px;
-    // transform: translateY(-62%);
-    left: 120%;
-    position: absolute;
-  }
-  @media (max-width: 1024px) {
-    left: calc(100% + 5vw);
-  }
-  @media (max-width: 968px) {
-    display: block;
-    // right: 0;
-    margin: 20px 0;
-    position: relative;
-    left: auto;
-  }
-}
-
-
-
 .home-title.glitch:hover {
   @include textGlitch("example-one", 30, $title-color, #D8C1BB00, $button-color, #61E294, 450, 115);
 }
@@ -386,112 +352,6 @@ a {
   // margin-top: 40px;
   // background-color: #636363;
   z-index: 5;
-  .about-content-container {
-    width: 100%;
-    height: 100%;
-    font-family: microgramma;
-    color: $title-color-2;
-    .about-description {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 3;
-      .hover-title-wrapper {
-        // display: flex;
-        // flex-direction: row;
-        position: relative;
-        h2 {
-          text-align: right;
-          font-size: 2rem;
-          // padding: 10px 0;
-          margin: 10px 0;
-          transition: transform 0.2s ease-in-out, color 0.1s ease-in-out;
-          cursor: pointer;
-          &:hover {
-            // transform: translateX(20px);
-            color: $lime-green-hover;
-          }
-          // &:focus-within {
-          //   transform: translateX(200px);
-          // }
-        }
-      }
-
-
-      @media (min-width: 968px) {
-        height: calc(100% - 360px);
-        max-height: 600px;
-        top: 20%;
-        left: 7%;
-      }
-      @media (min-width: 1200px) {
-        left: 11%;
-      }
-      @media (max-width: 968px) {
-        top: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        left: 55%;
-        width: fit-content;
-        width: -moz-max-content;
-      }
-      @media (max-width: 767px) {
-        .hover-title-wrapper {
-          h2 {
-            font-size: 1.5rem;
-          }
-        }
-      }
-      @media (max-width: 500px) {
-        .hover-title-wrapper {
-          h2 {
-            font-size: 1.0rem;
-          }
-          .home-wrap {
-            // width: 200px;
-            font-size: 0.95rem;
-            max-width: 270px;
-          }
-        }
-      }
-      @media (max-width: 374px) {
-        .hover-title-wrapper {
-          h2 {
-            font-size: 0.9rem;
-          }
-          .home-wrap {
-            // width: 200px;
-            font-size: 0.9rem;
-            margin: 10px 0;
-            max-width: 265px;
-          }
-        }
-      }
-      @media (max-width: 320px) {
-        .hover-title-wrapper {
-          h2 {
-            font-size: 0.8rem;
-          }
-          .home-wrap {
-            // width: 200px;
-            font-size: 0.8rem;
-            margin: 10px 0;
-            max-width: 220px;
-          }
-        }
-      }
-    }
-    .home-image {
-      position: absolute;
-      top: 0%;
-      // right: 20%;
-      // max-width: 300px;
-      height: 120vh;
-      width: 100%;
-      object-fit: cover;
-      opacity: 0.18;
-    }
-  }
   .left-column {
     // background-color: $bright-yellow-background;
     .inner-left {
@@ -765,17 +625,17 @@ a {
 
 // MUSIC CARDS
 
-.music-image {
-  position: absolute;
-	@include music-image-width(0);
-	// height: $music-image-width;
-	// margin: -20px 60px;
-	perspective: 1000px;
-  img {
-    @include music-image-width(0);
-  }
-
-}
+// .music-image {
+//   position: absolute;
+// 	@include music-image-width(0);
+// 	// height: $music-image-width;
+// 	// margin: -20px 60px;
+// 	perspective: 1000px;
+//   img {
+//     @include music-image-width(0);
+//   }
+//
+// }
 .hover-zone {
   // position: relative;
   position: absolute;
@@ -1540,16 +1400,16 @@ input[type=range] {
 
 @media only screen and (max-width: 600px) {
   html {
-    position: fixed;
+    // position: fixed;
   }
   body {
-    overscroll-behavior-y: none;
-    overflow: hidden;
+    // overscroll-behavior-y: none;
+    // overflow: hidden;
     width: 100vw;
   }
   .body-wrap {
     height: 100%;
-    overflow-y: hidden;
+    // overflow-y: hidden;
   }
   .extra-blur-bottom {
     width: 100%;
@@ -1699,23 +1559,23 @@ input[type=range] {
       font-size: 11px;
     }
   }
-  .first .slick-prev:before, .first .slick-next:before {
-    font-size: 35px;
-    color: $title-color;
-  }
-  .first .slick-prev, .first .slick-next {
-    right: 11px;
-  }
-  .first .slick-prev {
-    bottom: 25%;
-  }
-  .first .slick-next {
-    bottom: calc(25% - 50px);
-  }
-
-  .slick-vertical .slick-slide {
-    height: 100vh;
-  }
+  // .first .slick-prev:before, .first .slick-next:before {
+  //   font-size: 35px;
+  //   color: $title-color;
+  // }
+  // .first .slick-prev, .first .slick-next {
+  //   right: 11px;
+  // }
+  // .first .slick-prev {
+  //   bottom: 25%;
+  // }
+  // .first .slick-next {
+  //   bottom: calc(25% - 50px);
+  // }
+  //
+  // .slick-vertical .slick-slide {
+  //   height: 100vh;
+  // }
   // .social-links {
   //   bottom: 70px;
   //   height: auto;

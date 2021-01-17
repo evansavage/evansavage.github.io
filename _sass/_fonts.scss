@@ -12,6 +12,41 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: ambiant;
+  src: url('fonts/AmbiantVariableGX.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ferrite-heavy;
+  src: url('fonts/FerriteCoreDX-Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ferrite-normal;
+  src: url('fonts/FerriteCoreDX-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ferrite-light;
+  src: url('fonts/FerriteCoreDX-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ferrite-lighter;
+  src: url('fonts/FerriteCoreDX-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // @font-face {
 //   font-family: istokweb;
 //   src: url('fonts/IstokWeb-Regular.ttf') format('truetype');
