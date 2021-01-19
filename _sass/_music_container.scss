@@ -26,7 +26,7 @@ $grey-description-color: #58605e;
       // max-height: 600px;
       display: grid;
       grid-template-columns: 1.4fr 0.5fr;
-      grid-template-rows: 42px minmax(41px, auto) auto minmax(70px, auto);
+      grid-template-rows: 41px minmax(47px, auto) auto minmax(70px, auto);
       grid-column-gap: 60px;
       // max-height: $music-card-height-large;
       margin-bottom: 110px;
@@ -40,6 +40,7 @@ $grey-description-color: #58605e;
       .card-meta {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         grid-column: 1;
         grid-row: 1;
         padding: 10px 15px;
@@ -47,16 +48,19 @@ $grey-description-color: #58605e;
         font-family: catv;
         color: $light-details-color;
         font-size: 0.9rem;
+        div {
+          line-height: 20px;
+        }
         // width: 80%;
       }
       h2 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         grid-column: 1;
         grid-row: 2;
         border-left: 1px solid $light-details-color;
         padding-left: 15px;
-        font-family: ferrite-light;
+        font-family: kanik-light;
         color: $title-color-2;
         // padding-top: 5px;
       }
@@ -75,10 +79,13 @@ $grey-description-color: #58605e;
       .description {
         grid-column: 1;
         grid-row: 4;
-        padding: 5px 15px;
-        font-size: 1.031rem;
-        font-family: catv;
-        color: $grey-description-color;
+        padding: 15px;
+        font-size: 0.95rem;
+        font-family: kanik-light;
+        color: $title-color-2;
+        p {
+          margin: 0;
+        }
         // font-size: 1.2rem;
         // width: 80%;
       }
@@ -108,7 +115,7 @@ $grey-description-color: #58605e;
       .carousel-card {
         // grid-template-columns: auto;
         // max-height: 800px;
-        grid-template-rows: 42px minmax(32px, auto) auto minmax(70px, auto);
+        grid-template-rows: 41px minmax(41px, auto) auto minmax(70px, auto);
         grid-column-gap: 20px;
         // grid-row-gap: 20px;
         // max-height: auto;
@@ -124,7 +131,7 @@ $grey-description-color: #58605e;
           // width: 420px;
         }
         h2 {
-          font-size: 1.3rem;
+          font-size: 1.6rem;
           // grid-column: 1;
           // grid-row: 3;
         }
@@ -147,7 +154,7 @@ $grey-description-color: #58605e;
       margin-right: 15px;
       .carousel-card {
         grid-template-columns: auto;
-        grid-template-rows: 200px 42px minmax(32px, auto) auto minmax(70px, auto);
+        grid-template-rows: 200px 42px minmax(41px, auto) auto minmax(20px, auto);
         .music-image {
           grid-row: 1;
           grid-column: 1;
@@ -160,13 +167,15 @@ $grey-description-color: #58605e;
         }
         h2 {
           grid-row: 3;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
         .genre-tags {
           grid-row: 4;
         }
         .description {
           grid-row: 5;
+          border-left: 1px solid $light-details-color;
+
         }
       }
     }

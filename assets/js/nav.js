@@ -31,7 +31,7 @@ $(document).ready(function() {
       $('.music-content-container').fadeOut('fast');
       $('.research-content-container').fadeOut('fast');
       $('.dev-content-container').fadeOut('fast');
-      $('.social-links').addClass('home-social');
+      // $('.social-links').addClass('home-social');
       $('html').removeClass('not-home');
       $('.home-content-container').fadeIn('medium');
     }
@@ -49,7 +49,7 @@ $(document).ready(function() {
       $('.music-content-container').fadeOut('fast');
       $('.research-content-container').fadeOut('fast');
       $('.dev-content-container').fadeOut('fast');
-      $('.social-links').removeClass('home-social');
+      // $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
       $('.about-content-container').css('display', 'flex').hide().fadeIn('medium');
     }
@@ -66,7 +66,7 @@ $(document).ready(function() {
       $('.about-content-container').fadeOut('fast');
       $('.research-content-container').fadeOut('fast');
       $('.dev-content-container').fadeOut('fast');
-      $('.social-links').removeClass('home-social');
+      // $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
       $('.music-content-container').fadeIn('medium');
       $('.music-content-container').css('display', 'flex');
@@ -88,7 +88,7 @@ $(document).ready(function() {
       $('.about-content-container').fadeOut('fast');
       $('.music-content-container').fadeOut('fast');
       $('.dev-content-container').fadeOut('fast');
-      $('.social-links').removeClass('home-social');
+      // $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
       $('.research-content-container').fadeIn('medium');
     }
@@ -105,7 +105,7 @@ $(document).ready(function() {
       $('.about-content-container').fadeOut('fast');
       $('.music-content-container').fadeOut('fast');
       $('.research-content-container').fadeOut('fast');
-      $('.social-links').removeClass('home-social');
+      // $('.social-links').removeClass('home-social');
       $('html').addClass('not-home');
       $('.dev-content-container').fadeIn('medium');
     }
