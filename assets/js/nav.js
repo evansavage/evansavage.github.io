@@ -41,6 +41,9 @@ $(document).ready(function() {
       open = 0;
       $('body').css('overflow', 'scroll');
     }
+    if ($('.social-links').css('display') == 'none') {
+      $('.social-links').toggle(300);
+    }
 
   });
   $('.about-nav').on('click', function() {
