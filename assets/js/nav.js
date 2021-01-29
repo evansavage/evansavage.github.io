@@ -73,6 +73,7 @@ $(document).ready(function() {
       $('html').addClass('not-home');
       $('.music-content-container').fadeIn('medium');
       $('.music-content-container').css('display', 'flex');
+      // test
     }
     if (width < 768 && $('.mobile-nav-wrapper.open')) {
       $('.mobile-nav-wrapper').toggleClass('open');
