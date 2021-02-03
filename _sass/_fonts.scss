@@ -82,6 +82,41 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: generale;
+  src: url('fonts/GeneraleStation.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: half-light;
+  src: url('fonts/half-21-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: half-reg;
+  src: url('fonts/half-39-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: pt-sans;
+  src: url('fonts/PTS55E.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: px-gro;
+  src: url('fonts/Px-Grotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 //
 // @font-face {
 //   font-family: oxygen;
